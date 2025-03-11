@@ -4258,7 +4258,11 @@ textarea.form-control-lg {
 }
 
 /*---------------------------------HERO EFFECT--------------------- */
+.upload_btns{
+  display: flex;
+  justify-content: space-evenly;
 
+}
 
 /*---------------------------------HERO EFFECT--------------------- */
 
