@@ -3966,6 +3966,9 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+  #animation{
+    display: none;
+   }
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4013,6 +4016,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  #animation{
+    display: none;
+   }
   .navbar-expand-md {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4060,6 +4066,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
+  #animation{
+    display: none;
+   }
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4107,6 +4116,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1200px) {
+  #animation{
+    display: flex;
+   }
   .navbar-expand-xl {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4154,6 +4166,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1400px) {
+  #animation{
+    display: flex;
+   }
   .navbar-expand-xxl {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4260,8 +4275,62 @@ textarea.form-control-lg {
 /*---------------------------------HERO EFFECT--------------------- */
 .upload_btns{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inline-text{
+  display: block;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+.container2 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+  color: white;
+  font-weight: 600;
+}
+
+.animation div:first-child {
+  animation: text-animation 10s infinite;
+}
+
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
 }
 
 /*---------------------------------HERO EFFECT--------------------- */
@@ -4410,6 +4479,7 @@ textarea.form-control-lg {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
+
   .card-group {
     display: flex;
     flex-flow: row wrap;
@@ -8417,6 +8487,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+  
   .float-sm-start {
     float: left !important;
   }
@@ -10976,7 +11047,7 @@ p {
   }
 }
 .btn-xl {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.125rem;
   font-weight: 700;
@@ -11060,8 +11131,8 @@ p {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
   text-align: center;
   color: #fff;
   background-image: url("../assets/img/header_background.svg");
@@ -11087,8 +11158,8 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
