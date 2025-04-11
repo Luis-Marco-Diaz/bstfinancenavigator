@@ -443,10 +443,12 @@ th {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
+  text-align: left;
 }
 
 label {
   display: inline-block;
+  font-size: 14px;
 }
 
 button {
@@ -580,6 +582,8 @@ output {
 
 iframe {
   border: 0;
+  width: 110%;
+  height: 100vh;
 }
 
 summary {

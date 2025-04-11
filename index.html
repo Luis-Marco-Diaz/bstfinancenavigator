@@ -11,6 +11,7 @@
         <link rel="icon" type="image/x-icon" href="assets/img/bst.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
@@ -394,20 +395,22 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h1 style=" color: #004aad; font-size: 50px; text-shadow: -1px 1px 5px rgba(66,64,75,0.48); " class="poppins-regular" ><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h1>
-                                    <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 30px;" >En menos de 5 segundos, genera resultados completos que incluyen:</p>
-                                    <br>
+                                    <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 24px;" >En menos de 5 segundos, genera resultados completos que incluyen:</p>
+                                    
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Evaluación Financiera con métricas clave.  </strong>
+                                            <strong class="poppins-regular" style="color: var(--bs-FN1); font-size: 24px;" >Evaluación Financiera con métricas clave.  </strong>
                                         </li>
                                         <li>
-                                            <strong>Interpretación detallada de los datos.  </strong>
+                                            <strong class="poppins-regular" style="color: var(--bs-FN1); font-size: 24px;" >Interpretación detallada de los datos.  </strong>
                                         </li>
                                         <li>
-                                            <strong>Recomendaciones estratégicas para mejorar la situación financiera.   </strong>
+                                            <strong class="poppins-regular" style="color: var(--bs-FN1); font-size: 24px;" >Recomendaciones estratégicas para mejorar tu situación financiera.   </strong>
                                         </li>
                                     </ul>
-                                    <p>Todo entregado en un documento PDF, listo para descarga o para compartir por retrasmisión con terceros.</p>
+                                    <i>Todo entregado en un documento PDF, <br> listo para descarga o para compartir por retrasmisión con terceros.</i>
+                                    <br>
+                                    <br>
                                     <form>
                                         <div class="form-group">
                                           <label for="exampleFormControlFile1"><B>CARGA TU BALANCE GENERAL</B> (En Excel) </label>
@@ -613,61 +616,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h3 class="text-uppercase">CARGA MANUAL DE DATOS</h3>
-                                    <ul class="list-inline" >
-                                        <li>
-                                            <b>1. Llena esta plantilla con los datos financieros de tu empresa.</b>
-                                        </li>
-                                        <li><b>2. Una vez completa, súbela y el sistema generará tu análisis automáticamente.</b></li>
-                                    </ul>
-                                    <!-- TABLE FORM-->
-                                    <div class="card" style="background-color: gainsboro; padding: 2%; " >
-                                        <table> 
-                                            <h4>BALANCE GENERAL</h4>
-                                            <h5>ACTIVOS</h5>
-                                            <form class="form-group" > 
-                                                <tr> 
-                                                    <td> 
-                                                        <label for="name"> 
-                                                            Name 
-                                                        </label> 
-                                                    </td> 
-                                                    <td><input type="text" id="name" /> 
-                                                    </td> 
-                                                </tr> 
-                                                <tr> 
-                                                    <td><label for="email"> 
-                                                            Email 
-                                                        </label> 
-                                                    </td> 
-                                                    <td><input type="email" id="email" /> 
-                                                    </td> 
-                                                </tr> 
-                                                <tr> 
-                                                    <td><label for="telnum"> 
-                                                            Tel No. 
-                                                        </label> 
-                                                    </td> 
-                                                    <td><input type="telnum" id="telnum" /> 
-                                                    </td> 
-                                                </tr> 
-                                                <tr> 
-                                                    <td><label for="Roll No."> 
-                                                            Roll No. 
-                                                        </label> 
-                                                    </td> 
-                                                    <td><input type="number" id="rollno" /> 
-                                                    </td> 
-                                                </tr> 
-                                            </form> 
-                                        </table> 
-                                        <br>
-                                        <div>
-                                            <button style="width: fit-content;" class="btn btn-primary text-uppercase" type="submit" >ENVIAR
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <iframe id="Tableform" src="/table.html" ></iframe>
                                 </div>
                             </div>
                         </div>

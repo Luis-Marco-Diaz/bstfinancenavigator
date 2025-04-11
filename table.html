@@ -1,40 +1,585 @@
-<table> 
-    <h4>BALANCE GENERAL</h4>
-    <h5>ACTIVOS</h5>
-    <form class="form-group" > 
-        <tr> 
-            <td> <b>Activo Circulante</b>
-                <label for="name"> 
-                Total Activo Circulante 
-                </label> 
-            </td> 
-            <td><input type="text" id="TAC" /> 
-            </td> 
-        </tr> 
-        <tr> 
-            <td><label for="name"> 
-                Total Activo Fijo 
-                </label> 
-            </td> 
-            <td><input type="text" id="TAF" /> 
-            </td> 
-        </tr> 
-        <tr> 
-            <b>Activo Diferido</b>
-            <td><label for="telnum"> 
-                Total Activo Diferido 
-                </label> 
-            </td> 
-            <td><input type="text" id="TAD" /> 
-            </td> 
-        </tr> 
-        <tr> 
-            <td><label for="Roll No."> 
-                    Roll No. 
-                </label> 
-            </td> 
-            <td><input type="number" id="rollno" /> 
-            </td> 
-        </tr> 
-    </form> 
-</table> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+<!-- CSS Grid-->
+<style>
+    .container-90{
+        display: flex;
+        flex-direction: column;
+       
+        justify-content: center;
+        align-items: center;
+    }
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+padding: 15px;
+background-color: rgb(206, 206, 206);
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+
+
+</style>
+</head>
+<body>
+    <!-- Módulo de Carga Manual-->
+<div>
+    <div class="container-90">
+        <h3 class="text-uppercase">CARGA MANUAL DE DATOS</h3>
+    <ul class="list-inline" >
+        <li>
+            <b>1. Llena esta plantilla con los datos financieros de tu empresa.</b>
+        </li>
+        <li><b>2. Una vez completo, el sistema generará tu análisis automáticamente.</b></li>
+    </ul>
+    </div>
+    
+    <div class="container-90">
+        <form action="https://formspree.io/f/mzzeopeg"
+        method="POST" >
+
+            <div style="display: flex; flex-direction: column; align-items: center; background-color: rgb(176, 176, 176); padding: 1%;" >
+            <label for="name"><b>NOMBRE O RAZÓN SOCIAL</b></label>
+            <input name="Nombre o Razon Social" type="text" id="name" required /> 
+            <label for="date"><b>PERIODO DEL BALANCE</b></label> 
+            <div>Del <input name="Periodo Inicio" type="date" id="date1" required /> al <input name="Periodo Fin" type="date" id="date2" required /> </div>
+            </div>
+
+            <div class="parent">
+                <div class="div1">
+                   <!-- Activos -->
+                    <table> 
+                        <h4>BALANCE GENERAL</h4>
+                        <hr>
+                        <h5>ACTIVOS</h5>
+                            <div>
+                                <tr> <b style="text-align: left;" >Activo Circulante</b>
+                                    <td> 
+                                        <label for="tac"> 
+                                            Total Activo Circulante: (+)
+                                        </label> 
+                                    </td>
+                                    <td><input name="TotalActivoCirculante" type="text" id="tac" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr>
+                                    <td><label for="taf"> 
+                                        Total Activo Fijo: (+)
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalActivoFijo" type="text" id="taf" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td><label for="tad"> 
+                                        Total Activo Diferido: (+)
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalActivoDiferido" type="text" id="tad" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td><label for="TA"> 
+                                        Total Activos: (=)
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalActivos" type="text" id="TA" required /> 
+                                    </td> 
+                                </tr> 
+                            </div>
+                    </table>
+                    <br>
+                    <!-- Pasivos -->
+                    <table> 
+                        <h5>PASIVOS</h5>
+                            <div>
+                                <tr> <b style="text-align: left;" >Pasivo Circulante</b>
+                                    <td> 
+                                        <label for="tpc"> 
+                                            Total Pasivo Circulante: (+)
+                                        </label> 
+                                    </td>
+                                    <td><input name="TotalPasivoCirculante"  type="text" id="tpc" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr>
+                                    <td><label for="tplp"> 
+                                        Total Pasivo a Largo Plazo (+) 
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalPasivoLargoPlazo" type="text" id="tplp" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td><label for="tp"> 
+                                        Total Pasivo (=)
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalPasivo" type="text" id="tp" required /> 
+                                    </td> 
+                                </tr> 
+                                
+                            </div>
+                    </table>
+                    <br>
+                    <!-- Capital Contable -->
+                    <table> 
+                        <h5>CAPITAL CONTABLE</h5>
+                            <div>
+                                <tr>
+                                    <td> 
+                                        <label for="cs"> 
+                                            Capital Social: (+)
+                                        </label> 
+                                    </td>
+                                    <td><input name="CapitalSocial" type="text" id="cs" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr>
+                                    <td><label for="tcc"> 
+                                        Total Capital Contable (+) 
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalCapitalContable" type="text" id="tcc" value="0" required /> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td><label for="tp"> 
+                                        Total Pasivo y Capital Contable (=)
+                                        </label> 
+                                    </td> 
+                                    <td><input name="TotalPasivoyCapitalContable" type="text" id="tpcc" required /> 
+                                    </td> 
+                                </tr> 
+                                
+                            </div>
+                    </table>
+                </div>
+                <div class="div2">
+                    <!-- Estado de Resultados-->
+            
+                <!-- Ventas y Costos -->
+            <table> 
+                <h4>ESTADO DE RESULTADOS</h4>
+                <hr>
+                <h5>VENTAS Y COSTOS</h5>
+                    <div>
+                        <tr>
+                            <td> 
+                                <label for="vn"> 
+                                Ventas Netas: (+)
+                                </label> 
+                            </td>
+                            <td><input name="VentasNetas" type="text" id="vn" value="0" required /> 
+                            </td> 
+                        </tr> 
+                        <tr>
+                            <td><label for="cdv"> 
+                                Costo de Ventas: (-)
+                                </label> 
+                            </td> 
+                            <td><input name="CostodeVentas" type="text" id="cdv" value="0" required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="ub"> 
+                                Utilidad Bruta: (=)
+                                </label> 
+                            </td> 
+                            <td><input name="UtilidadBruta" type="text" id="ub" required /> 
+                            </td> 
+                        </tr> 
+                        
+                    </div>
+            </table>
+            <br>
+            <!-- Gastos de Operación -->
+            <table> 
+                <h5>GASTOS DE OPERACIÓN</h5>
+                    <div>
+                        <tr>
+                            <td> 
+                                <label for="gdv"> 
+                                    Gastos de Ventas: (-)
+                                </label> 
+                            </td>
+                            <td><input name="GastosdeVentas" type="text" id="gdv" value="0" required /> 
+                            </td> 
+                        </tr> 
+                        <tr>
+                            <td><label for="ga"> 
+                                Gastos Administrativos (-) 
+                                </label> 
+                            </td> 
+                            <td><input name="GastosAdministrativos" type="text" id="ga" value="0" required /> 
+                            </td>  
+                        </tr> 
+                        <tr> 
+                            <td><label for="gdd"> 
+                               Gastos de Depreciación (-)
+                                </label> 
+                            </td> 
+                            <td><input name="GastosdeDepreciacion" type="text" id="gdd" value="0" required /> 
+                            </td> 
+                        </tr><tr> 
+                            <td><label for="tgdo"> 
+                               Total Gastos de Operación (=)
+                                </label> 
+                            </td> 
+                            <td><input name="TotalGastosOperacion" type="text" id="tgdo" required /> 
+                            </td> 
+                        </tr> 
+                    </div>
+            </table>
+            <br>
+            <!-- Resultados Financieros -->
+            <table> 
+                <h5>RESULTADOS FINANCIEROS</h5>
+                    <div>
+                        <tr>
+                            <td> 
+                                <label for="udo"> 
+                                    Utilidad de la Operación: (=)
+                                </label> 
+                            </td>
+                            <td><input name="UtilidadOperacion" type="text" id="udo" required /> 
+                            </td> 
+                        </tr> 
+                        <tr>
+                            <td><label for="tcc"> 
+                                Gastos por intereses (-) 
+                                </label> 
+                            </td> 
+                            <td><input name="GastosporIntereses" type="text" id="tcc"  required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="unai"> 
+                                Utilidad Neta Antes de Impuestos (=)
+                                </label> 
+                            </td> 
+                            <td><input name="UtilidadNetaAdeI" type="text" id="unai" required /> 
+                            </td> 
+                        </tr>
+                        <tr> 
+                            <td><label for="imp"> 
+                                Impuestos (-)
+                                </label> 
+                            </td> 
+                            <td><input name="Impuestos" type="text" id="imp" required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="undi"> 
+                                Utilidad Neta Después de Impuestos (=)
+                                </label> 
+                            </td> 
+                            <td><input name="UtilidadDespuesdeImpuestos" type="text" id="undi"  required /> 
+                            </td> 
+                        </tr> 
+                        <br>
+                        <tr> 
+                            <td><label for="dp"> 
+                                Dividendos Preferentes (-)
+                                </label> 
+                            </td> 
+                            <td><input name="DividendosPreferentes" type="text" id="dp" required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="udpac"> 
+                                Utilidad Disponible para Acciones Comunes (=)
+                                </label> 
+                            </td> 
+                            <td><input name="UtilidadDisponibleAccionesComunes" type="text" id="udpac"  required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="dac"> 
+                                Dividendos Acciones Comunes (-)
+                                </label> 
+                            </td> 
+                            <td><input name="DividentosAccionesComunes" type="text" id="dac"  required /> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td><label for="ur"> 
+                                Utilidades Retenidas (=)
+                                </label> 
+                            </td> 
+                            <td><input name="UtilidadesRetenidas" type="text" id="ur"  required /> 
+                            </td> 
+                        </tr> 
+                        
+                    </div>
+            </table>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; padding-top: 1%">
+                <button type="submit" class="btn btn-primary btn-xl text-uppercase" >ENVIAR</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+</body>
+
+    
+<!-- Sumas y Restas-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Activos-->
+<script>
+$(document).ready(function(){
+  
+  function sumar(){
+    
+    var uno, dos, tres, cuatro, operacion;
+  
+      uno = $('#tac');
+      dos = $('#taf');
+      tres = $('#tad');
+      cuatro =$('#TA');
+      
+      operacion = parseFloat(uno.val()) + parseFloat(dos.val()) + parseFloat(tres.val());
+      cuatro.val(operacion);
+
+  }
+  $("#tac").keyup(function(){
+      
+      var uno;
+      uno = $('#taf').val();
+      
+      if(dos != ""){
+     sumar()
+      }
+      
+  });
+  
+  $("#taf").keyup(function(){
+      
+      var dos;
+      dos = $('#tad').val();
+      
+      if(dos != ""){
+     sumar()
+      }
+      
+  });
+  $("#tad").keyup(function(){
+      
+      var tres;
+      tres = $('#TA').val();
+      
+      if(tres!= ""){
+     sumar()
+      }
+      
+  });
+
+})
+</script>
+<!-- Pasivos-->
+<script>
+    $(document).ready(function(){
+      
+      function sumarp(){
+        
+        var tp, tplp, TP, pasivos;
+      
+          tp = $('#tpc');
+          tplp = $('#tplp');
+          TP =$('#tp');
+          
+          pasivos = parseFloat(tp.val()) + parseFloat(tplp.val());
+          TP.val(pasivos);
+    
+      }
+      $("#tpc").keyup(function(){
+          
+          var tp;
+          tp = $('#tplp').val();
+          
+          if(tplp != ""){
+         sumarp()
+          }
+          
+      });
+      
+      $("#tplp").keyup(function(){
+          
+          var tplp;
+          tplp = $('#tp').val();
+          
+          if(tplp != ""){
+         sumarp()
+          }
+          
+      });
+    
+    })
+</script>
+<!-- Capital Contable-->
+<script>
+    $(document).ready(function(){
+      
+      function sumarc(){
+        
+        var cs, tplp, TP, totalpasivoycapital;
+      
+          cs = $('#cs');
+          tcc = $('#tcc');
+          tpcc =$('#tpcc');
+          
+          totalpasivoycapital = parseFloat(cs.val()) + parseFloat(tcc.val());
+          tpcc.val(totalpasivoycapital);
+    
+      }
+      $("#cs").keyup(function(){
+          
+          var cs;
+          cs = $('#tcc').val();
+          
+          if(tcc != ""){
+         sumarc()
+          }
+          
+      });
+      
+      $("#tcc").keyup(function(){
+          
+          var tcc;
+          tcc = $('#tpcc').val();
+          
+          if(tcc != ""){
+         sumarc()
+          }
+          
+      });
+    
+    })
+</script>
+<!-- Ventas y Costos-->
+<script>
+    $(document).ready(function(){
+      
+      function sumarv(){
+        
+        var VN, CV, UB, utilidadbruta;
+      
+          VN = $('#vn');
+          CV = $('#cdv');
+          UB =$('#ub');
+          
+          utilidadbruta = parseFloat(VN.val()) - parseFloat(CV.val());
+          UB.val(utilidadbruta);
+    
+      }
+      $("#vn").keyup(function(){
+          
+          var VN;
+          VN = $('#cdv').val();
+          
+          if(CV != ""){
+         sumarv()
+          }
+          
+      });
+      
+      $("#cdv").keyup(function(){
+          
+          var CV;
+          CV = $('#cdv').val();
+          
+          if(CV != ""){
+         sumarv()
+          }
+          
+      });
+    
+    })
+</script>
+<!-- Gastos de Operación-->
+<script>
+    $(document).ready(function(){
+      
+      function sumargo(){
+        
+        var GDV, GA, GDD, TGDO, gastosoperacion;
+      
+          GDV = $('#gdv');
+          GA = $('#ga');
+          GDD =$('#gdd');
+          TGDO =$('#tgdo');
+
+          gastosoperacion = parseFloat(GDV.val()) + parseFloat(GA.val()) + parseFloat(GDD.val());
+          TGDO.val(gastosoperacion);
+    
+      }
+
+      $("#gdv").keyup(function(){
+          
+          var GDV;
+          GDV = $('#ga').val();
+          
+          if(GA != ""){
+         sumargo()
+          }
+          
+      });
+      
+      $("#ga").keyup(function(){
+          
+          var GA;
+          GA = $('#gdd').val();
+          
+          if(GA != ""){
+         sumargo()
+          }
+          
+      });
+
+      $("#gdd").keyup(function(){
+          
+          var GDD;
+          GDD = $('#tgdo').val();
+          
+          if(GDD != ""){
+         sumargo()
+          }
+          
+      });
+    
+    })
+</script>
+<!-- Resultados Financieros-->
+
+
+
+
+</html>
