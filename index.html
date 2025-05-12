@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -42,22 +43,23 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
+       <!-- Masthead SPLIT-->
         <header class="masthead">
-            <div class="container">
-                <div class="row" style="padding-top: 5%;" >
-                    <div class="col-md-6" >
+            <div >
+                <div style="display: flex; flex-wrap: wrap;" >
+                    <div class="col-md-6 headtext " >
                         <img style="max-width: 100px; min-width: 40px; " src="assets/img/logos/BST-imago.png" alt="BSTNavigator">
-                        <h1 style=" color: #004aad; font-size: 50px; text-shadow: -1px 1px 5px rgba(66,64,75,0.48); " class="poppins-regular" ><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h1>
-                        <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 30px;" >Finanzas claras, decisiones seguras</p>
+                        <h1 class="poppins-regular blueBST" ><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h1>
+                        <h3 class="poppins-regular" >Finanzas claras, decisiones seguras</h3>
                         <br>
                         <div>
-                            <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 18px;"> <b>Solución tecnológica inteligente,</b> diseñada para interpretar de forma automática y comprensible los estados financieros de cualquier empresa, <b>SIN PROMESAS VACÍAS.</b> <b style="color: #004aad;" >Al alcance de todos, </b><b>con o sin experiencia contable o financiera.</b></p>
+                            <p class="poppins-semibold" style="color: var(--bs-FN1); font-size: 18px;">Toma decisiones financieras inteligentes, proyecta escenarios, simula cambios y comprende las verdaderas causas detrás de los números.</p>
+                            <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 18px;" >Analiza, interpreta y obtén recomendaciones financieras en menos de 5 segundos</p>
                         </div>
                         <br>
                         <div class="upload_btns" >
-                            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1">HAZ TU PRIMER ANÁLISIS GRATUITO</a>
-        
+                            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1">Analizar mis Finanzas</a>
+                            
                             <!--<a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal7">Completa el formulario</a>
                             <div class="inline-text" style="width: 50%;" >
                                 <i style="color: #42404b;" >Carga manual de la información financiera mediante una plantilla predeterminada, asegurando una estructura óptima para el análisis.</i>
@@ -66,20 +68,16 @@
                     </div>
                     <div class="col-md-6" >
                         <video
+                        width="100%"
                         controls
                         autoplay
                         loop
                         muted
-                        src="/assets/videos/BSTFinanceNavigator -Nivel-Basico.mp4"
-                        width="100%">
+                        src="/assets/videos/Video-Intro-Header-2.mp4"
+                        >
                         </video>
-                        <p class="poppins-regular" style="color: var(--bs-FN1); font-size: 18px;">Conoce la salud financiera de tu negocio, a través de nuestras herramientas financieras; <b>Obtén un Análisis instantáneo, Diagnóstico automático y  Simulador financiero.</b></p>
                     </div>
                 </div>
-              
-              <div style="padding-top: 5%; padding-bottom: 3%;">
-                <h5 style="color: #004aad;" >“Haz tu análisis gratis en menos de 2 minutos. <span style="color: #cf0b0b;" >Sin tarjeta. Sin compromiso.”</span></h5>
-            </div>
             </div>
         </header>
         <!-- Beneficios Clave -->
@@ -370,7 +368,7 @@
                 </div>
             </div>
         </section>
-        <!-- Pricing -->
+        <!-- Pricing I -->
         <section class="page-section" id="pricing" style="background-color: var(--bs-FN1);" >
             <div class="container">
                 <div class="text-center">
@@ -379,7 +377,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="team-member basic">
+                        <div class="team-member basic" style="background-color: var(--bs-blue);" >
                             <h4 class="text-light ">Nivel Básico</h4>
                             <h5 class="text-light">$20 USD - mes</h5>
                             <p class="text-light" >$30 USD - Análisis Único</p>
@@ -388,48 +386,50 @@
                                     <li><b>1 Usuario</b></li>
                                     <li>Análisis e Interpretación del Balance General y Estado de Resultados.</li>
                                     <li>Indicadores financieros fundamentales.</li>
-                                    <li>Generación de reportes en pdf</li>
+                                    <li>Generación de reportes en pdf.</li>
                                 </ul>
                             </div>
-                            <a class=" btn text-light mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
+                            <a class=" btn text-light mx-2" href="#basic" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
                             <br>
                             <br>
                             <a class="btn btn-light " href="">Comenzar ahora</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                       <div class="team-member basic">
-                            <h4 class="text-light ">Nivel Básico</h4>
+                       <div class="team-member basic" style="background-color: #cf0b0b;">
+                            <h4 class="text-light ">Nivel Intermedio</h4>
                             <h5 class="text-light">$20 USD - mes</h5>
                             <p class="text-light" >$30 USD - Análisis Único</p>
                             <div class="featuress" >
                                 <ul class="text-lg-start" >
-                                    <li><b>1 Usuario</b></li>
-                                    <li>Análisis e Interpretación del Balance General y Estado de Resultados.</li>
-                                    <li>Indicadores financieros fundamentales.</li>
-                                    <li>Generación de reportes en pdf</li>
+                                    <li><b>3 Usuarios</b></li>
+                                    <li><b>Nivel Básico +</b></li>
+                                    <li>Simulación de escenarios.</li>
+                                    <li>Generación de reportes personalizados en pdf.</li>
+                                    <li>Proyección de flujo de caja basada en modelos estadísticos.</li>
                                 </ul>
                             </div>
-                            <a class=" btn text-light mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
+                            <a class=" btn text-light mx-2" href="#middle" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
                             <br>
                             <br>
                             <a class="btn btn-light " href="">Comenzar ahora</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="team-member basic">
-                            <h4 class="text-light ">Nivel Básico</h4>
+                        <div class="team-member basic" style="background-color: #000000;">
+                            <h4 class="text-light ">Nivel Avanzado</h4>
                             <h5 class="text-light">$20 USD - mes</h5>
                             <p class="text-light" >$30 USD - Análisis Único</p>
                             <div class="featuress" >
                                 <ul class="text-lg-start" >
-                                    <li><b>1 Usuario</b></li>
-                                    <li>Análisis e Interpretación del Balance General y Estado de Resultados.</li>
-                                    <li>Indicadores financieros fundamentales.</li>
-                                    <li>Generación de reportes en pdf</li>
+                                    <li><b>Multiusuarios / Empresas</b></li>
+                                    <li><b>Nivel Intermedio +</b></li>
+                                    <li>Automatización de análisis financieros.</li>
+                                    <li>Simulación de distintos escenarios empresariales.</li>
+                                    <li>Integraciones API.</li>
                                 </ul>
                             </div>
-                            <a class=" btn text-light mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
+                            <a class=" btn text-light mx-2" href="#advance" aria-label="Parveen Anand Twitter Profile"> Ver más ...</a>
                             <br>
                             <br>
                             <a class="btn btn-light " href="">Comenzar ahora</a>
@@ -437,36 +437,177 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center text-uppercase ">
+                        <li class="large text-light" >Descuento del 10% en tu primer suscripción</li>
+                        <li class="large text-light" >Antes de realizar una contratación mensual puedes solicitar una análisis único (una sóla vez).</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing II -->
+        <section class="page-section" id="pricing" style="background-color: var(--bs-FN1);" >
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="section-heading text-light">Planes de Servicios de Análisis de <span style="color: #cf0b0b;">BST</span> Finance Navigator</h3>
+                </div>
+                <div class="row">
+                    <button id="basic"  class="accordion" style="background-color: #004aad;" ><h4 class="text-light" >1. Plan Básico ¡Inicia! - $20 USD al Mes.</h4></button>
+                        <div class="panel">
+                            <div style="padding: 2%;" >
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
+                                    <p>Este nivel entrega un reporte fácil de entender que ayuda a conocer cómo está funcionando una empresa desde el punto de vista financiero. A partir de la información contable disponible, el sistema analiza datos clave y los convierte en conclusiones claras sobre la salud económica del negocio. Esto permite saber, por ejemplo, si la empresa está usando bien sus recursos, si puede pagar sus deudas sin problemas, si está generando buenas ganancias o si podría enfrentar dificultades en el futuro. Todo se presenta de forma ordenada y con recomendaciones útiles, sin necesidad de que el lector tenga conocimientos técnicos en contabilidad o finanzas.</p>
+                                </ul>
+                                <p class="text-center" style="font-size: 18px;" ><b>Es una herramienta pensada para tomar decisiones con confianza y claridad.</b></p>
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
+                                </ul>
+                                <div class="container3">
+                                    <div class="mes"><b>Mensual</b></div>
+                                    <div class="mes-1"><b>Primera Vez</b></div>
+                                    <div class="semes"><b>Semestral</b></div>
+                                    <div class="semes-1"><b>Primera Vez</b></div>
+                                    <div class="anual"><b>Anual</b></div>
+                                    <div class="anual-1"><b>Primera Vez</b></div>
+                                    <div class="a"><p>$20</p></div>
+                                    <div class="b"><p>$18</p></div>
+                                    <div class="c"><p>$102</p></div>
+                                    <div class="d"><p>$91.80</p></div>
+                                    <div class="e"><p>$192</p></div>
+                                    <div class="f"><p>$172.80</p></div>
+                                </div>
+                                <div class="pricetablemob" style="font-size: 18px;" >
+                                    <ul style="color: var(--bs-blue);" >
+                                        <li><b>Mensual:</b> $20 / <b>Primera Vez: </b> $18</li>
+                                        <li><b>Semestral:</b> $102 / <b>Primera Vez: </b> $91.80</li>
+                                        <li><b>Anual</b> $192 / <b>Primera Vez: </b> $172.80</li>
+                                    </ul>
+                                </div>
+                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
+                                    <a class="btn btn-info btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
+                                 </div>
+                            </div>
+                        </div>
+                    <button id="middle" class="accordion" style="background-color: #cf0b0b;" ><h4 class="text-light" >2. Plan Intermedio ¡Impulsa! - $35 USD al Mes.</h4></button>
+                        <div class="panel">
+                            <div style="padding: 2%;" >
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
+                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
+                                </ul>
+                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
+                                </ul>
+                                <div class="container3">
+                                    <div class="mes"><b>Mensual</b></div>
+                                    <div class="mes-1"><b>Primera Vez</b></div>
+                                    <div class="semes"><b>Semestral</b></div>
+                                    <div class="semes-1"><b>Primera Vez</b></div>
+                                    <div class="anual"><b>Anual</b></div>
+                                    <div class="anual-1"><b>Primera Vez</b></div>
+                                    <div class="a"><p>$35</p></div>
+                                    <div class="b"><p>$31.5</p></div>
+                                    <div class="c"><p>$178.5</p></div>
+                                    <div class="d"><p>$160.65</p></div>
+                                    <div class="e"><p>$336</p></div>
+                                    <div class="f"><p>$302.40</p></div>
+                                </div>
+                                <div class="pricetablemob" style="font-size: 18px;" >
+                                    <ul style="color: var(--bs-blue);" >
+                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
+                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
+                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
+                                    </ul>
+                                </div>
+                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
+                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
+                                 </div>
+                            </div>
+                        </div>
+
+                    <button id="advance" class="accordion" style="background-color: #000000;" ><h4 class="text-light" >3. Plan Avanzado ¡Domina! - $100 USD al Mes.</h4></button>
+                         <div class="panel">
+                            <div style="padding: 2%;" >
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
+                                    <p>Este nivel ofrece un análisis financiero de alta precisión, diseñado para respaldar decisiones estratégicas en entornos empresariales complejos. A partir de una metodología propietaria y estructurada, el sistema genera una lectura profunda del estado económico de la empresa, permitiendo visualizar patrones, detectar riesgos ocultos y validar el impacto de las decisiones financieras a lo largo del tiempo. Este nivel de análisis no solo facilita la interpretación de los resultados, sino que también proporciona una base sólida para optimizar el desempeño organizacional, evaluar la sostenibilidad de las operaciones y proyectar escenarios futuros con mayor certeza.</p>
+                                </ul>
+                                <p class="text-center" style="font-size: 18px;" ><b>Es una herramienta pensada para quienes necesitan transformar información contable en conocimiento financiero útil, accionable y confiable.</b></p>
+                                <ul>
+                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
+                                </ul>
+                                <div class="container3">
+                                    <div class="mes"><b>Mensual</b></div>
+                                    <div class="mes-1"><b>Primera Vez</b></div>
+                                    <div class="semes"><b>Semestral</b></div>
+                                    <div class="semes-1"><b>Primera Vez</b></div>
+                                    <div class="anual"><b>Anual</b></div>
+                                    <div class="anual-1"><b>Primera Vez</b></div>
+                                    <div class="a"><p>$100</p></div>
+                                    <div class="b"><p>$90</p></div>
+                                    <div class="c"><p>$510</p></div>
+                                    <div class="d"><p>$459</p></div>
+                                    <div class="e"><p>$960</p></div>
+                                    <div class="f"><p>$864</p></div>
+                                </div>
+                                <div class="pricetablemob" style="font-size: 18px;" >
+                                    <ul style="color: var(--bs-blue);" >
+                                        <li><b>Mensual:</b> $100 / <b>Primera Vez: </b> $90</li>
+                                        <li><b>Semestral:</b> $510 / <b>Primera Vez: </b> $459</li>
+                                        <li><b>Anual</b> $960 / <b>Primera Vez: </b> $864</li>
+                                    </ul>
+                                </div>
+                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
+                                    <a class="btn btn-dark btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
+                                 </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </section>
 
         <!-- Certificaciones-->
-        <div class="py-5">
+        <section class="py-5 certifications " >
             <div class="container">
+                <div class="row" style="padding-top: 5%;"  >
+                    <div class="col-md-6">
+                        <p style="font-size: 22px;" ><b style="color: #42404b;" ><span style="color: #cf0b0b;" >BST</span> Finance Navigator</b> nace con una visión clara: simplificar lo complejo y guiar hacia la salud financiera de personas y empresas en todo el mundo.
+                        <br>
+                        <br>
+                        Desde su origen, este proyecto ha buscado resolver un problema universal: <b><i>la dificultad para comprender, interpretar y actuar sobre la información financiera.</i></b></p>
+                    </div>
+                    <div class="col-md-6" >
+                        <video 
+                        controls
+                        autoplay
+                        loop
+                        muted
+                        width="100%"
+                        src="/assets/videos/BSTFinanceNavigator - Avanzados.mp4"></video>
+                    </div>
+                </div>
+                <div class="row text-center" style="padding-top: 5%;"  >
+                    <h4>Cumplimiento con las normas universales contables</h4>
+                </div>
                 <div class="row align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
+                    <div class="col-lg-4">
+                        <a><img width="90%" src="assets/img/logos/NIIF-MX.svg" alt="NIIF"/></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
+                    <div class="col-lg-4">
+                        <a ><img width="90%" src="assets/img/logos/GAAP.svg" alt="GAAP" /></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
+                    <div class="col-lg-4">
+                        <a ><img width="90%" src="assets/img/logos/IFRS.svg" alt="IFRS" /></a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Contacto</h2>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -529,7 +670,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>

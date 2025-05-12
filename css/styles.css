@@ -11474,9 +11474,8 @@ header.masthead .masthead-heading {
 }
 
 .basic{
-  background-color: var(--bs-blue);
   border-radius: 15px;
-  padding: 2%;
+  padding: 5% 3% ;
 }
 
 section#contact {
@@ -11614,6 +11613,87 @@ section#contact form#contactForm :-ms-input-placeholder {
 #market2 {
   background-image: url(/assets/img/top-divider.png);
   background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden; 
+}
+
+.pricetablemob{
+  display: none;
+}
+
+.container3 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "mes mes-1 semes semes-1 anual anual-1"
+    "a b c d e f";
+  text-align: center;
+  border: solid 0.5px;
+}
+
+.mes {
+  grid-area: mes; background-color: rgba(183, 184, 186,1); border: solid 0.5px;padding: 3px;}
+
+.mes-1 { grid-area: mes-1; background-color: rgba(183, 184, 186,1);border: solid 0.5px;padding: 3px; }
+
+.semes { grid-area: semes; background-color: rgba(183, 184, 186,1);border: solid 0.5px;padding: 3px; }
+
+.semes-1 { grid-area: semes-1; background-color: rgba(183, 184, 186,1);border: solid 0.5px;padding: 3px; }
+
+.anual { grid-area: anual; background-color: rgba(183, 184, 186,1);border: solid 0.5px;padding: 3px; }
+
+.anual-1 { grid-area: anual-1; background-color: rgba(183, 184, 186,1);border: solid 0.5px;padding: 3px; }
+
+.a { grid-area: a;border: solid 0.5px;padding: 3px;}
+
+.b { grid-area: b;border: solid 0.5px;padding: 3px;}
+
+.c { grid-area: c;border: solid 0.5px;padding: 3px;}
+
+.d { grid-area: d;border: solid 0.5px;padding: 3px;}
+
+.e { grid-area: e;border: solid 0.5px;padding: 3px;}
+
+.f { grid-area: f;border: solid 0.5px;padding: 3px;}
+
+@media (width <= 450px) {
+  .container3{
+    display: none;
+  }
+  .pricetablemob{
+    display: block;
+    width: 100%;
+  }
+}
+
+.certifications {
+  background-image: url(/assets/img/bg-cert.png);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
