@@ -410,7 +410,7 @@ kbd kbd {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0 0 0;
 }
 
 img,
@@ -11696,4 +11696,141 @@ section#contact form#contactForm :-ms-input-placeholder {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+/* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filters label:hover {
+  background: var(--bs-blue);
+  color: var(--white);
+}
+
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.blue{
+  background-color: rgb(76 150 234 / 0.1);
+}
+.posts {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 0.5fr);
+  text-align: justify;
+}
+
+.posts .post {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.posts .post-title {
+  font-size: 1.3rem;
+}
+
+.posts figcaption {
+  padding: 3%;
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories li {
+  margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--bs-blue);
+  color: var(--white);
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="basico"]:checked ~ .filters [for="basico"],
+[value="intermedio"]:checked ~ .filters [for="intermedio"],
+[value="avanzado"]:checked ~ .filters [for="avanzado"],
+[value="WordPress"]:checked ~ .filters [for="WordPress"],
+[value="Slider"]:checked ~ .filters [for="Slider"],
+[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+  background: var(--bs-blue);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+  display: block;
+}
+
+[value="basico"]:checked ~ .posts .post:not([data-category~="basico"]),
+[value="intermedio"]:checked ~ .posts .post:not([data-category~="intermedio"]),
+[value="avanzado"]:checked ~ .posts .post:not([data-category~="avanzado"]),
+[value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
+[value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
+[value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
+  display: none;
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  text-align: right;
+}
+
+footer span {
+  color: #e31b23;
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 900px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+
+  .posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

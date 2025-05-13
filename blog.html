@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            :root {
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #49b293;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#about">Acerca de BST</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html#blog">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#contact">Acceso <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Header -->
+        <section class="page-section" style="padding-bottom: 2rem;" >
+            <div class="container">
+                <div class="text-center" >
+                    <h2 class="section-heading ">Centro de Recursos</h2>
+                    <b style="font-size: 1.3rem;" >Finanzas claras en menos de 5 minutos</b>
+                    <p style="font-size: 1.3rem;" >Mejora la toma de decisiones con nuestras 150 respuestas financieras</p> 
+                </div>
+                <hr>
+                <div>
+                    <div class="col text-center">
+                        <br>
+                        <a class="btn btn-info btn-xl text-uppercase" href="https://drive.google.com/file/d/1Jda4B7dGIXm_boHHwade2pnZ8rOzl2sK/view?usp=sharing" target="_blank" > Descargar Guía Completa en PDF</a>
+                        <button class="btn btn-info btn-xl text-uppercase" onclick="DivNiveles()" > Buscar por palabra clave</button>
+                    </div>
+                    <div id="miDiv" style="display: none;" class="container text-center" >
+                        <br>
+                        <label style="font-size: 1.5rem;" for="search">Busca un Tema...</label>
+                        <input id="search" type="text">
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <!-- Grid de Niveles-->
+        <section class="author-archive text-center" id="blog"  >
+           <h2>Explorar por Nivel</h2>
+           <br>
+            <div class="container">
+            <input type="radio" id="All" name="categories" value="All" checked>
+            <input type="radio" id="basico" name="categories" value="basico">
+            <input type="radio" id="intermedio" name="categories" value="intermedio">
+            <input type="radio" id="avanzado" name="categories" value="avanzado">
+            <input type="radio" id="WordPress" name="categories" value="WordPress">
+            <input type="radio" id="Slider" name="categories" value="Slider">
+            <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
+
+            <ol class="filters">
+                <li><label for="All">Todos</label></li>
+                <li><label for="basico">Básico</label></li>
+                <li><label for="intermedio">Intermedio</label></li>
+                <li><label for="avanzado">Avanzado</label></li>
+                <li><label for="WordPress">Emprendedor</label></li>
+                <li><label for="Slider">Consultor</label></li>
+                <li><label for="fullPage.js">Empresario</label></li>
+            </ol>
+
+                <ol class="posts">
+                <!-- Nivel Básico-->
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Qué es el Estado de Situación Financiera y cómo se interpreta?</h3>
+                                <p>Es un reporte que muestra lo que tienes, lo que debes y tu patrimonio; Ayuda a saber si estás en equilibrio, endeudado o generando valor. <b>Ejemplo: Si tienes activos por $50,000 y deudas por $20,000, tu patrimonio es $30,000.</b>
+                                <br>
+                                <b><i>Conclusión: Interpretarlo te dice si tu negocio es sólido.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</h3>
+                                <p>Ambos estados muestran aspectos distintos de tu negocio. Uno mide desempeño; el otro, la posición financiera; El Estado de Resultados muestra si ganas o pierdes. El Estado de Situación Financiera muestra cuánto tienes y cuánto debes. <b>Ejemplo: Puedes tener una utilidad mensual positiva, pero si debes más de lo que tienes, tu situación financiera es delicada.</b>
+                                <br>
+                                <b><i>Conclusión: Usar ambos te da una visión completa.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Cómo leer tus estados financieros en 3 pasos?</h3>
+                                <p>Leer tus finanzas no es solo revisar cifras. Hay una forma práctica y sencilla de hacerlo; 1) Revisa tus ventas e ingresos. 2) Analiza tus costos y gastos. 3) Compara con meses anteriores. Ejemplo: Una tienda compara sus ingresos y utilidad de tres meses y detecta una caída en la rentabilidad.
+                                <br>
+                                <b><i>Conclusión: Un vistazo mensual ordenado te ayuda a tomar mejores decisiones.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Qué es el análisis vertical y horizontal en finanzas?</h3>
+                                <p>Son métodos para comparar cifras y detectar tendencias o desequilibrios; El Análisis vertical compara cada línea con el total, El Horizontal compara el mismo rubro entre diferentes periodos. <b>Ejemplo: Detectas que el costo de ventas subió del 40% al 60% del total. Algo está afectando tu margen.</b>
+                                <br>
+                                <b><i>Conclusión: Son herramientas sencillas y efectivas.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Cómo hacer un informe simple de análisis financiero para tu negocio?</h3>
+                                <p>Un informe te ayuda a entender y comunicar tus resultados; Incluye ingresos, egresos, utilidad, deudas y observaciones clave. <b>Ejemplo: En una hoja sencilla, anotas ventas, gastos y utilidad del mes, y detectas una fuga de dinero en servicios duplicados.</b>
+                                <br>
+                                <b><i>Conclusión: Un informe no tiene que ser complejo, solo útil.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post blue" data-category="basico">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Basico</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Cuáles son los errores más comunes al interpretar estados financieros?</h3>
+                                <p>Interpretar mal los números puede llevarte a tomar decisiones equivocadas; Confundir ingresos con utilidad, no considerar deudas o dejar fuera el flujo de efectivo. <b>Ejemplo: Una empresa cree que va bien porque vende mucho, pero ignora que sus cuentas por pagar son mayores que sus ingresos.</b>
+                                <br>
+                                <b><i>Conclusión: Interpretar mal tus estados financieros puede costarte caro; Aprender a interpretar es clave.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+
+
+                <!-- Nivel Intermedio-->
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                     <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                    <li class="post" data-category="intermedio">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">intermedio</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                <!-- Nivel Avanzado-->
+                    <li class="post" data-category="avanzado">
+                      <article>
+                        <figure>
+                          <figcaption>
+                            <ol class="post-categories">
+                            <li><a href="">Avanzado</a></li>
+                                </ol>
+                                <h3 class="post-title">¿Para qué sirve el análisis e interpretación de estados financieros?</h3>
+                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo.
+                                <br>
+                                Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                <br>
+                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                          </figcaption>
+                        </figure>
+                      </article>
+                    </li>
+                </ol>
+           </div>
+        </section>
+
+        
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -68,3 +68,19 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Mostrar Div Palabaras Clave
+
+var miDivVisible = false;
+function DivNiveles() {
+  var miDiv = document.getElementById("miDiv");
+
+  if (miDivVisible) {
+    miDiv.style.display = "none";
+    miDivVisible = false;
+  } else {
+    miDiv.style.display = "inline-block";
+    miDivVisible = true;
+  }
+}
+
