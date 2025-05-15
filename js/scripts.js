@@ -69,7 +69,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-   // Accordion
+   // Accordion BLOG
 var acc = document.getElementsByClassName("accordionblog");
 var i;
 
@@ -85,7 +85,8 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// Mostrar Div Palabaras Clave
+
+// Mostrar Div TEMAS NIVEL BÁSICO
 
 var miDivVisible = false;
 function DivNiveles() {
@@ -100,3 +101,19 @@ function DivNiveles() {
   }
 }
 
+// Mostrar FUNDAMENTOS
+const accordionTitles = document.querySelectorAll(".accordionTitle");
+
+accordionTitles.forEach((accordionTitle) => {
+  accordionTitle.addEventListener("click", () => {
+    if (accordionTitle.classList.contains("is-open")) {
+      accordionTitle.classList.remove("is-open");
+    } else {
+      const accordionTitlesWithIsOpen = document.querySelectorAll(".is-open");
+      accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
+        accordionTitleWithIsOpen.classList.remove("is-open");
+      });
+      accordionTitle.classList.add("is-open");
+    }
+  });
+});

@@ -45,7 +45,6 @@ a {
 body {
   margin: 50px 0;
   color: var(--black);
-  font: 1rem/1.3 sans-serif;
 }
 
 .author-archive {
@@ -107,222 +106,220 @@ input[type="radio"] {
                 <div>
                     <div class="col text-center">
                         <br>
-                        <button class="btn btn-info btn-xl text-uppercase" href="#" target="_blank" > básico</button>
+                        <button class="btn btn-info btn-xl text-uppercase" onclick="DivNiveles()" > básico</button>
                         <button class="btn btn-danger btn-xl text-uppercase" onclick="DivNiveles()" > intermedio</button>
                         <button class="btn btn-dark btn-xl text-uppercase" onclick="DivNiveles()" > avanzado</button>
                     </div>
-                    <div id="miDiv" style="display: none;" class="container text-center" >
+
+            <!-- DIV 1 - NIVEL BÁSICO -->
+                    <div id="miDiv" style="display: none;" class="container" >
                       <br>
-                         <div class="row">
+                         <div class="row" style="background-color: rgb(76 150 234 / 0.1);" >
                           <br>
-                          <!-- Temas A -->
+                          <!-- Temas A (FUNDAMENTOS FINANCIEROS) -->
                           <div>
-                            <button id="middle" class="accordionblog" style="background-color: #ffffff;" ><h4 >1. Finanzas personales y empresariales</h4></button>
-                            <div class="panel">
-                            <div style="padding: 2%;" >
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
-                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
-                                </ul>
-                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
-                                </ul>
-                                <div class="container3">
-                                    <div class="mes"><b>Mensual</b></div>
-                                    <div class="mes-1"><b>Primera Vez</b></div>
-                                    <div class="semes"><b>Semestral</b></div>
-                                    <div class="semes-1"><b>Primera Vez</b></div>
-                                    <div class="anual"><b>Anual</b></div>
-                                    <div class="anual-1"><b>Primera Vez</b></div>
-                                    <div class="a"><p>$35</p></div>
-                                    <div class="b"><p>$31.5</p></div>
-                                    <div class="c"><p>$178.5</p></div>
-                                    <div class="d"><p>$160.65</p></div>
-                                    <div class="e"><p>$336</p></div>
-                                    <div class="f"><p>$302.40</p></div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Fundamentos Financieros y Lectura de Reportes</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="pricetablemob" style="font-size: 18px;" >
-                                    <ul style="color: var(--bs-blue);" >
-                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
-                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
-                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
-                                    </ul>
-                                </div>
-                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
-                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
-                                 </div>
-                            </div>
-                            </div>
+                              </div> 
                           </div>
                           <!-- Temas B -->
                           <div>
-                            <button id="middle" class="accordionblog" style="background-color: #ffffff;" ><h4 >2. Finanzas personales y empresariales</h4></button>
-                            <div class="panel">
-                            <div style="padding: 2%;" >
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
-                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
-                                </ul>
-                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
-                                </ul>
-                                <div class="container3">
-                                    <div class="mes"><b>Mensual</b></div>
-                                    <div class="mes-1"><b>Primera Vez</b></div>
-                                    <div class="semes"><b>Semestral</b></div>
-                                    <div class="semes-1"><b>Primera Vez</b></div>
-                                    <div class="anual"><b>Anual</b></div>
-                                    <div class="anual-1"><b>Primera Vez</b></div>
-                                    <div class="a"><p>$35</p></div>
-                                    <div class="b"><p>$31.5</p></div>
-                                    <div class="c"><p>$178.5</p></div>
-                                    <div class="d"><p>$160.65</p></div>
-                                    <div class="e"><p>$336</p></div>
-                                    <div class="f"><p>$302.40</p></div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Indicadores, Rentabilidad y Control</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="pricetablemob" style="font-size: 18px;" >
-                                    <ul style="color: var(--bs-blue);" >
-                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
-                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
-                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
-                                    </ul>
-                                </div>
-                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
-                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
-                                 </div>
-                            </div>
-                            </div>
+                              </div> 
                           </div>
                           <!-- Temas C -->
                           <div>
-                            <button id="middle" class="accordionblog" style="background-color: #ffffff;" ><h4 >3. Finanzas personales y empresariales</h4></button>
-                            <div class="panel">
-                            <div style="padding: 2%;" >
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
-                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
-                                </ul>
-                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
-                                </ul>
-                                <div class="container3">
-                                    <div class="mes"><b>Mensual</b></div>
-                                    <div class="mes-1"><b>Primera Vez</b></div>
-                                    <div class="semes"><b>Semestral</b></div>
-                                    <div class="semes-1"><b>Primera Vez</b></div>
-                                    <div class="anual"><b>Anual</b></div>
-                                    <div class="anual-1"><b>Primera Vez</b></div>
-                                    <div class="a"><p>$35</p></div>
-                                    <div class="b"><p>$31.5</p></div>
-                                    <div class="c"><p>$178.5</p></div>
-                                    <div class="d"><p>$160.65</p></div>
-                                    <div class="e"><p>$336</p></div>
-                                    <div class="f"><p>$302.40</p></div>
-                                </div>
-                                <div class="pricetablemob" style="font-size: 18px;" >
-                                    <ul style="color: var(--bs-blue);" >
-                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
-                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
-                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
-                                    </ul>
-                                </div>
-                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
-                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
-                                 </div>
-                            </div>
-                            </div>
-                          </div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);"><h5 >Flujo de Efectivo y Proyecciones</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  </div>
                           <!-- Temas D -->
                           <div>
-                            <button id="middle" class="accordionblog" style="background-color: #ffffff;" ><h4 >4. Finanzas personales y empresariales</h4></button>
-                            <div class="panel">
-                            <div style="padding: 2%;" >
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
-                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
-                                </ul>
-                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
-                                </ul>
-                                <div class="container3">
-                                    <div class="mes"><b>Mensual</b></div>
-                                    <div class="mes-1"><b>Primera Vez</b></div>
-                                    <div class="semes"><b>Semestral</b></div>
-                                    <div class="semes-1"><b>Primera Vez</b></div>
-                                    <div class="anual"><b>Anual</b></div>
-                                    <div class="anual-1"><b>Primera Vez</b></div>
-                                    <div class="a"><p>$35</p></div>
-                                    <div class="b"><p>$31.5</p></div>
-                                    <div class="c"><p>$178.5</p></div>
-                                    <div class="d"><p>$160.65</p></div>
-                                    <div class="e"><p>$336</p></div>
-                                    <div class="f"><p>$302.40</p></div>
-                                </div>
-                                <div class="pricetablemob" style="font-size: 18px;" >
-                                    <ul style="color: var(--bs-blue);" >
-                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
-                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
-                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
-                                    </ul>
-                                </div>
-                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
-                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
-                                 </div>
-                            </div>
-                            </div>
-                          </div>
-                          <!-- Temas e -->
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Gestión Personal y Hábitos Financieros</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  </div>
+                          <!-- Temas E -->
                           <div>
-                            <button id="middle" class="accordionblog" style="background-color: #ffffff;" ><h4 >5. Finanzas personales y empresariales</h4></button>
-                            <div class="panel">
-                            <div style="padding: 2%;" >
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Características Principales:</b></li>
-                                    <p>Este nivel proporciona un diagnóstico estructurado que permite evaluar la situación financiera de una empresa más allá de los números visibles en los estados financieros. A través de indicadores clave interpretados de forma integral, el sistema revela cómo se desempeña el negocio en aspectos como estabilidad, eficiencia, capacidad de generar ganancias, control operativo y sustentabilidad. El análisis intermedio ayuda a entender las causas detrás de los resultados, identificar áreas de oportunidad y visualizar tendencias que impactan en el desempeño futuro.</p>
-                                </ul>
-                                <p class="text-center" style="font-size: 18px;" ><b>Esta visión permite a los usuarios con conocimientos generales tomar decisiones más informadas y estratégicas, sin requerir un dominio técnico especializado.</b></p>
-                                <ul>
-                                    <li><b style="font-size: 18px;" >Política de Precios por tipo de suscripción (USD):</b></li>
-                                </ul>
-                                <div class="container3">
-                                    <div class="mes"><b>Mensual</b></div>
-                                    <div class="mes-1"><b>Primera Vez</b></div>
-                                    <div class="semes"><b>Semestral</b></div>
-                                    <div class="semes-1"><b>Primera Vez</b></div>
-                                    <div class="anual"><b>Anual</b></div>
-                                    <div class="anual-1"><b>Primera Vez</b></div>
-                                    <div class="a"><p>$35</p></div>
-                                    <div class="b"><p>$31.5</p></div>
-                                    <div class="c"><p>$178.5</p></div>
-                                    <div class="d"><p>$160.65</p></div>
-                                    <div class="e"><p>$336</p></div>
-                                    <div class="f"><p>$302.40</p></div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Precios, Costos e Inventario</h5></button>
+                              <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="pricetablemob" style="font-size: 18px;" >
-                                    <ul style="color: var(--bs-blue);" >
-                                        <li><b>Mensual:</b> $35 / <b>Primera Vez: </b> $31.5</li>
-                                        <li><b>Semestral:</b> $178.5 / <b>Primera Vez: </b> $160.65</li>
-                                        <li><b>Anual</b> $336 / <b>Primera Vez: </b> $302.40</li>
-                                    </ul>
-                                </div>
-                                 <div class="container" style="padding: 20px; display: flex; justify-content: center; " >
-                                    <a class="btn btn-danger btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"> Comenzar Ahora</a>
-                                 </div>
-                            </div>
-                            </div>
-                          </div>
+                              </div> 
+                              </div>
 
                          </div>
                     </div>
                 </div>
             </div>
         </section>
-      
-        <!-- Grid de Niveles-->
+
+
+        <!-- Grid de Niveles
         <section class="author-archive text-center" id="blog"  >
            <h2>Explorar por Nivel</h2>
            <br>
@@ -346,11 +343,9 @@ input[type="radio"] {
             </ol>
 
                 <ol class="posts">
-                <!-- Nivel Básico-->
+                
                     <li class="post blue" data-category="basico">
                       <article>
-                        <figure>
-                          <figcaption>
                             <ol class="post-categories">
                             <li><a href="">Basico</a></li>
                                 </ol>
@@ -358,8 +353,6 @@ input[type="radio"] {
                                 <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
                                 <br>
                                 <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
-                          </figcaption>
-                        </figure>
                       </article>
                     </li>
                     <li class="post blue" data-category="basico">
@@ -1117,7 +1110,7 @@ input[type="radio"] {
                       </article>
                     </li>
 
-                <!-- Nivel Intermedio-->
+                 Nivel Intermedio
                     <li class="post" data-category="intermedio">
                       <article>
                         <figure>
@@ -1272,7 +1265,7 @@ input[type="radio"] {
                       </article>
                     </li>
 
-                <!-- Nivel Avanzado-->
+             Nivel Avanzado
                     <li class="post" data-category="avanzado">
                       <article>
                         <figure>
@@ -1293,7 +1286,7 @@ input[type="radio"] {
                 </ol>
            </div>
         </section>
-
+-->
         
         <!-- Footer-->
         <footer class="footer py-4">
