@@ -69,6 +69,22 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+   // Accordion LEVEL1
+var accl = document.getElementsByClassName("level1");
+var j;
+
+for (j = 0; j < accl.length; j++) {
+  accl[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
    // Accordion BLOG
 var acc = document.getElementsByClassName("accordionblog");
 var i;
@@ -85,23 +101,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-
-// Mostrar Div TEMAS NIVEL BÁSICO
-
-var miDivVisible = false;
-function DivNiveles() {
-  var miDiv = document.getElementById("miDiv");
-
-  if (miDivVisible) {
-    miDiv.style.display = "none";
-    miDivVisible = false;
-  } else {
-    miDiv.style.display = "inline-block";
-    miDivVisible = true;
-  }
-}
-
-// Mostrar FUNDAMENTOS
+// Mostrar ARTICULOS
 const accordionTitles = document.querySelectorAll(".accordionTitle");
 
 accordionTitles.forEach((accordionTitle) => {

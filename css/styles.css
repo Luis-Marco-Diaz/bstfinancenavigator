@@ -11603,7 +11603,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   background: var(--bs-blue);
   color: var(--white);
 }
-
+.filters label:active{
+  background: var(--bs-blue);
+}
 
 /* FILTERED ELEMENTS (POSTS)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -11655,32 +11657,28 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: var(--white);
 }
 
-
-/* FILTERING RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-[value="All"]:checked ~ .filters [for="All"],
-[value="basico"]:checked ~ .filters [for="basico"],
-[value="intermedio"]:checked ~ .filters [for="intermedio"],
-[value="avanzado"]:checked ~ .filters [for="avanzado"],
-[value="WordPress"]:checked ~ .filters [for="WordPress"],
-[value="Slider"]:checked ~ .filters [for="Slider"],
-[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
-  background: var(--bs-blue);
-  color: var(--white);
+.containerarticle1{
+  box-sizing: border-box;
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  z-index: 1;
+}
+.containerarticle2 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  z-index: 3;
+}
+.containerarticle3 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  z-index: 5;
 }
 
-[value="All"]:checked ~ .posts [data-category] {
-  display: block;
-}
-
-[value="basico"]:checked ~ .posts .post:not([data-category~="basico"]),
-[value="intermedio"]:checked ~ .posts .post:not([data-category~="intermedio"]),
-[value="avanzado"]:checked ~ .posts .post:not([data-category~="avanzado"]),
-[value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
-[value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
-[value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
-  display: none;
-}
 
 .accordionTitle {
   cursor: pointer;
