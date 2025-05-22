@@ -4318,7 +4318,7 @@ textarea.form-control-lg {
 }
 
 .animation div:first-child {
-  animation: text-animation 10s infinite;
+  animation: text-animation 20s infinite;
 }
 
 .first div {
@@ -4330,17 +4330,28 @@ textarea.form-control-lg {
 .third div {
   background-color:#c10528;
 }
+.fourth div {
+  background-color:#05c105;
+}
+.fifth div {
+  background-color:#7605c1;
+}
+.sixth div {
+  background-color:#c18205;
+}
+.seventh div {
+  background-color:#101010;
+}
 
 @keyframes text-animation {
   0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
+  5% {margin-top: 0;}
+  15% {margin-top: -5.62rem;}
+  30% {margin-top: -11.24rem;}
+  45% {margin-top: -16rem;}
+  60% {margin-top: -22rem;}
+  75% {margin-top: -27rem;}
+  90% {margin-top: -32rem;}
   100% {margin-top: 0;}
 }
 
