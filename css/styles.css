@@ -11589,33 +11589,37 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 
-/* FILTERS
+/* SUMMARY
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.filters {
-  text-align: center;
-  margin-bottom: 2rem;
+
+summary:hover {
+background-color: #373b3e;
+padding: 10px 5px;
+color: white;
+border-radius: 5px;
+transition: 0.8;
+}
+details:open > summary {
+  background-color: #5c636a;
 }
 
-.filters * {
-  display: inline-block;
+.summBasic{
+background-color: #004aad;
+padding: 10px 8px;
+color: white;
+border-radius: 5px;
 }
-
-.filters label {
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.25rem;
-  border-radius: 2rem;
-  min-width: 50px;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
+.summMiddle{
+background-color: #e31b23;
+padding: 10px 8px;
+color: white;
+border-radius: 5px;
 }
-
-.filters label:hover {
-  background: var(--bs-blue);
-  color: var(--white);
-}
-.filters label:active{
-  background: var(--bs-blue);
+.summAdvance{
+background-color: #000;
+padding: 10px 8px;
+color: white;
+border-radius: 5px;
 }
 
 /* FILTERED ELEMENTS (POSTS)
@@ -11624,49 +11628,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   background-color: white;
   padding: 1%;
 }
-.posts {
-  display: grid;
-  grid-gap: 1rem;
-  text-align: justify;
-}
-
-.posts .post {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.posts .post-title {
-  font-size: 1.3rem;
-}
-
-.posts figcaption {
-  padding: 3%;
-}
-
-.posts .post-categories {
-  margin-bottom: 0.75rem;
-  font-size: 0.75rem;
-}
-
-.posts .post-categories * {
-  display: inline-block;
-}
-
-.posts .post-categories li {
-  margin-bottom: 0.2rem;
-}
-
-.posts .post-categories a {
-  padding: 0.2rem 0.5rem;
-  border-radius: 1rem;
-  border: 1px solid;
-  line-height: normal;
-  transition: all 0.1s;
-}
-
-.posts .post-categories a:hover {
-  background: var(--bs-blue);
-  color: var(--white);
-}
 
 .containerarticle1{
   box-sizing: border-box;
@@ -11674,6 +11635,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   left: 3%;
   right: 3%;
   z-index: 1;
+  padding-bottom: 100px;
 }
 .containerarticle2 {
   box-sizing: border-box;
@@ -11681,6 +11643,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   left: 3%;
   right: 3%;
   z-index: 3;
+  padding-bottom: 100px;
 }
 .containerarticle3 {
   box-sizing: border-box;
@@ -11688,8 +11651,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   left: 3%;
   right: 3%;
   z-index: 5;
+  padding-bottom: 100px;
 }
-
 
 .accordionTitle {
   cursor: pointer;
@@ -11709,6 +11672,23 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .accordionTitle.is-open + .accordionContent {
   display: block;
+}
+.containerblog{
+  width: 100%;
+  background-image: url(/assets/img/Background-01.png);
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardblog{
+  display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: rgba(0, 81, 255, 0.5); width: 250px; height: 300px; padding: 30px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* FOOTER
