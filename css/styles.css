@@ -11673,22 +11673,61 @@ border-radius: 5px;
 .accordionTitle.is-open + .accordionContent {
   display: block;
 }
-.containerblog{
-  width: 100%;
-  background-image: url(/assets/img/Background-01.png);
-  height: 550px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
+.containerblog1 { 
+  border-bottom: solid 0.5px;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "b1 b1"
+    "L1 Art1"
+    "L1 Art2"
+    "L1 Art3";
 }
 
-.cardblog{
-  display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: rgba(0, 81, 255, 0.5); width: 250px; height: 300px; padding: 30px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.b1 { grid-area: b1;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background-image: url(/assets/img/Background-01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.L1 {
+  grid-area: L1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: var(--bs-gray-200)
+}
+
+.Art1 { grid-area: Art1; padding: 2%;
+}
+.Art2 { grid-area: Art2; padding: 2%; }
+
+.Art3 { grid-area: Art3; padding: 2%; }
+
+.nav-link-blog {
+  display: block;
+  color: var(--bs-red-BST);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-blog {
+    transition: none;
+  }
+}
+.nav-link-blog:hover, .nav-link-blog:focus {
+  color: var(--bs-FN1);
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-out;
 }
 
 /* FOOTER

@@ -21,26 +21,14 @@
         <!-- Core theme (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            :root {
-  --black: #3a3a3a;
-  --white: #fff;
-  --green: #49b293;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 ol {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
+
 
 body {
   margin: 50px 0;
@@ -70,6 +58,34 @@ input[type="radio"] {
   left: -9999px;
 }
 
+.hover-underline {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+.hover-underline:hover{
+  font-weight: 600;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ae0a0a, #252525);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
         </style>
     </head>
     <body id="page-top">
@@ -96,27 +112,40 @@ input[type="radio"] {
         </nav>
       
         <!-- Header -->
-         <section class="containerblog " >
-          <h1>Artículos Recientes</h1>
-          <div class=" text-center cardblog" >
-            <h3 style="color: white;" >Gestión de Utilidad Marginal</h3>
-            <button class="btn btn-light " >Ver Artículo</button>
+         <div class="containerblog1" >
+            <div class="b1">
+              <h1>Centro de Recursos</h1>
+            </div>
+            <div class="L1">
+              <ul class="navbar-bar text-uppercase" style="list-style-type: none;" >
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold;" href="">Artículos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="#lecturarapida">Lectura Rápida</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">videos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">E-books</a></li>
+              </ul>
+            </div>
+            <div class="Art1">
+              <h3>Nuevos Artículos <i class="fa-solid fa-book"></i></h3>
+              <br>
+              <a class="hover-underline" href="">Control de Inventarios: Qué es y cómo se administra...</a>
+            </div>
+            <div class="Art2">
+              <a class="hover-underline" href="">Como determinar el precio de venta de un producto...</a>
+            </div>
+            <div class="Art3">
+              <a class="hover-underline" href="">Análisis Vertical y Horizontal: la doble estratégica para entender tus finanzas...</a>
+            </div>
           </div>
-          <div class=" text-center cardblog">
-            <h3 style="color: white;" >Control de Inventarios</h3>
-            <button class="btn btn-light " >Ver Artículo</button>
-          </div>
-         </section>
-        <section class="page-section " style="padding-bottom: 2rem;" > 
+        <!-- Artículos cortos -->
+        <div style="padding-bottom: 2rem; padding-top: 2%;" id="lecturarapida"> 
           <div class="container">
-                <div class="text-center" >
-                    <h2 class="section-heading ">Finanzas claras en menos de 5 minutos</h2>
-                    
+                <div class="text-center pt-5" >
+                    <h3 class="section-heading ">Finanzas claras en menos de 5 minutos</h3>
                     <p style="font-size: 1.3rem;" >Mejora la toma de decisiones con nuestras 150 respuestas financieras</p> 
                 </div>
                 <hr>
                     <div id="blog">
-                      <h2 class="text-center" >Explorar por Nivel</h2>
+                      <h3 class="text-center" >Explorar por Nivel</h3>
                       <div style="display: flex; flex-direction: row; justify-content: space-evenly;" >
                         <details name="levels">
                           <summary class="summBasic" > Nivel Básico</summary>
@@ -844,7 +873,8 @@ input[type="radio"] {
                       
                     </div>
             </div>
-        </section>
+          </div>
+
 
 <!-- Footer-->
         <footer class="footer" style="position: fixed; bottom: 0px; left: 0; right: 0; background-color: white; z-index: 100; padding: 20px; " >
