@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+        <style>
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.hover-underline {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+.hover-underline:hover{
+  font-weight: 600;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ae0a0a, #252525);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="/assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/about.html">Acerca de BST</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html#blog">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/faq.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Header -->
+         <div class=" container-fluid row" style="padding-top: 80px;"  >
+          <div class="col-md-2 L1  ">
+              <ul class="navbar-bar text-uppercase" style="list-style-type: none;" >
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold;" href="/blog.html#blog">Artículos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="/fast.html">Lectura Rápida</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">videos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">E-books</a></li>
+              </ul>
+            </div>  
+          <div class="col-md-10" >
+              <div class="imgarticle" >
+                <figure>
+                  <img src="/assets/img/articles/Control-de-Inventarios.jpg" alt="">
+                   <figcaption class="text-center" style="background-color: var(--bs-gray-200); padding: 0.5%;" ><i class="fa-solid fa-clock"></i> Lectura de 4 minutos  | <b>Control de Inventarios</b> </figcaption>
+                </figure> 
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="Art1" id="blog" >
+                  <!-- Page Content -->
+                  <div class="container">
+                    <!-- Page Heading -->
+                    <div class="row">
+                      <div class="col-12 mb-4">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title text-center ">
+                              Control de Inventarios: Qué es y cómo se administra
+                            </h2>
+                            <br>
+                            <p class="card-text">
+                              En el corazón de toda operación comercial eficiente se encuentra una gestión inteligente del inventario. No es exagerado afirmar que el inventario puede ser una de las palancas más poderosas —o más peligrosas— dentro de la estructura financiera de una empresa. La diferencia entre una empresa con flujo de efectivo saludable y otra con capital estancado suele radicar, en muchos casos, en cómo administra lo que almacena.</p>
+                              <p>El inventario no es simplemente una lista de productos almacenados; es una manifestación física del capital invertido. Puede transformarse en una herramienta estratégica de crecimiento o en un obstáculo silencioso que compromete la rentabilidad. Administrarlo correctamente es entender que, detrás de cada caja en bodega, hay dinero que podría estar generando retorno.</p>
+                              <p>Cuando el inventario se convierte en problema, suele ser porque se ha dejado crecer sin control o sin alinearse con la demanda real del mercado. Productos que no se venden, pedidos innecesarios o falta de sincronización entre ventas y compras generan acumulaciones que inmovilizan recursos. Esto trae consigo costos invisibles como almacenamiento, deterioro, seguros, y lo más importante: oportunidades perdidas para reinvertir ese capital en productos rentables o iniciativas estratégicas.</p>
+                              <p>
+                                Existen distintos tipos de inventario que deben reconocerse para ser gestionados eficazmente. El inventario de lento movimiento representa productos que rotan escasamente, mientras que el cíclico responde a temporadas o eventos específicos. El excedente surge de compras desalineadas con la demanda, y el inventario obsoleto refleja pérdidas directas por falta de rotación o desactualización. Identificar y clasificar estos tipos es esencial para aplicar medidas correctivas y evitar su acumulación.</p>
+                                <p>A nivel contable, la forma en que se valora el inventario influye directamente en los estados financieros. Métodos como FIFO /PEPS (primero en entrar, primero en salir), LIFO/UEPS (último en entrar, primero en salir) y el promedio ponderado, afectan el costo de ventas y por tanto la utilidad neta y la carga fiscal. Comprender esta interacción es vital para elegir el modelo contable más adecuado según el entorno económico y los objetivos de rentabilidad.</p>
+                                <p>Los indicadores financieros juegan un papel clave en la lectura del inventario como activo estratégico. La rotación de inventario, los días promedio en bodega y el porcentaje del inventario sobre ventas son métricas fundamentales para saber si el capital está generando valor o simplemente ocupando espacio. Una empresa con baja rotación o días altos de inventario tiene mayor exposición al deterioro, pérdidas de liquidez y presión en sus márgenes.</p>
+                                <p>Más allá del análisis financiero, la gestión efectiva requiere herramientas tácticas. El punto de reorden permite prever el momento óptimo de reposición antes de caer en quiebres de existencias. El inventario de seguridad actúa como colchón frente a variaciones en la demanda o retrasos de proveedores. Estas métricas operativas deben ser adaptadas a cada categoría de producto, considerando niveles históricos de consumo y tiempos logísticos reales.</p>
+                                <p>El impacto del inventario sobre la rentabilidad operativa es directo. Una mala política de compras o precios puede generar acumulación, descuentos forzados o incluso pérdida de margen a pesar de altos volúmenes de venta. Alinear la estrategia de inventario con la política de precios es un paso fundamental. Un producto que se vende con pérdida solo para rotar el inventario no es rentable; es una señal de alarma financiera.</p>
+                                <br>
+                                <p>Los métodos de control como ABC, EOQ y el conteo cíclico son herramientas clave para tomar control de este universo. El método ABC permite priorizar el control sobre los productos que más aportan al negocio. EOQ ayuda a definir la cantidad ideal de pedido considerando costos de almacenamiento y orden. El conteo cíclico reemplaza el inventario masivo por una revisión constante, reduciendo errores y pérdidas.</p>
+                                <p>Sin embargo, todo esto depende en gran parte de la calidad de la previsión de la demanda. Muchos errores de inventario tienen raíz en proyecciones mal realizadas: sobre optimismo, falta de datos históricos o ignorar tendencias estacionales. La previsión debe combinar datos cuantitativos con criterio comercial, integrando ventas pasadas, conocimiento del mercado y herramientas tecnológicas.</p>
+                                <p>Las buenas prácticas en la administración de inventarios no son complicadas, pero sí requieren disciplina. Revisiones mensuales, eliminación sistemática de obsoletos, clasificación constante por rentabilidad, y coordinación entre compras, finanzas y ventas son acciones que multiplican el valor del inventario. No se trata de reducir el inventario, sino de tener el inventario correcto.</p>
+                                <p>En este proceso, plataformas como BST Finance Navigator juegan un papel fundamental. Aunque no gestionan el inventario directamente, permiten diagnosticar su impacto financiero, visibilizando cómo afecta la liquidez, la rotación, la rentabilidad por unidad y el capital de trabajo. Lo que antes era una cifra aislada, se convierte en un componente estratégico integrado al análisis de negocio.</p>
+                                <br>
+                                <p>El caso de una empresa que logra recuperar capital atrapado en inventarios mal gestionados es ilustrativo. A través de clasificaciones ABC, campañas de promoción y decisiones basadas en datos, es posible transformar activos inmovilizados en liquidez disponible. Así, lo que antes parecía una pérdida se convierte en oportunidad para inversión inteligente.</p>
+                                <p>En conclusión, el control de inventarios no es un proceso aislado. Es un pilar que cruza lo financiero, lo logístico y lo comercial. Su gestión inteligente puede marcar la diferencia entre estancamiento y crecimiento. Administrar inventarios no es solo contar productos: es tomar decisiones que afectan directamente la salud y el futuro de toda la empresa.</p>
+                                <b>BST Finance Navigator ALTA Precisión en Resultados Financieros</b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.row -->
+
+                  </div>
+                  <!-- /.container -->
+          </div>
+
+<!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

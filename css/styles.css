@@ -11730,6 +11730,19 @@ border-radius: 5px;
   transition: transform 0.3s ease-out;
 }
 
+.imgarticle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.imgarticle img {
+  box-sizing: border-box;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
