@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.hover-underline {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+.hover-underline:hover{
+  font-weight: 600;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ae0a0a, #252525);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/about.html">Acerca de BST</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html#blog">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/faq.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Header -->
+         <div class="containerblog1" >
+            <div class="b1">
+              <h1>Centro de Recursos de Administración y Finanzas</h1>
+            </div>
+            <div class="L1">
+              <ul class="navbar-bar text-uppercase" style="list-style-type: none;" >
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold;" href="/blog.html">Artículos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="/fast.html">Lectura Rápida</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">videos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">E-books</a></li>
+              </ul>
+            </div>
+            <div class="Art1">
+                 <!-- Artículos cortos -->
+        <div style="padding-bottom: 2rem; padding-top: 2%;" id="lecturarapida"> 
+          <div class="container">
+                <div class="text-center pt-5" >
+                    <h3 class="section-heading ">Finanzas claras en menos de 5 minutos</h3>
+                    <p style="font-size: 1.3rem;" >Mejora la toma de decisiones con nuestras 150 respuestas financieras</p> 
+                </div>
+                    <div id="blog">
+                      <h3 class="text-center" >Explorar por Nivel</h3>
+                      <div style="display: flex; flex-direction: row; justify-content: space-evenly;" >
+                        <details name="levels">
+                          <summary class="summBasic" > Nivel Básico</summary>
+                              <div class="containerarticle1" >
+                              <br>
+                         <div class="row" style="background-color: rgb(76 150 234 / 0.1);" >
+                          <br>
+                          <!-- Temas A (FUNDAMENTOS FINANCIEROS) -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Fundamentos Financieros y Lectura de Reportes</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Es un reporte que muestra lo que tienes, lo que debes y tu patrimonio; Ayuda a saber si estás en equilibrio, endeudado o generando valor. Ejemplo: Si tienes activos por $50,000 y deudas por $20,000, tu patrimonio es $30,000.
+                                            <br>
+                                            <b><i>Conclusión: Interpretarlo te dice si tu negocio es sólido.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Ambos estados muestran aspectos distintos de tu negocio. Uno mide desempeño; el otro, posición financiera; El Estado de Resultados muestra si ganas o pierdes. El Estado de Situación Financiera muestra cuánto tienes y cuánto debes. Ejemplo: Puedes tener una utilidad mensual positiva, pero si debes más de lo que tienes, tu situación financiera es delicada.
+                                            <br>
+                                            <b><i>Conclusión: Usar ambos te da una visión completa.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">4. ¿Cómo leer tus estados financieros en 3 pasos?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Leer tus finanzas no es solo revisar cifras. Hay una forma práctica y sencilla de hacerlo: <i>1) Revisa tus ventas e ingresos; 2) Analiza tus costos y gastos; 3) Compara con meses anteriores.</i> Ejemplo: Una tienda compara sus ingresos y utilidad de tres meses y detecta una caída en la rentabilidad.
+                                            <br>
+                                            <b><i>Conclusión: Un vistazo mensual ordenado te ayuda a tomar mejores decisiones.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">5. ¿Qué es el análisis vertical y horizontal en finanzas?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Son métodos para comparar cifras y detectar tendencias o desequilibrios; Análisis vertical compara cada línea con el total. Horizontal compara el mismo rubro entre diferentes periodos. Ejemplo: Detectas que el costo de ventas subió del 40% al 60% del total. Algo está afectando tu margen.
+                                            <br>
+                                            <b><i>Conclusión: Son herramientas sencillas y efectivas.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">6. ¿Cómo hacer un informe simple de análisis financiero para tu negocio?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Un informe te ayuda a entender y comunicar tus resultados; Incluye ingresos, egresos, utilidad, deudas y observaciones clave. Ejemplo: En una hoja sencilla, anotas ventas, gastos y utilidad del mes, y detectas una fuga de dinero en servicios duplicados.
+                                            <br>
+                                            <b><i>Conclusión: Un informe no tiene que ser complejo, solo útil.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">7. ¿Cuáles son los errores más comunes al interpretar estados financieros?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Interpretar mal los números puede llevarte a tomar decisiones equivocadas; Confundir ingresos con utilidad, no considerar deudas o dejar fuera el flujo de efectivo. Ejemplo: Una empresa cree que va bien porque vende mucho, pero ignora que sus cuentas por pagar son mayores que sus ingresos.
+                                            <br>
+                                            <b><i>Conclusión: Leer mal puede costarte caro. Aprender a interpretar es clave.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">8. ¿Cuál es el rol del Estado de Resultados en la toma de decisiones?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Este estado muestra si el negocio es rentable en un periodo; Informa sobre ventas, costos, gastos y utilidad. Útil para ajustar precios, reducir costos o evaluar campañas. Ejemplo: Un restaurante nota que subieron sus gastos sin aumentar ingresos. Decide recortar sueldos extras y renegociar alquiler.
+                                            <br>
+                                            <b><i>Conclusión: El Estado de Resultados es una brújula mensual.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">9. ¿Cómo se relacionan el Estado de Resultados y el Flujo de Efectivo?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Puedes tener utilidad pero no dinero disponible. Por eso hay que mirar ambos; El Estado de Resultados muestra ingresos y gastos; el Flujo de Efectivo, lo que entra y sale de caja. Ejemplo: Vendiste $20,000, pero solo cobraste $10,000. Tienes utilidad pero poca liquidez.
+                                            <br>
+                                            <b><i>Conclusión: Rentabilidad no es lo mismo que liquidez.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">10. ¿Qué debe contener un estado financiero básico para emprendedores?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Un buen estado financiero resume lo esencial sin ser complicado; Incluye ventas, gastos, utilidad, deudas, activosy patrimonio. Ejemplo: Un emprendedor anota todo lo que gana, gasta y debe. Así puede ver si está generando valor.
+                                            <br>
+                                            <b><i>Conclusión: Lo básico bien hecho, vale más que lo complejo sin control.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">11. ¿Cuáles son los errores más comunes al leer un estado financiero?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Un estado financiero mal leído puede dar una falsa sensación de éxito o alarma; Confundir ventas con utilidad, no considerar flujo de efectivo, analizar un solo mes y mezclar finanzas personales. Ejemplo: Una tienda cree que gana porque vende mucho, pero tiene más gastos que ingresos y está en pérdida.
+                                            <br>
+                                            <b><i>Conclusión: Leer bien tus finanzas es clave para tomar decisiones acertadas.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                              </div> 
+                          </div>
+                          <!-- Temas B -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Indicadores, Rentabilidad y Control</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">12. ¿Qué es el punto de equilibrio y cómo se calcula?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Es el nivel mínimo de ventas donde cubres todos tus costos; Su Fórmula es: Punto de equilibrio = Costos fijos / (Precio - Costo variable) Ejemplo: Si tus costos fijos son $10,000 y ganas $5 por unidad, necesitas vender 2,000 unidades para no perder.
+                                            <br>
+                                            <b><i>Conclusión: Te dice cuántas ventas necesitas para empezar a ganar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">13. ¿Cuál es la diferencia entre utilidad bruta, operativa y neta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">14. ¿Qué indicadores financieros debería revisar un pequeño negocio?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Algunos números claves dicen mucho sobre tu negocio; Margen neto, liquidez, capital de trabajo, rotación de inventario. Ejemplo: Un negocio detecta que su rotación de inventario es muy lenta. Ajusta compras y mejora su flujo de caja.
+                                            <br>
+                                            <b><i>Conclusión: Medir lo correcto es mejor que medir mucho.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">15. ¿Cuáles son los beneficios de llevar una contabilidad básica en tu negocio?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>La contabilidad no es solo para declarar impuestos; Te ayuda a tomar decisiones, planear, buscar financiamiento y evitar sorpresas. Ejemplo: Un emprendedor lleva registro mensual y detecta un alza en sus costos. Reacciona a tiempo y evita perder dinero.
+                                            <br>
+                                            <b><i>Conclusión: Tener orden financiero es tener tranquilidad.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">16. ¿Cómo saber si tu negocio está siendo rentable?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Rentabilidad significa que ganas más de lo que gastas. Sin eso, el negocio es solo una actividad ocupada; Calcula tu utilidad neta mensual, revisa tus márgenes y evalúa si generas valor después de pagar todo. Ejemplo: Un negocio genera $20,000 en ventas y gasta $18,000. Su rentabilidad es del 10%. Busca subirla al 20% mejorando procesos.
+                                            <br>
+                                            <b><i>Conclusión: La rentabilidad es el oxígeno del negocio. Si no lo tienes, no importa cuánto corras, te vas a detener.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">17. ¿Qué indicadores financieros deberías revisar semanalmente?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Algunos datos son tan importantes que no pueden esperar al cierre del mes. Revisarlos semanalmente te permite corregir a tiempo; Ventas, egresos clave, flujo de caja, cuentas por cobrar y por pagar. Ejemplo: Una panadería detecta una baja en ingresos durante la semana y ajusta promociones para el fin de semana, evitando una caída mensual.
+                                            <br>
+                                            <b><i>Conclusión: Ver tus números cada semana mejora tu reflejo financiero.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">18. ¿Qué significa tener finanzas sanas en un pequeño negocio?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Finanzas sanas no significan ganar mucho, sino administrar bien; Gastar menos de lo que se gana, mantener liquidez, no depender de deudas y tener margen de maniobra. Ejemplo: Un emprendedor lleva su contabilidad al día, tiene ahorro para imprevistos y paga sus proveedores puntualmente.
+                                            <br>
+                                            <b><i>Conclusión: Las finanzas sanas te dan paz y crecimiento.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                              
+                              </div> 
+                          </div>
+                          <!-- Temas C -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);"><h5 >Flujo de Efectivo y Proyecciones</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                    
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">19. ¿Cuál es la diferencia entre flujo de efectivo y ganancia?</p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Ganar dinero no es lo mismo que tenerlo en caja; La ganancia es lo que queda en papel después de tus gastos. El flujo es lo que entra y sale de tu cuenta. Ejemplo: Vendes $10,000, tu ganancia es $2,000, pero solo cobraste $5,000. Tu flujo disponible es limitado.
+                                                <br>
+                                                <b><i>Conclusión: La rentabilidad te dice si ganas. El flujo, si puedes operar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">20. ¿Cuál es la función del Balance General en el control del negocio?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Es una foto de tu situación financiera; Muestra activos, pasivos y patrimonio. Ayuda a saber si el negocio es sólido. Ejemplo: Si tus activos son mayores que tus pasivos, estás en buena posición.
+                                                <br>
+                                                <b><i>Conclusión: Es el mapa que te dice dónde estás parado.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      
+                                  
+                                  </div> 
+                          </div>
+                          <!-- Temas D -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Gestión Personal y Hábitos Financieros</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  </div>
+                          <!-- Temas E -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Precios, Costos e Inventario</h5></button>
+                              <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                         </div>
+                               </div>
+                          </details>
+                          <details name="levels">
+                            <summary class="summMiddle" > Nivel intermedio</summary>
+                            <div class="containerarticle2" >
+                      <br>
+                         <div class="row" style="background-color: rgba(234, 76, 76, 0.1);" >
+                          <br>
+                          <!-- Temas A (FUNDAMENTOS FINANCIEROS) -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgba(234, 76, 76, 0.1);" ><h5>DOS</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                          <!-- Temas B -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Indicadores, Rentabilidad y Control</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                          <!-- Temas C -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);"><h5 >Flujo de Efectivo y Proyecciones</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                          </div>
+                          <!-- Temas D -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Gestión Personal y Hábitos Financieros</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  </div>
+                          <!-- Temas E -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Precios, Costos e Inventario</h5></button>
+                              <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                         </div>
+                               </div>
+                          </details>
+                          <details name="levels">
+                            <summary class="summAdvance" > Nivel avanzado</summary>
+                              <div class="containerarticle3" >
+                      <br>
+                         <div class="row" style="background-color: rgba(46, 37, 37, 0.1);" >
+                          <br>
+                          <!-- Temas A (FUNDAMENTOS FINANCIEROS) -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgba(46, 37, 37, 0.1);" ><h5>DOS</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                          <!-- Temas B -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Indicadores, Rentabilidad y Control</h5></button>
+                            <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                          <!-- Temas C -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);"><h5 >Flujo de Efectivo y Proyecciones</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                          </div>
+                          <!-- Temas D -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Gestión Personal y Hábitos Financieros</h5></button>
+                                <!-- Acccordeon BASIC-->
+                                  <div>
+                                      <div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                        <div class="accordionContent">
+                                            <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                      <div class="accordionItem">
+                                        <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                        <div class="accordionContent">
+                                          <article class=" blue">
+                                                <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                                <br>
+                                                <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                            </article>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  </div>
+                          <!-- Temas E -->
+                          <div>
+                            <button id="middle" class="accordionblog" style="background-color: rgb(76 150 234 / 0.1);" ><h5>Precios, Costos e Inventario</h5></button>
+                              <!-- Acccordeon BASIC-->
+                              <div>
+                                  <div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">1. ¿Para qué sirve el análisis e interpretación de estados financieros? </p>
+                                    <div class="accordionContent">
+                                        <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">2. ¿Qué es el Estado de Situación Financiera y cómo se interpreta?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                  <div class="accordionItem">
+                                    <p class="accordionTitle">3. ¿Cuál es la diferencia entre el Estado de Resultados y el Estado de Situación Financiera?</p>
+                                    <div class="accordionContent">
+                                      <article class=" blue">
+                                            <p>Comprender tus estados financieros te permite tomar mejores decisiones y detectar problemas a tiempo; Ayuda a evaluar si el negocio está siendo rentable, si hay pérdidas o si se requiere ajustar gastos. Ejemplo: Una tienda detecta que aunque vende bien, sus gastos aumentan más rápido. El análisis le permite ajustar y recuperar utilidad.
+                                            <br>
+                                            <b><i>Conclusión: El análisis financiero es tu mapa para mejorar.</i></b></p>
+                                        </article>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                          </div>
+                         </div>
+                               </div>
+
+                          </details>
+                      </div>
+                      
+                    </div>
+            </div>
+          </div>
+            </div>
+          </div>
+
+
+<!-- Footer-->
+        <footer class="footer" style="position: fixed; bottom: 0px; left: 0; right: 0; background-color: white; z-index: 100; padding: 20px; " >
+            <div">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

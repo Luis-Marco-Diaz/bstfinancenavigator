@@ -11636,6 +11636,7 @@ border-radius: 5px;
   right: 3%;
   z-index: 1;
   padding-bottom: 100px;
+  padding-top: 70px;
 }
 .containerarticle2 {
   box-sizing: border-box;
@@ -11644,6 +11645,7 @@ border-radius: 5px;
   right: 3%;
   z-index: 3;
   padding-bottom: 100px;
+  padding-top: 70px;
 }
 .containerarticle3 {
   box-sizing: border-box;
@@ -11652,6 +11654,7 @@ border-radius: 5px;
   right: 3%;
   z-index: 5;
   padding-bottom: 100px;
+  padding-top: 70px;
 }
 
 .accordionTitle {
@@ -11684,8 +11687,8 @@ border-radius: 5px;
   grid-template-areas:
     "b1 b1"
     "L1 Art1"
-    "L1 Art2"
-    "L1 Art3";
+    "L1 Art1"
+    "L1 Art1";
 }
 
 .b1 { grid-area: b1;
@@ -11701,16 +11704,13 @@ border-radius: 5px;
 .L1 {
   grid-area: L1;
   display: flex;
-  align-items: center;
   padding-left: 10px;
+  padding-top: 15px;
   background-color: var(--bs-gray-200)
 }
 
 .Art1 { grid-area: Art1; padding: 2%;
 }
-.Art2 { grid-area: Art2; padding: 2%; }
-
-.Art3 { grid-area: Art3; padding: 2%; }
 
 .nav-link-blog {
   display: block;
