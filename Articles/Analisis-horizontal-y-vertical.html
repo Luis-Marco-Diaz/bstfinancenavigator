@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+        <style>
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.hover-underline {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+.hover-underline:hover{
+  font-weight: 600;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ae0a0a, #252525);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="/assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/about.html">Acerca de BST</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html#blog">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/faq.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Header -->
+         <div class=" container-fluid row" style="padding-top: 80px;"  >
+          <div class="col-md-2 L1  ">
+              <ul class="navbar-bar text-uppercase" style="list-style-type: none;" >
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold;" href="/blog.html#blog">Artículos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="/fast.html">Lectura Rápida</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">videos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">E-books</a></li>
+              </ul>
+            </div>  
+          <div class="col-md-10" >
+              <div class="imgarticle" >
+                <figure>
+                  <img src="/assets/img/articles/Analisis-horizontal-y-vertical.jpg" alt="">
+                   <figcaption class="text-center" style="background-color: var(--bs-gray-200); padding: 0.5%;" ><i class="fa-solid fa-clock"></i> Lectura de 4 minutos  | <b>Análisis Financiero</b> </figcaption>
+                </figure> 
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="Art1" id="blog" >
+                  <!-- Page Content -->
+                  <div class="container">
+                    <!-- Page Heading -->
+                    <div class="row">
+                      <div class="col-12 mb-4">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title text-center ">
+                              Análisis Vertical y Horizontal: La doble estratégica para entender tus finanzas
+                            </h2>
+                            <br>
+                            <p class="card-text">
+                              <b>¿Por qué dos perspectivas te dan la visión completa de tu empresa? ,</b>
+                              Imagina analizar la salud financiera de tu empresa desde dos ángulos complementarios. Por un lado, <b>El Análisis Vertical</b> te muestra la estructura de tus estados financieros en un momento dado. Por otro lado, <b>El Análisis Horizontal</b> revela cómo esa estructura cambia a lo largo del tiempo. Juntos, forman una sola <b>unidad estratégica indispensable para entender tanto la composición actual como la evolución de las finanzas de cualquier empresa.</b> En términos sencillos: el análisis vertical es la "fotografía" de tus finanzas (¿cómo está compuesto cada elemento en relación al total?), mientras que el análisis horizontal es la "película" de su progreso (¿cómo han cambiado esos elementos con el tiempo?). Al combinarlos, obtienes una visión clara y completa de dónde estás parado hoy y cómo has llegado hasta aquí, pudiendo así tomar decisiones informadas para el futuro.</p>
+
+                              <h5>Análisis Vertical: la radiografía de tu estructura financiera</h5>
+                              <p>El análisis vertical desglosa tus estados financieros para mostrar qué peso tiene cada rubro dentro del total. En un estado de resultados, sabrás qué porción de tus ingresos se destina a costos, gastos operativos, impuestos, etc. En un balance general, verás cómo se compone tu estructura financiera: qué parte de tus activos totales está en efectivo o inventarios, y cuánto de tu financiamiento corresponde a deudas frente a capital propio. Gracias a esta perspectiva vertical, detectas inmediatamente si tu estructura financiera está balanceada o desproporcionada. ¿Representan tus deudas una parte razonable del total, o están demasiado elevadas? ¿Es saludable el porcentaje de gastos respecto a las ventas? Este análisis actúa como una radiografía instantánea: te permite detectar desequilibrios estructurales y entender la composición exacta de tus finanzas en un periodo determinado, incluso si no cuentas con datos históricos previos.</p>
+
+                              <h5>Análisis Horizontal: la tendencia detrás de los números</h5>
+                              <p>El análisis horizontal se enfoca en la evolución de tus cifras a través del tiempo. Compara tus estados financieros de dos o más periodos consecutivos para ver cómo han crecido o disminuido los distintos rubros. Por ejemplo, ¿han aumentado tus ingresos este año en comparación con el anterior? ¿Cómo ha variado tu deuda o tus costos en el último par de años?
+                              <br>
+                                Este análisis te mostrará la tendencia: identifica crecimientos, estancamientos o caídas en cada componente financiero. Es la manera más clara de responder preguntas como "¿Estamos mejor que el año pasado?" o "¿En qué áreas hemos mejorado y en cuáles hemos retrocedido?". Con la perspectiva horizontal, puedes detectar tendencias a tiempo y anticipar riesgos al notar si alguna cifra crítica (como la utilidad neta o el nivel de endeudamiento) está tomando una dirección indeseada.</p>
+                                <br>
+                                <div class="ilustration" ><img class="ilustration" src="/assets/img/articles/Ilustracion-articulos-analisis-horizontal.jpg" alt="Análsiis Horizontal y Vertical"></div>
+                                <br>
+                                <h5>¿Por qué necesitas ambos análisis?</h5>
+                                <p>Por separado, cada análisis ofrece información valiosa; juntos, proporcionan una <b>visión integral de la salud financiera de tu empresa.</b> El análisis vertical te dice cómo estás hoy, revelando la estructura interna de tus finanzas. El horizontal te dice cómo has cambiado con el tiempo, mostrando el rumbo y la velocidad de esos cambios.
+                                <br>
+                                  Al combinar los dos enfoques, obtienes respuestas completas: no solo entiendes cómo está conformada tu empresa financieramente, sino también cómo esa conformación está progresando o deteriorándose con el tiempo. En otras palabras, puedes ver la foto del momento actual y la película de la evolución financiera al mismo tiempo. Esta doble estratégica es indispensable para detectar oportunidades y problemas que podrían pasar desapercibidos con un solo enfoque. <b> Vertical + Horizontal = Decisiones más inteligentes: </b> Al usar ambos análisis, podrás identificar si un problema proviene de una estructura inadecuada (por ejemplo, demasiada deuda en tu pasivo) o de una tendencia negativa (por ejemplo, esa deuda crece demasiado rápido año tras año). También sabrás si un buen resultado puntual es verdaderamente sólido al verlo en contexto histórico. En resumen, combinar análisis vertical y horizontal te permite corregir desequilibrios a tiempo y planificar con mayor certeza, respaldando cada decisión en datos tanto estáticos como dinámicos. </p>
+
+                                <h5>Llévalo a la práctica con <span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h5>
+                                <p>Tanto el análisis vertical como el horizontal pueden sonar complejos, pero con las herramientas adecuadas son procesos simples y poderosos. <b><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</b> integra ambas metodologías en su plataforma para que cualquier usuario, sin necesidad de ser experto en finanzas, pueda beneficiarse de esta visión dual.
+                                  <br>
+                                Nuestra plataforma hace los cálculos por ti y presenta la información en gráficos y reportes fáciles de entender. En el nivel Intermedio de <b><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</b> tienes acceso a análisis vertical y horizontal con interpretaciones claras y visualizaciones interactivas para evaluar tu desempeño financiero. En el nivel Avanzado, estas herramientas se potencian aún más, permitiéndote personalizar comparativas, profundizar en detalles e incluso generar informes ajustados a tus necesidades para una toma de decisiones de alto nivel. Ambos niveles, Intermedio y Avanzado, te brindan este conjunto completo de análisis que antes solo estaba al alcance de expertos o de largas hojas de cálculo. Ahora lo tendrás al alcance de un clic, integrado con tus datos reales y siempre disponible para consultar la salud de tu negocio.</p>
+
+                                <h5>Detecta tendencias, corrige desequilibrios y anticipa riesgos: ¡Suscríbete ahora!</h5>
+                                <p>Entender la estructura y la evolución de tus finanzas te da una ventaja invaluable: puedes adelantarte a los problemas y capitalizar las oportunidades. Al suscribirte a BSTFinanceNavigator en sus niveles Intermedio o Avanzado, tendrás en tus manos las herramientas de análisis vertical y horizontal para lograr justamente eso. Con estas herramientas, podrás:</p>
+                                <ul>
+                                  <li><b>Detectar tendencias financieras a tiempo,</b> visualizando patrones de crecimiento o decrecimiento en tus ingresos, gastos, activos y deudas.</li>
+                                  <li><b>Corregir desequilibrios en tu estructura financiera,</b> dentificando si algún componente (como costos, inventarios o pasivos) está fuera de proporción y tomando medidas antes de que sea un problema mayor.</li>
+                                  <li><b>Anticipar riesgos futuros </b> al observar señales de alerta en la evolución de tus cifras, para que puedas actuar preventivamente en lugar de reaccionar tarde.</li>
+                                </ul>
+                                
+                                <p>No dejes la salud financiera de tu empresa a la suerte. Suscríbete hoy mismo a  <b><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</b> (Intermedio o Avanzado) y aprovecha el poder combinado del análisis vertical y horizontal. Con esta doble estratégica entenderás plenamente tu negocio, podrás tomar decisiones con confianza y asegurar un crecimiento sostenido.</p>
+                                <br>
+                                <b> ¿Listo para llevar tus finanzas al siguiente nivel?, Empieza ahora con <span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator y obtén la perspectiva completa que necesitas para triunfar. </b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.row -->
+
+                  </div>
+                  <!-- /.container -->
+          </div>
+
+<!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
