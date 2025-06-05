@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+        <style>
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.hover-underline {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+.hover-underline:hover{
+  font-weight: 600;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ae0a0a, #252525);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="/assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/about.html">Acerca de BST</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html#blog">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/faq.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Header -->
+         <div class=" container-fluid row" style="padding-top: 80px;"  >
+          <div class="col-md-2 L1  ">
+              <ul class="navbar-bar text-uppercase" style="list-style-type: none;" >
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold;" href="/blog.html#blog">Artículos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="/fast.html">Lectura Rápida</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">videos</a></li>
+                    <li style="padding: 10px 0px;" ><a class="nav-link-blog" style="font-weight: bold; " href="">E-books</a></li>
+              </ul>
+            </div>  
+          <div class="col-md-10" >
+              <div class="imgarticle" >
+                <figure>
+                  <img src="/assets/img/articles/Modelo-BST-Gestion-por-Utilidad.png" alt="">
+                   <figcaption class="text-center" style="background-color: var(--bs-gray-200); padding: 0.5%;" ><i class="fa-solid fa-clock"></i> Lectura de 5 minutos  | <b>Gestión Empresarial</b> </figcaption>
+                </figure> 
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="Art1" id="blog" >
+                  <!-- Page Content -->
+                  <div class="container">
+                    <!-- Page Heading -->
+                    <div class="row">
+                      <div class="col-12 mb-4">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title text-center ">
+                              Modelo <span style="color: #ae0a0a;">BST</span> de Gestión por Utilidad Prioritaria
+                            </h2>
+                            <br>
+                            <h5>Introducción</h5>
+                            <p class="card-text">
+                              <p>En el mundo de los negocios, no basta con vender. Muchas empresas ingresan dinero constantemente, <b>pero al final del mes su rentabilidad es inexistente o incierta.</b> No alcanzan a ver una ganancia verdadera. Este problema no siempre se debe a una falta de ventas, sino a la ausencia de una estrategia estructurada para administrar esos ingresos.</p>
+
+                              <p><b><span style="color: #cf0b0b;">BST</span>Finance Navigator</b> nace para resolver ese vacío, para reemplazar la improvisación por una metodología clara, estructurada y orientada a la rentabilidad sostenida. <b style="color: #ae0a0a;" >BST</b> combina una metodología clara y accesible para ello; <b>El Modelo <span style="color: #ae0a0a;">BST</span> de Gestión por Utilidad Prioritaria</b>, que junto con una plataforma digital, permite aplicarlo de forma continua, mes a mes, con base en datos reales y sin necesidad de ser un experto contable o financiero.</p>
+                              <h5 class="text-center" style="line-height: 2rem;" >Este sistema no es sólo una herramienta contable, es una nueva forma de pensar en el mundo de los negocios. <i>La propuesta es directa: <span style="color: #ae0a0a;" >Dejar de improvisar y definir la utilidad como objetivo desde el inicio de operaciones; y protegerla como el activo más valioso del negocio.</span></i></h5>
+                            
+                              <p>En lugar de operar y esperar que “sobre algo”, tal como se lleva a cabo por sistema a través de un estado de resultados, mejor se planifica desde el principio cuánto se quiere ganar siendo este el objetivo primario.</p>
+                              
+                              <h5>Fundamento del Modelo <span style="color: #ae0a0a;">BST</span></h5>
+                              <ul>
+                                <p><b>El Modelo <span style="color: #ae0a0a;" >BST</span></b> es una metodología contable-estratégica que ayuda a transformar los datos financieros en decisiones operativas. Está diseñado para todo tipo de usuario: desde emprendedores y pymes hasta consultores, contadores o corporativos. Su objetivo es enseñar a gestionar con base en utilidad planeada, no en resultados residuales.</p>
+                               
+                                <p><b>El Modelo <span style="color: #ae0a0a;" >BST</span></b> responde a una realidad común: muchas personas y negocios trabajan, venden y facturan, pero no logran generar utilidad real y constante. No porque falten ingresos, sino porque no existe una estrategia clara para administrarlos. Esto ocurre porque administran en función del saldo en la cuenta final, no de un propósito definido.</p>
+                                
+                                <p><b>El Modelo <span style="color: #ae0a0a;" >BST</span></b> propone un cambio de raíz, un cambio profundo: gestionar con base en la utilidad deseada, no en los resultados residuales, sino de definir cuánto se quiere ganar desde el principio, y gestionar con base en esa meta.</p>
+                              </ul>
+
+                              <h5>Pilares Fundamentales del Modelo <span style="color: #ae0a0a;">BST</span></h5>
+                              <ul>
+                                <p>Este principio se basa en los siguientes pilares fundamentales:</p>
+
+                                <p>1) El uso disciplinado de los <b>Estados financieros formales</b> (Balance General y Estado de Resultados).</p>
+                                <p>2) La aplicación del proceso de los principios clásicos de la administración: <b>Prever, Planear, Organizar, Dirigir y Controlar.</b></p>
+                                <p>3) Se define al inicio como una meta financiera operativa.</p>
+                                <p>4) Utilizar El simulador financiero de <b><span style="color: #cf0b0b;" >BST</span>Finance Navigator</b> que permite al usuario proyectar escenarios con autonomía. </p>
+                                <p>5) Se promueve una disciplina mensual: El análisis financiero no es esporádico, es continuo.</p>
+
+                              </ul>
+                              
+                              <p>Este modelo de gestión es accesible para cualquier persona, independientemente de su formación técnica, ya que convierte las finanzas en decisiones comprensibles, aplicables y repetibles.</p>
+
+                                <br>
+                                <div class="ilustration" ><img class="ilustration" src="/assets/img/articles/Ilustracion-articulos-analisis-horizontal.jpg" alt="Análsiis Horizontal y Vertical"></div>
+                                <br>
+
+                                <h5>Las Cinco Fases del Modelo <span style="color: #ae0a0a;">BST</span></h5>
+
+                                <b>1. Claridad Financiera: Diagnóstico mensual con base en datos reales.</b>
+                                <p>Antes de tomar decisiones, necesitas saber con precisión dónde estás parado. Esta fase no se basa en suposiciones ni estimaciones, sino en la lectura mensual del <b>Balance General y del Estado de Resultados.</b> Se trata de hacer visible lo invisible</p>
+                                <p><b>Ejemplo:</b> Una ferretería descubre que sus ventas han aumentado, pero su utilidad neta se ha reducido porque los gastos en entregas duplicaron su costo logístico.</p>
+
+                                <b>2. Asignación por Propósito: Distribución intencional del ingreso operativo.</b>
+                                <p>ACada peso que entra debe tener un propósito antes de gastarse. Esta fase busca ordenar el ingreso mediante bloques: utilidad deseada, reservas, impuestos, costos fijos y reinversión.</p>
+                                <p><b>Ejemplo:</b> Una tienda online asigna semanalmente el 10% para utilidad, 5% para impuestos, y distribuye el resto según presupuesto.</p>
+
+                                <b>3. Protección de la Utilidad: La utilidad planificada se resguarda y no se improvisa.</b>
+                                <p>ACada peso que entra debe tener un propósito antes de gastarse. Esta fase busca ordenar el ingreso mediante bloques: utilidad deseada, reservas, impuestos, costos fijos y reinversión.</p>
+                                <p><b>Ejemplo:</b> Una tienda online asigna semanalmente el 10% para utilidad, 5% para impuestos, y distribuye el resto según presupuesto.</p>
+                                
+                                <b>4. Crecimiento Sostenible: Invertir solo cuando hay excedente, no por impulso.</b>
+                                <p>ACada peso que entra debe tener un propósito antes de gastarse. Esta fase busca ordenar el ingreso mediante bloques: utilidad deseada, reservas, impuestos, costos fijos y reinversión.</p>
+                                <p><b>Ejemplo:</b> Una tienda online asigna semanalmente el 10% para utilidad, 5% para impuestos, y distribuye el resto según presupuesto.</p>
+
+                                <b>5. Decisiones por Margen: Toda acción debe mejorar la rentabilidad real.</b>
+                                <p>ACada peso que entra debe tener un propósito antes de gastarse. Esta fase busca ordenar el ingreso mediante bloques: utilidad deseada, reservas, impuestos, costos fijos y reinversión.</p>
+                                <p><b>Ejemplo:</b> Una tienda online asigna semanalmente el 10% para utilidad, 5% para impuestos, y distribuye el resto según presupuesto.</p>
+                                <br>
+
+                                <h5>Plataforma <span style="color: #cf0b0b;" >BST</span>Finance Navigator, Tres Niveles, Un Solo Objetivo</h5>
+                                <p>La plataforma es el espacio digital donde el <b>El Modelo <span style="color: #ae0a0a;" >BST</span></b> cobra vida. Diseñada para ser utilizada por cualquier persona, desde un emprendedor hasta una pyme; Permite aplicar la metodología de forma práctica, visual y mensual.</p>
+                                <h5>Tres niveles de madurez financiera</h5>
+                                <table>
+                                  <thead style="background-color: #ae0a0a; color: white;" >
+                                        <tr>
+                                          <th class="text-center">Nivel</th>
+                                          <th class="text-center">Enfoque Principal</th>
+                                          <th class="text-center">Fases del Modelo BST</th>
+                                          <th class="text-center">Herramientas Clave</th>
+                                        </tr>
+                                  </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td style="background-color: var(--bs-blue); color: white;" ><b>Básico</b></td>
+                                          <td>Diagnóstico inicial</td>
+                                          <td>Claridad Financiera</td>
+                                          <td>Visor financiero, reporte interpretado, 15 indicadores financieros</td>
+                                        </tr>
+                                        <tr>
+                                          <td style="background-color: var(--bs-red-BST); color: white;" ><b>Intermedio</b></td>
+                                          <td>Organización proactiva</td>
+                                          <td>Asignación y Protección</td>
+                                          <td>Simulador básico, análisis vertical/horizontal, 36 indicadores financieros</td>
+                                        </tr>
+                                        <tr>
+                                          <td style="background-color: #000000;color: white;"><b>Avanzado</b></td>
+                                          <td>Planeación estratégica</td>
+                                          <td>Crecimiento y Decisiones por Margen</td>
+                                          <td>Simulador avanzado, escenarios, 61 indicadores financieros</td>
+                                        </tr>
+                                      </tbody>
+                                </table>
+                                <br>
+                                <div class="row" >
+                                  <div class="col-md-4 card "><b class="card-header" >Con el Nivel Básico obtienes claridad</b><video width="100%" controls loop src="/assets/videos/BSTFinanceNavigator -Nivel-Basico.mp4"></video></div>
+                                  <div class="col-md-4 card "><b class="card-header" >Con el Intermedio tomas el control</b><video width="100%" controls loop src="/assets/videos/BSTFinanceNavigator-Nivel-Intermedio.mp4"></video></div>
+                                  <div class="col-md-4 card "><b class="card-header">Con el Avanzado planificas tu rentabilidad</b><video width="100%" controls loop src="/assets/videos/BSTFinanceNavigator - Avanzados.mp4"></video></div>
+                                </div>
+                                <br>
+                                
+                                <h5>Comparativa de funcionalidades</h5>
+                                <div style="display: flex; justify-content: center; ">
+                                  <img style="max-width: 60%;" src="/assets/img/TablaComparativaBSTFinanceNavigator.png" alt="Tabla Comparativa de Suscripciones a BST Finance Nevigator">
+                                </div>
+                                <p>Nuestra plataforma no es una app contable más: es un sistema de entrenamiento financiero. Cada mes se convierte en una sesión práctica para tomar decisiones reales.</p>
+                                <br>
+                                <h5>Errores comunes que el Modelo <span style="color: #ae0a0a;" >BST</span> corrige</h5>
+                                <ul>
+                                  <li>Mezclar finanzas personales y del negocio.</li>
+                                  <li>Reinvertir sin confirmar rentabilidad.</li>
+                                  <li>Gastar en función del saldo, no del flujo.</li>
+                                  <li>Tomar decisiones impulsivas sin analizar márgenes.</li>
+                                  <li>Subestimar la carga fiscal hasta el cierre.</li>
+                                </ul>
+                                <h5>Resultados al aplicar <span style="color: #ae0a0a;">BST</span> Finance Navigator</h5>
+                                <ul>
+                                  <li>Utilidad protegida y previsible desde el primer mes.</li>
+                                  <li>Reducción del estrés financiero.</li>
+                                  <li>Mayor claridad en decisiones operativas.</li>
+                                  <li>Cultura de administración por procesos.</li>
+                                  <li>Profesionalización de la gestión financiera.</li>
+                                  <li>Expansión basada en excedentes reales.</li>
+                                </ul>
+
+                                <h5>Rentabilidad como filosofía de gestión</h5>
+
+                                <p>La utilidad no es lo que queda. Es lo que decides proteger. Este principio guía todo el sistema. <b style="color: #ae0a0a;" >BST</b> no solo ofrece herramientas, sino que entrena una nueva mentalidad empresarial. Enseña a dejar la urgencia como motor de decisiones, y adoptar una lógica de rentabilidad planificada. Como lo expresan los guiones institucionales: <b>“La utilidad no se encuentra. Se diseña.” </b> El sitio web de  <b style="color: #ae0a0a;" >BST</b> refuerza esta filosofía: diseño claro, estructura funcional, y foco en acompañar al usuario mes a mes. La experiencia digital está centrada en el valor aplicado, no en la complejidad técnica.</p>
+                                
+                                <h5>Conclusión Final</h5>
+
+                                <p>BSTFinanceNavigator no es una moda financiera. Es una herramienta concreta para transformar negocios desde la base: la utilidad.
+                                <br>
+                                  Ya sea que estés comenzando tu emprendimiento, que lleves años operando sin claridad, o que busques escalar con estrategia, <b style="color: #ae0a0a;" >BST</b> te da el mapa, las herramientas y la mentalidad correcta.
+                                <br>
+                                  Con <b style="color: #ae0a0a;" >BST</b>, la rentabilidad deja de ser un accidente. Se convierte en el centro de tu operación.</p>
+
+                                <h5 class="text-center" style="line-height: 2rem;" >“Modelo <span style="color: #ae0a0a;">BST</span> + Plataforma <span style="color: #ae0a0a;">BST</span>inanceNavigator: una alianza que transforma tus decisiones en rentabilidad, tu operación en estrategia, y tu empresa en una organización financieramente sólida.” </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.row -->
+
+                  </div>
+                  <!-- /.container -->
+          </div>
+
+<!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
