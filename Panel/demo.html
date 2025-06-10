@@ -34,7 +34,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="layoutSidenav">
+    <div id="layoutSidenav">
              <!-- Navbar lateral-->
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -97,188 +97,210 @@
             </div>
   
  <!-- PANEL CONTENT -->
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
+          <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
                         <h1 class="mt-4">Empresa SA de CV</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active"><h5>Tablero de Control Financiero</h5></li>
                         </ol>
-                        <h4 class="text-center" style="font-weight: 700; color: var(--bs-blue); " >Proyección Financiera - Nivel Básico </h4>
-                    
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h5><i class="fa-regular fa-file-lines"></i> Balance General (USD)</h5>
+                        <hr>
+                        <div>
+                            <ul>
+                                <li style="font-size: 18px;" >Conoce tu Potencial Financiero y Visualiza cómo luce un análisis profesional según tu nivel de suscripción</li>
+                                <li style="font-size: 18px;" >Selecciona un plan y accede al ejemplo real que recibirías.</li>
+                                <li style="font-size: 18px;" >Descubre cómo cada nivel ofrece más detalle, profundidad y recomendaciones prácticas.</li>
+                            </ul>
+                            <br>
+                            <div style="display: flex; justify-content: space-evenly; " >
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
+                                <b>Nivel Básico</b>
+                                </button>
+                                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
+                                <b>Nivel Intermedio</b>
+                                </button>
+                                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
+                                <b>Nivel Avanzado</b>
+                                </button>
                             </div>
-                            <div class="card-body">
-                                <table style="width: 100%;" >
-                                    <thead >
-                                        <tr style="background-color: var(--bs-gray-300);" >
-                                            <th>CONCEPTO</th>
-                                            <th>MONTO (USD)</th>
+                                
+                        </div>
+                        <!-- BASIC LEVEL -->
+                            <div style="padding-top: 30px;" class="collapse" id="basic" >
+                                <h4 class="text-center" style="font-weight: 700; color: var(--bs-blue); " >Proyección Financiera - Nivel Básico </h4>
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5><i class="fa-regular fa-file-lines"></i> Balance General (USD)</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table style="width: 100%;" >
+                                        <thead >
+                                            <tr style="background-color: var(--bs-gray-300);" >
+                                                <th>CONCEPTO</th>
+                                                <th>MONTO (USD)</th>
+                                                <th>CONCEPTO</th>
+                                                <th>MONTO (USD)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b>ACTIVO</b></td>
+                                            <td></td>
+                                            <td><b>PASIVO (ADEUDOS)</b></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Activo Circulante</td>
+                                            <td>45,000</td>
+                                            <td>Total Pasivo Circulante</td>
+                                            <td>25,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Activos Fijos</td>
+                                            <td>70,000</td>
+                                            <td>Total Pasivos a Largo Plazo</td>
+                                            <td>30,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Activo Diferido</td>
+                                            <td>10,000</td>
+                                            <td><b>Total de Pasivos</b></td>
+                                            <td><b>55,000</b></td>
+                                        </tr>
+                                        <tr style="background-color: var(--bs-gray-200)" >
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td><b>PATRIMONIO</b></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Activo Total</b></td>
+                                            <td><b>125,000</b></td>
+                                            <td>Capital Social</td>
+                                            <td>50,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Reservas</td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Utilidades Retenidas</td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td><b>Total Capital Contable</b></td>
+                                            <td><b>70,000</b></td>
+                                        </tr>
+                                        <tr style="background-color: var(--bs-gray-200)" >
+                                            <td ></td>
+                                            <td ></td>
+                                            <td ></td>
+                                            <td ></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td><b>Total de Pasivos y Capital Contable</b></td>
+                                            <td><b>125,000</b></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5><i class="fa-regular fa-file-lines"></i> Estado de Resultados (USD)</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table style="width: 60%;" >
+                                        <thead>
+                                        <tr>
                                             <th>CONCEPTO</th>
                                             <th>MONTO (USD)</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><b>ACTIVO</b></td>
-                                        <td></td>
-                                        <td><b>PASIVO (ADEUDOS)</b></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total Activo Circulante</td>
-                                        <td>45,000</td>
-                                        <td>Total Pasivo Circulante</td>
-                                        <td>25,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Activos Fijos</td>
-                                        <td>70,000</td>
-                                        <td>Total Pasivos a Largo Plazo</td>
-                                        <td>30,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Activo Diferido</td>
-                                        <td>10,000</td>
-                                        <td><b>Total de Pasivos</b></td>
-                                        <td><b>55,000</b></td>
-                                    </tr>
-                                    <tr style="background-color: var(--bs-gray-200)" >
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td><b>PATRIMONIO</b></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Activo Total</b></td>
-                                        <td><b>125,000</b></td>
-                                        <td>Capital Social</td>
-                                        <td>50,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Reservas</td>
-                                        <td>10,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Utilidades Retenidas</td>
-                                        <td>10,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td><b>Total Capital Contable</b></td>
-                                        <td><b>70,000</b></td>
-                                    </tr>
-                                    <tr style="background-color: var(--bs-gray-200)" >
-                                        <td ></td>
-                                        <td ></td>
-                                        <td ></td>
-                                        <td ></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td><b>Total de Pasivos y Capital Contable</b></td>
-                                        <td><b>125,000</b></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                        <tbody>
+                                        <tr>
+                                            <td>Ventas Netas</td>
+                                            <td>200,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Costo de Ventas</td>
+                                            <td>140,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Utilidad Bruta</b></td>
+                                            <td><b>60,000</b></td>
+                                        </tr>
+                                        <tr style="background-color: var(--bs-gray-300);" >
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>GASTOS OPERATIVOS</b></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gastos Administrativos</td>
+                                            <td>20,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gastos de Venta</td>
+                                            <td>15,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ingresos Financieros</td>
+                                            <td>5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gastos Financieros</td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr style="background-color: var(--bs-gray-300);" >
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Utilidad Operativa (EBIT)</td>
+                                            <td>20,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Impuesto Sobre La Renta</td>
+                                            <td>6,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Utilidad Neta</b></td>
+                                            <td><b>14,000</b></td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
                             </div>
-                        </div>
-                        <hr>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h5><i class="fa-regular fa-file-lines"></i> Estado de Resultados (USD)</h5>
+                            <hr>
+                            <h4 class="text-center" style="font-weight: 700; color: var(--bs-blue); " >Análisis Financiero COMPLETO – Nivel Básico (15 Indicadores) </h4>
+                            <p>Este informe incluye el análisis completo del Nivel Básico, basado en la proyección contable validada. Los 15 indicadores se calculan, clasifican y describen conforme al analisis financiero practicado con agrupación según desempeño.</p>
+                            <br>
+                            <div>
+                                <iframe style="position: absolute; width: 90%; height: 100%; zoom: 0.89; -moz-transform: scale(0.89); -moz-transform-origin: 0 0; -o-transform: scale(0.89); -o-transform-origin: 0 0; -webkit-transform: scale(0.89); -webkit-transform-origin: 0 0; " src="https://mundoprogresivo.com/bstfinance/reporte.php" frameborder="0"></iframe>
                             </div>
-                            <div class="card-body">
-                                <table style="width: 60%;" >
-                                    <thead>
-                                    <tr>
-                                        <th>CONCEPTO</th>
-                                        <th>MONTO (USD)</th>
-                                    </tr>
-                                </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Ventas Netas</td>
-                                        <td>200,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Costo de Ventas</td>
-                                        <td>140,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Utilidad Bruta</b></td>
-                                        <td><b>60,000</b></td>
-                                    </tr>
-                                    <tr style="background-color: var(--bs-gray-300);" >
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>GASTOS OPERATIVOS</b></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gastos Administrativos</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gastos de Venta</td>
-                                        <td>15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ingresos Financieros</td>
-                                        <td>5,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gastos Financieros</td>
-                                        <td>10,000</td>
-                                    </tr>
-                                    <tr style="background-color: var(--bs-gray-300);" >
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Utilidad Operativa (EBIT)</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Impuesto Sobre La Renta</td>
-                                        <td>6,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Utilidad Neta</b></td>
-                                        <td><b>14,000</b></td>
-                                    </tr>
-                                    </tbody>
-                                    </table>
                             </div>
-                        </div>
-                        <hr>
-                        <h4 class="text-center" style="font-weight: 700; color: var(--bs-blue); " >Análisis Financiero COMPLETO – Nivel Básico (15 Indicadores) </h4>
-                        <p>Este informe incluye el análisis completo del Nivel Básico, basado en la proyección contable validada. Los 15 indicadores se calculan, clasifican y describen conforme al analisis financiero practicado con agrupación según desempeño.</p>
-                        <br>
-                        <div>
-                            <iframe style="position: absolute; width: 90%; height: 100%; zoom: 0.89; -moz-transform: scale(0.89); -moz-transform-origin: 0 0; -o-transform: scale(0.89); -o-transform-origin: 0 0; -webkit-transform: scale(0.89); -webkit-transform-origin: 0 0; " src="https://mundoprogresivo.com/bstfinance/reporte.php" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </main>
-                
-            </div>
-        </div>
+                </div>
+            </main>
+          </div>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
