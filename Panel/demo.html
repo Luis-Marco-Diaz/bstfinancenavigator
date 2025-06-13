@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/index.html">BST Finance Navigator</a>
+            <a class="navbar-brand ps-3" href="/index.html"><i class="fa-regular fa-square-caret-left"></i> Regresar al Sitio</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -114,14 +114,23 @@
                             <br>
                             <div style="display: flex; justify-content: space-evenly; " >
                                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
-                                <b>Nivel Básico</b>
+                                <b>Análisis Básico</b>
                                 </button>
                                 <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
-                                <b>Nivel Intermedio</b>
+                                <b>Análisis Intermedio</b>
                                 </button>
                                 <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
-                                <b>Nivel Avanzado</b>
+                                <b>Análisis Avanzado</b>
                                 </button>
+
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
+                                <b>Análisis Vertical y Horizontal Financiero</b>
+                                </button>
+
+                                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#basic" aria-expanded="false" aria-controls="collapseExample">
+                                <b>Simulador Financiero</b>
+                                </button>
+                                
                             </div>
                                 
                         </div>
@@ -133,6 +142,11 @@
                                     <h5><i class="fa-regular fa-file-lines"></i> Balance General (USD)</h5>
                                 </div>
                                 <div class="card-body">
+                                    <style>
+                                        th{
+                                        text-align: center;
+                                        }
+                                    </style>
                                     <table style="width: 100%;" >
                                         <thead >
                                             <tr style="background-color: var(--bs-gray-300);" >
@@ -227,7 +241,7 @@
                                 <div class="card-body">
                                     <table style="width: 60%;" >
                                         <thead>
-                                        <tr>
+                                        <tr style="background-color: var(--bs-gray-300);" >
                                             <th>CONCEPTO</th>
                                             <th>MONTO (USD)</th>
                                         </tr>
