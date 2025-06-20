@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - BST Finance Navigator</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/index.html"><i class="fa-regular fa-square-caret-left"></i> Regresar al Sitio</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    <div id="layoutSidenav">
+             <!-- Navbar lateral-->
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">MAIN</div>
+                            <a class="nav-link" href="demo.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Tablero de Control
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Simulador Financiero
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Históricos
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a  onclick="suscription()" class="nav-link" href="">2025</a>
+                                            <a  onclick="suscription()" class="nav-link" href="">2024</a>
+                                            <a onclick="suscription()" class="nav-link" href="">2023</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Nueva Simulación
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a onclick="suscription()" class="nav-link" href="">Empresa 1</a>
+                                            <a onclick="suscription()" class="nav-link" href="">Empresa 2</a>
+                                            <a onclick="suscription()" class="nav-link" href="">Empresa 3</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" style="cursor: pointer;" onclick="suscription()" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" style="cursor: pointer;"  onclick="suscription()" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Empresa DEMO
+                    </div>
+                </nav>
+            </div>
+  
+ <!-- PANEL CONTENT -->
+          <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                        <h1 class="mt-4">Empresa SA de CV</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"><h5>Tablero de Control Financiero</h5></li>
+                        </ol>
+                        <hr>
+                        <div>
+                            <ul style="list-style-type: none;">
+                                <li style="font-size: 18px;" ><b>1.</b> Conoce tu Potencial Financiero y Visualiza cómo luce un análisis profesional según tu nivel de suscripción</li>
+                                <li style="font-size: 18px;" ><b>2.</b> Selecciona un plan y accede al ejemplo real que recibirías.</li>
+                                <li style="font-size: 18px;" ><b>3.</b> Descubre cómo cada nivel ofrece más detalle, profundidad y recomendaciones prácticas.</li>
+                            </ul>
+                            <br>
+                            <div style="display: flex; justify-content: space-evenly; " >
+                                <a class="btn btn-primary" type="button" href="/Panel/demo.html" >
+                                <b>Análisis Básico</b>
+                                </a>
+                                <a class="btn btn-danger" type="button" href="/Panel/demo-middle.html">
+                                <b>Análisis Intermedio</b>
+                                </a>
+                                <a class="btn btn-dark" type="button" href="/Panel/demo-advance.html">
+                                <b>Análisis Avanzado</b>
+                                </a>
+
+                                <a class="btn btn-warning" type="button" href="/Panel/demo-vh.html">
+                                <b>Análisis Vertical y Horizontal Financiero</b>
+                                </a>
+
+                                <a class="btn btn-success" type="button" href="/Panel/demo.html">
+                                <b>Simulador Financiero</b>
+                                </a>
+                            </div>
+                                
+                        </div>
+                        <!-- ADVANCE LEVEL -->
+                        <div style="padding-top: 30px;" id="advance" >
+                            <h4 class="text-center" style="font-weight: 700; color: var(--bs-black); " >Proyección Financiera - Nivel Avanzado </h4>
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5><i class="fa-regular fa-file-lines"></i> Balance General (USD)</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <style>
+                                            th{
+                                            text-align: center;
+                                            }
+                                        </style>
+                                        <table style="width: 100%;" >
+                                            <thead >
+                                                <tr style="background-color: var(--bs-gray-300);" >
+                                                    <th>CONCEPTO</th>
+                                                    <th>MONTO (USD)</th>
+                                                    <th>CONCEPTO</th>
+                                                    <th>MONTO (USD)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><b>ACTIVO</b></td>
+                                                <td></td>
+                                                <td><b>PASIVO (ADEUDOS)</b></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Activo Circulante</td>
+                                                <td class="text-center" >85,000</td>
+                                                <td>Total Pasivo Circulante</td>
+                                                <td class="text-center" >95,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activos Fijos</td>
+                                                <td class="text-center" >200,000</td>
+                                                <td>Total Pasivos a Largo Plazo</td>
+                                                <td class="text-center" >120,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activo Diferido</td>
+                                                <td class="text-center" >20,000</td>
+                                                <td><b>Total de Pasivos</b></td>
+                                                <td class="text-center" ><b>215,000</b></td>
+                                            </tr>
+                                            <tr style="background-color: var(--bs-gray-200)" >
+                                                <td colspan="4" ></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><b>PATRIMONIO</b></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Activo Total</b></td>
+                                                <td class="text-center" ><b>305,000</b></td>
+                                                <td>Capital Social</td>
+                                                <td class="text-center" >60,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Reservas</td>
+                                                <td class="text-center" >15,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Utilidades Retenidas</td>
+                                                <td class="text-center" >15,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><b>Total Capital Contable</b></td>
+                                                <td class="text-center" ><b>90,000</b></td>
+                                            </tr>
+                                            <tr style="background-color: var(--bs-gray-200)" >
+                                                <td colspan="4" ></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><b>Total de Pasivos y Capital Contable</b></td>
+                                                <td class="text-center" ><b>305,000</b></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5><i class="fa-regular fa-file-lines"></i> Estado de Resultados (USD)</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <table style="width: 60%;" >
+                                            <thead>
+                                            <tr style="background-color: var(--bs-gray-300);" >
+                                                <th>CONCEPTO</th>
+                                                <th>MONTO (USD)</th>
+                                            </tr>
+                                        </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Ventas Netas</td>
+                                                <td class="text-center" >400,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Costo de Ventas</td>
+                                                <td class="text-center" >290,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Utilidad Bruta</b></td>
+                                                <td class="text-center" ><b>110,000</b></td>
+                                            </tr>
+                                            <tr style="background-color: var(--bs-gray-300);" >
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>GASTOS OPERATIVOS</b></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gastos Administrativos</td>
+                                                <td class="text-center" >35,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gastos de Venta</td>
+                                                <td class="text-center" >25,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ingresos Financieros</td>
+                                                <td class="text-center" >6,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gastos Financieros</td>
+                                                <td class="text-center" >18,000</td>
+                                            </tr>
+                                            <tr style="background-color: var(--bs-gray-300);" >
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Utilidad Operativa (EBIT)</td>
+                                                <td class="text-center" >38,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Impuesto Sobre La Renta</td>
+                                                <td class="text-center" >11,400</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Utilidad Neta</b></td>
+                                                <td class="text-center" ><b>26,600</b></td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
+                                    </div>
+                                </div>
+                                <hr>
+                                <h4 class="text-center" style="font-weight: 700; color: var(--bs-black); " >Análisis Financiero COMPLETO – Nivel Avanzado (60 Indicadores) </h4>
+                                <p>Este informe incluye el análisis completo del Nivel Avanzado, basado en la proyección contable validada; Los 60 indicadores se calculan, clasifican y describen conforme al analisis financiero practicado con agrupación según desempeño.</p>
+                                <br>
+                                <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-2 shadow mb-5 bg-body rounded ">
+                                    <div class="card-header bg-danger text-white" ><b><i class="fa-solid fa-triangle-exclamation"></i> Área con Prioridad Crítica</b></div>
+                                    <div class="card-body">
+                                    <table class="table table-hover table-sm" style="border: 0px;"  >
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >INTERPRETACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>Hay presión financiera de corto plazo por desequilibrio en la estructura de liquidez.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>El negocio tiene muy poco respaldo inmediato para cubrir sus necesidades urgentes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Nivel de deuda elevado. Riesgo de dependencia financiera.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>Nivel técnico aceptable. El uso del activo es rentable dentro del umbral estándar.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>El retorno sobre el capital es limitado. Indica baja efectividad del patrimonio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Los activos no están generando suficientes ingresos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>La utilidad operativa no cubre de forma adecuada los gastos financieros.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Capital de trabajo insuficiente para respaldar operaciones corrientes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>El ciclo operativo es extenso. Exige mayor financiamiento interno.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Margen neto limitado. Riesgo financiero ante caídas de ingresos</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Nivel elevado de apalancamiento. Riesgo de inestabilidad financiera.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #12</b></td>
+                                            <td>Riesgo operativo por falta de liquidez funcional.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #13</b></td>
+                                            <td>Rotación deficiente de cuentas por cobrar. Impacta liquidez y sostenibilidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #14</b></td>
+                                            <td>Insuficiencia operativa para responder con activos líquidos a los compromisos inmediatos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #15</b></td>
+                                            <td>Riesgo operativo por escasez de efectivo inmediato.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #16</b></td>
+                                            <td>Estructura financiera desbalanceada. Riesgo de pérdida de control sobre la operación.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #17</b></td>
+                                            <td>ROI por debajo del umbral financiero. Inversión ineficiente en términos estratégicos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #18</b></td>
+                                            <td>Insuficiente capacidad operativa para cumplir con obligaciones</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #19</b></td>
+                                            <td>Déficit de capital de trabajo operativo. Riesgo de interrupciones funcionales.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #20</b></td>
+                                            <td>Riesgo estructural de continuidad financiera.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #21</b></td>
+                                            <td>Margen EBIT por debajo del estándar sectorial. Riesgo de pérdida sostenida.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #22</b></td>
+                                            <td>Alto nivel de deuda. Riesgo de sobreexposición financiera</td>
+                                        </tr>
+                                         <tr>
+                                            <td><b> #23</b></td>
+                                            <td>Rentabilidad operativa débil. Riesgo de estancamiento financiero.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #24</b></td>
+                                            <td>Bajo retorno en activos fijos. Riesgo de ineficiencia estructural.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #25</b></td>
+                                            <td>Estructura de costos fijos adecuada para la operación actual.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #26</b></td>
+                                            <td>El negocio mantiene un punto de equilibrio financiero.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #27</b></td>
+                                            <td>Desbalance entre liquidez disponible y volumen comercial.</td>
+                                        </tr>
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-4 shadow mb-5 bg-body rounded ">
+                                     <div class="card-header bg-danger text-white" ><b>Nivel Avanzado</b></div>
+                                    <div class="card-body">
+                                        <table class="table table-hover table-sm">
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >RECOMENDACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>Reorientar estructura de pagos y optimizar entradas operativas</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>Reforzar la caja, reducir gastos inmediatos y evaluar la obtención de liquidez de corto plazo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Reestructurar pasivos, fortalecer patrimonio y ajustar política de apalancamiento.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>Optimizar operaciones, mantener control de eficiencia y evaluar escenarios de expansión controlada.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>Recomendación: Revisar estrategias de rentabilidad y uso del capital propio para maximizar retorno.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Evaluar eficiencia operativa y desinvertir en activos ociosos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>Negociar mejores tasas o reducir deuda con alto costo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Mejorar rotación de activos circulantes y reducir compromisos de corto plazo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>Reducir tiempos de inventario y cobro. Negociar mejores condiciones con proveedores.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Ajustar precios, controlar costos y optimizar eficiencia operativa.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Reducir pasivos y reforzar capital social para evitar dependencia excesiva.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #12</b></td>
+                                            <td>Establecer fondos de contingencia y reorganizar flujo operativo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #13</b></td>
+                                            <td>Aplicar herramientas de automatización y evaluar riesgo por cliente.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #14</b></td>
+                                            <td>Rediseñar la estrategia de liquidez y establecer reservas de contingencia.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #15</b></td>
+                                            <td>Establecer mínimo técnico de caja operativa, analizar líneas de crédito contingentes y mejorar gestión de tesorería.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #16</b></td>
+                                            <td>Reducir apalancamiento y fortalecer base patrimonial estratégica.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #17</b></td>
+                                            <td>Reorientar recursos hacia iniciativas con mayor retorno y ajustar indicadores de desempeño.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #18</b></td>
+                                            <td>Renegociar condiciones de deuda y fortalecer flujo operativo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #19</b></td>
+                                            <td>Reestructurar flujo de efectivo y buscar soluciones estructurales de liquidez.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #20</b></td>
+                                            <td>Reestructurar estrategia, reducir exposición financiera y revisar viabilidad del modelo de negocio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #21</b></td>
+                                            <td>Reconfigurar estrategia operativa, reducir estructura fija y ajustar precios.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #22</b></td>
+                                            <td>Reestructurar pasivos y mejorar la capitalización.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #23</b></td>
+                                            <td>Recomendación: Rediseñar el modelo de costos e implementar planes de eficiencia operacional.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #24</b></td>
+                                            <td>Reevaluar utilización de activos y su contribución al resultado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #25</b></td>
+                                            <td>Consolidar eficiencia operativa sin sacrificar capacidad instalada.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #26</b></td>
+                                            <td>Evaluar escenarios de crecimiento manteniendo esta proporción saludable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #27</b></td>
+                                            <td>Rediseñar estructura operativa para fortalecer capacidad de respuesta financiera.</td>
+                                        </tr>
+
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                                </div>
+                                <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-2 shadow mb-5 bg-body rounded ">
+                                    <div class="card-header bg-warning text-dark" ><b> <i class="fa-solid fa-arrows-to-eye"></i> Área con Atención Inmediata</b></div>
+                                    <div class="card-body">
+                                    <table class="table table-hover table-sm" style="border: 0px;"  >
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >INTERPRETACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>Margen aceptable que refleja eficiencia en estructura comercial.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>La rentabilidad operativa es aceptable, pero puede optimizarse.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Resultado neto razonable frente a ventas, con oportunidades de mejora.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>El periodo medio de pago excede límites aceptables. Riesgo de corte de crédito.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>Exposición moderada en la gestión de cuentas por pagar.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Solvencia técnica adecuada.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>Nivel de retorno funcional en activos productivos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Apalancamiento técnico dentro del rango óptimo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>Nivel técnico de costo financiero aceptable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Cobertura operativa ajustada para obligaciones de corto plazo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Eficiencia dentro del rango técnico óptimo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #12</b></td>
+                                            <td>Capacidad moderada de generación de caja.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #13</b></td>
+                                            <td>Estructura de deuda técnicamente aceptable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #14</b></td>
+                                            <td>Productividad técnica en línea con estándares del sector.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #15</b></td>
+                                            <td>Margen operativo dentro de estándares, con oportunidades de mejora.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #16</b></td>
+                                            <td>Reservas inmediatas funcionales, pero no óptimas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #17</b></td>
+                                            <td>Nivel de endeudamiento técnico adecuado frente al desempeño operativo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #18</b></td>
+                                            <td>Riesgo moderado; Capacidad operativa suficiente para cubrir costos fijos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #19</b></td>
+                                            <td>Nivel técnico funcional; Cobertura patrimonial estable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #20</b></td>
+                                            <td>Nivel adecuado de cobertura financiera.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #21</b></td>
+                                            <td>Eficiencia operativa adecuada con margen de mejora incremental.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #22</b></td>
+                                            <td>Desempeño sobresaliente en el uso del patrimonio; Máxima conversión en ingresos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #23</b></td>
+                                            <td>Estructura de deuda técnicamente aceptable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #24</b></td>
+                                            <td>El desempeño del activo fijo es aceptable.</td>
+                                        </tr>
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-2 shadow mb-5 bg-body rounded ">
+                                     <div class="card-header bg-warning text-dark" ><b>Nivel Avanzado</b></div>
+                                    <div class="card-body">
+                                        <table class="table table-hover table-sm">
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >RECOMENDACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>Monitorear costos directos y optimizar proveedores clave.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>Ajustar costos fijos y mejorar eficiencia en procesos clave.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Reducir gastos no operativos e impuestos con una mejor planeación.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>Rediseñar estructura de pagos estratégicos y reforzar relación con proveedores clave.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>Evaluar renegociación de condiciones sin afectar reputación comercial.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Consolidar estructura de capital sin aumentar el nivel de deuda.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>Evaluar tasa de uso y optimizar rendimiento de activos fijos operativos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Supervisar sensibilidad del negocio ante tasas de interés y evolución del capital.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>Evaluar eficiencia del financiamiento dentro del retorno global del negocio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Monitorear desempeño del flujo y fortalecer eficiencias operativas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Reforzar medición de procesos y ajustar según variaciones del entorno.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #12</b></td>
+                                            <td>Consolidar proceso operativo y proyectar necesidades futuras de capital.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #13</b></td>
+                                            <td>Consolidar condiciones actuales e implementar alertas tempranas de desbalance.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #14</b></td>
+                                            <td>Optimizar activos sin incurrir en sobreinversión o ociosidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #15</b></td>
+                                            <td>Ajustar estructura de costos y revisar eficiencia por unidad de negocio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #16</b></td>
+                                            <td>Optimizar gestión de efectivo y estrategias de corto plazo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #17</b></td>
+                                            <td>Mantener el equilibrio entre deuda y generación operativa de recursos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #18</b></td>
+                                            <td>Fortalecer control sobre ingresos operativos y márgenes críticos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #19</b></td>
+                                            <td>Evaluar nuevas inversiones manteniendo control sobre proporción capital/deuda.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #20</b></td>
+                                            <td>Revisar estructura de deuda para fortalecer capacidad operativa.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #21</b></td>
+                                            <td>Reforzar análisis por unidad de negocio para consolidar eficiencia funcional.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #22</b></td>
+                                            <td>Replicar estrategias exitosas, expandir operaciones y monitorear retornos con precisión.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #23</b></td>
+                                            <td>Consolidar condiciones actuales e implementar alertas tempranas de desbalance.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #24</b></td>
+                                            <td>Monitorear desgaste, mantenimiento y eficiencia por unidad operativa.</td>
+                                        </tr>
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                                </div>
+                                <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-2 shadow bg-body rounded ">
+                                    <div class="card-header bg-success text-white" ><b> <i class="fa-solid fa-circle-check"></i> Área con Desempeño Adecuado</b></div>
+                                    <div class="card-body">
+                                    <table class="table table-hover table-sm" style="border: 0px;"  >
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >INTERPRETACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>El endeudamiento estructural está bien balanceado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>Nivel funcional de rotación. Compatible con la eficiencia operativa deseada.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Rotación técnica aceptable. Permite continuidad operativa sin presión.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>Nivel destacado de retorno sobre el capital operativo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>Retorno técnico razonable en relación con la inversión total.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Capital de trabajo eficiente frente a nivel de ventas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>Cobertura sólida. Capacidad estable de servicio de deuda.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Buena estructura operativa, con costos controlados.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>Desempeño financiero sobresaliente respecto al capital económico empleado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Nivel óptimo de reinversión para mantener crecimiento sin riesgo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Desempeño sobresaliente en el uso del patrimonio. Máxima conversión en ingresos</td>
+                                        </tr>
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card mb-2 shadow bg-body rounded ">
+                                     <div class="card-header bg-success text-white" ><b>Nivel Avanzado</b></div>
+                                    <div class="card-body">
+                                        <table class="table table-hover table-sm">
+                                        <thead>
+                                            <th colspan="2" class="table-secondary" >RECOMENDACIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b> #1</b></td>
+                                            <td>Mantener el apalancamiento actual y aprovechar ventajas fiscales sin comprometer liquidez.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #2</b></td>
+                                            <td>Afinar ciclos de aprovisionamiento según condiciones del mercado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #3</b></td>
+                                            <td>Mantener política de crédito actual con monitoreo de morosidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #4</b></td>
+                                            <td>Consolidar esta ventaja y extender el modelo hacia áreas con retorno similar.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #5</b></td>
+                                            <td>Mejorar la productividad financiera de los recursos invertidos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #6</b></td>
+                                            <td>Sostener equilibrio en inventarios, cuentas por cobrar y pagar.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #7</b></td>
+                                            <td>Aprovechar margen operativo para mejorar perfil financiero.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #8</b></td>
+                                            <td>Vigilar niveles de eficiencia sin afectar la capacidad instalada</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #9</b></td>
+                                            <td>Mantener ventaja competitiva y considerar diversificación con base en eficiencia económica.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #10</b></td>
+                                            <td>Apoyar expansión controlada sin descuidar rentabilidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b> #11</b></td>
+                                            <td>Replicar estrategias exitosas, expandir operaciones y monitorear retornos con precisión.</td>
+                                        </tr>
+                                    </tbody>    
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                </div>
+                                <br>
+                                <div class="row" >
+                                    <p><b style="color: var(--bs-blue);" >Nota de Uso y Confidencialidad</b>
+                                        <br>
+                                        Este reporte ha sido generado a partir de la información financiera ingresada por el cliente o prospecto a través del sistema de captura de datos de <b><span style="color:red;" >BST</span>FinanceNavigator</b>, ya sea mediante la carga de un archivo Excel o completando manualmente el formulario disponible en nuestro sitio web oficial. El análisis entregado en este documento PDF se deriva exclusivamente de los datos contenidos en el balance general y el estado de resultados proporcionados.
+                                        Su contenido es confidencial y ha sido elaborado utilizando una metodología exclusiva desarrollada por <b><span style="color:red;" >BST</span>FinanceNavigator</b> . Está destinado únicamente al uso del destinatario autorizado para fines estratégicos y de evaluación interna. Queda prohibida su reproducción, distribución o uso parcial sin consentimiento expreso.
+                                    </p>
+                                </div>
+                                <br>
+                        </div>
+                        
+                </div>
+            </main>
+          </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+        <script>
+            function suscription() {
+                 if (window.confirm('Para acceder a esta función necesita una Suscripción Intermedia o Avanzada; Presione Cancelar para permanecer aquí')){
+                    window.open('https://bstfinancenavigator.netlify.app/#pricing', '_blank');
+                        };
+            }
+        </script>
+    </body>
+</html>
