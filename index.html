@@ -786,39 +786,27 @@
                             </ul>
                         </div>
                 </div>
+                <div class="row" style="justify-content: center;"  >
+                    <form class="col-lg-6" style="display: flex; flex-direction: column; justify-content: space-evenly; gap: 0.5rem; "
+                    action="https://formspree.io/f/mzzeopeg"
+                    method="POST"
+                    >
+                    <label for="name" style="color: white; font-size: 16px;" >Nombre</label>
+                    <input style="padding: 5px;" id="name" type="text" name="name" required >
+                    
+                    <label for="email" style="color: white; font-size: 16px;" >Correo Electónico</label>
+                    <input style="padding: 5px;" id="email" type="email" name="email" required >
+                    
+                    <label for="phone" style="color: white; font-size: 16px;" >Teléfono</label>
+                    <input style="padding: 5px;" id="phone" type="tel" name="phone" required >
+
+                    <label for="message" style="color: white; font-size: 16px;">Escriba su Mensaje</label>
+                    <textarea style="padding: 5px;" rows="5" id="message" name="message"></textarea>
+                    <br>
+                    <button class="btn btn-primary" type="submit"> ENVIAR </button>
+                    </form> 
+                </div>
                 
-                <form id="contactForm"  action="https://formspree.io/f/mzzeopeg" method="POST">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Nombre" required />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Se requiere un nombre.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Se requiere un correo.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido, favor de revisar.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Teléfono" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Se requiere un número telefónico.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Mensaje" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Se requiere un mensaje.</div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div style="display: flex; justify-content: center;" >
-                        <button  class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar Mensaje</button>
-                    </div>
-                </form>
             </div>
         </section>
         <!-- Footer-->
