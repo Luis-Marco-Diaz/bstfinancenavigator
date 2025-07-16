@@ -3931,6 +3931,8 @@ textarea.form-control-lg {
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -11075,7 +11077,7 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  padding-top: 8vh;
+  padding-top: 7vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
