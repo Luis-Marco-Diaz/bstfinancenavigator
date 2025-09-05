@@ -20,6 +20,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            @media (min-width: 300px) and (max-width: 975px) {
+             .video-header {
+            display: none;
+           }
+           }
+
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -35,10 +43,11 @@
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#page-top">Inicio</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#subscriptions">Precios</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Suscripciones</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/Panel/demo.html">Demo</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/about.html">Acerca de BST</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/blog.html">Blog</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="/Articles/Modelo-BST-de-Gestion-por-Utilidad-Prioritaria.html">Noticias</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./distribuidores.html">Distribuidores</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./Panel/demo.html">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./about.html">Acerca</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./blog.html">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./Articles/Modelo-BST-de-Gestion-por-Utilidad-Prioritaria.html">Noticias</a></li>
                         <li class="nav-item">
                             <!-- SECCIÓN MÁS -->
                                 <div class="btn-group">
@@ -47,13 +56,13 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" target="_blank" href="./assets/img/ebook/Garantia-de-Satisfaccion-Total-BSTFN.pdf">Garantía de Satisfacción</a></li>
-                                    <li><a class="dropdown-item" href="/faq.html">Preguntas Frecuentes</a></li>
+                                    <li><a class="dropdown-item" href="./faq.html">Preguntas Frecuentes</a></li>
                                     <li><a class="dropdown-item" href="#contact">Contacto</a></li>
-                                    <li><a class="dropdown-item" href="/legal.html">Legal</a></li>
+                                    <li><a class="dropdown-item" href="./legal.html">Legal</a></li>
                                 </ul>
                                 </div>
                         </li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="https://bstportal.com/bst_finance_navigator/Panel/login.html">Ingresar<span class="fa fa-sign-in"></span> </a> </li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" target="_blank" href="https://bstfinancenavigator-mexico.com/Panel/login.html">Ingresar<span class="fa fa-sign-in"></span> </a> </li>
                         
                     </ul>
                 </div>
@@ -63,7 +72,7 @@
         <header class="masthead" id="page-top" >
             <div >
                 <div style="display: flex; flex-wrap: wrap;" >
-                    <div class="col-md-6 headtext " >
+                    <div class="col-md-6 headtext">
                         <img style="max-width: 100px; min-width: 40px; " src="assets/img/logos/BST-imago.png" alt="BSTNavigator">
                         <h1 class="poppins-regular blueBST" ><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h1>
                         <h3 class="poppins-regular" >Finanzas claras, decisiones seguras</h3>
@@ -74,7 +83,7 @@
                         </div>
                         <br>
                         <div class="upload_btns" >
-                            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1">Analizar mis Finanzas</a>
+                            <a target="_blank" class="btn btn-primary btn-xl text-uppercase" href="https://bstfinancenavigator-mexico.com/Panel/login.html">Analizar mis Finanzas</a>
                             
                             <!--<a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal7">Completa el formulario</a>
                             <div class="inline-text" style="width: 50%;" >
@@ -82,9 +91,10 @@
                             </div>-->
                         </div>
                     </div>
-                    <div class="col-md-6" style="display: flex; align-items: center; flex-direction: column; justify-content: center;" >
+                    <div class="col-md-6 " style="display: flex; align-items: center; flex-direction: column; justify-content: center;" >
                         <br>
                         <video
+                        class="video-header"
                         width="auto"
                         height="75%"
                         controls
@@ -94,7 +104,7 @@
                         src="/assets/videos/Video-Intro-Header-BSTFN.mp4"
                         >
                         </video>
-                        <figcaption><i><b>Activar Audio para Escuchar  </b></i></figcaption>
+                        <figcaption class="video-header" ><i><b>Activar Audio para Escuchar  </b></i></figcaption>
                     </div>
                 </div>
             </div>
@@ -787,9 +797,9 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contacto</h2>
                 </div>
-                <div  class="m-5" style="display: flex; justify-content: center;" >
+                <div  style="display: flex; justify-content: center;" >
                         <div style="color: white;" >
-                            <ul style="list-style: none; font-weight: bold; font-size: 18px;" >
+                            <ul style="list-style: none; font-size: 16px;" >
                             <li><span style="color: #cf0b0b;" >BST</span> GLOBAL TRADE CORPORATION</li>
                             <li>1910 THOMES AVE</li>
                             <li>CHEYENNE WY 82001</li>

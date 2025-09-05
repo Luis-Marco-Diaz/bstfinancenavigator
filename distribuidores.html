@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Marko Díaz FullStack" />
+        <title>BSTFinanceNavigator - Diagnóstico financiero automático</title>
+        <meta name="description" content="Cargas tus datos financieros. En segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+        <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/bst.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+           @media (min-width: 300px) and (max-width: 975px) {
+             .hide{
+                display: none;
+             }
+             .containerlevel{
+                display: flex;
+                flex-direction: column;
+             }
+           }
+        </style>
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./distribuidores.html">Distribuidores</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./about.html">Acerca</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./blog.html">Blog</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./faq.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <!-- Masthead SPLIT-->
+        <header class="masthead">
+            <div>
+                <div style="display: flex; flex-direction: column;" >
+                    <div class="col-md-12" style="padding-top: 50px;">
+                        <br>
+                        <img style="max-width: 100px; min-width: 40px; " src="assets/img/logos/BST-imago.png" alt="BSTNavigator">
+                        <h1 class="poppins-regular blueBST" ><span class="poppins-semibold" style="color: #cf0b0b;" >BST</span>Finance Navigator</h1>
+                        <h4 class="poppins-regular" >Finanzas claras, decisiones seguras</h4>
+                        <br>
+                        <div class="text-center" style="display: flex; flex-direction: column; padding: 0% 10%;  " >
+                            <h2 style="color: #cf0b0b;" >Programa de Comisionistas y Distribuidores</h2>
+                            <h4 class="poppins-bold" style="line-height: 2rem;" >Genera Ingresos por medio de la promoción activa de nuestra <span style="color: #004aad;" >Plataforma de Análisis Financiero</span>, no necesitas inversión inicial, sólo tu tiempo y una red de comercialización amplia.</h4>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <video style="border-radius: 15px;" controls controlsList="nodownload" autoplay muted width="90%" src="/assets/videos/BSTFinanceNavigator - Avanzados.mp4"></video>
+                        </div>
+                        <div class="text-center" style="display: flex; flex-direction: column; padding: 2% 10%; " >
+                            <p class="poppins-semibold" style="color: var(--bs-FN1); font-size: 16px;">Distribuir <span style="color: #cf0b0b; font-weight: bold;">BST</span><span style="color: #004aad; font-weight: bold;">FN</span> <span style="color: #004aad;" >( Plataforma de Análisis Financiero) </span> no requiere inventario, compras mínimas ni estructuras de venta tradicionales. El modelo opera 100% en línea o de manera presencial, permitiendo que cada aliado comercial crezca a su ritmo, sin riesgo, pero con un marco claro de beneficios escalables. </p>
+                            <a href="">Ver Política Comercial</a>
+                            
+                        </div>
+                        <div class="upload_btns" >
+                            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1">Quiero Ser Distribudior</a>
+                            
+                            <!--<a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal7">Completa el formulario</a>
+                            <div class="inline-text" style="width: 50%;" >
+                                <i style="color: #42404b;" >Carga manual de la información financiera mediante una plantilla predeterminada, asegurando una estructura óptima para el análisis.</i>
+                            </div>-->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Grid de Niveles-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center ">
+                    <h3>En <span style="color: #cf0b0b;">BST</span> Finance Navigator <span style="font-weight: 400;" >contamos con 3 figuras de participación comercial, cada una brinda beneficios exclusivos y diferentes niveles de ganancias por comisionamiento.</span></h3>
+                    </h3>
+                    <br>
+                </div>
+
+                <div class="containerlevel">
+                    <div class="ALL"><h4 style="color: #000000; text-align: center;">Fundadores Comerciales <i>- por Tiempo Limitado -</i> <br> (100 Suscripciones al mes)  </h4>
+                        
+                        <ul>
+                            <li>No se requiere inversión. Solo visión, acción y compromiso.</li>
+                            <li>Comisión Directa de 40% en todas las ventas realizadas; Manteniendo un mínimo de 100 ventas mensuales (Suscripción o Análisis Único al mes)</li>
+                            <li>Comisión "Vitalicia": Cuando un "Usuario" adquiere su Suscripción mensual, cada renovación (Cada mes cobrado) genera el 40% de Comisión para el Fundador Comercial que realizó la venta.</b></li>
+                            <li>Comisión del 10% por recomendación directa de otros <strong>Fundadores / Distribuidores ó Comisionistas.</strong></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="uno  "><h4 style="color: #0349ac; text-align: center;" >Comisionistas <br> ( Desde 1 Suscripción al mes)</h4>
+                        <br>
+                        <ul>
+                            <li>Puede ser cualquier persona que desee promover <strong>BSTFN</strong> de forma flexible, sin compromiso de ventas.</li>
+                            <li>Obtiene una comisión del 5% al 10% por cada suscripción directa realizada.</li>
+                            <li>Su estatus se mantiene activo mientras registre ventas cada 90 días.</li>
+                            <li>Puede solicitar evolución a Distribuidor si supera las 100 ventas activas en un mes calendario.</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="dos hide ">
+                        <img src="/assets/img/Levels.png" alt="Niveles de Suscripción a BSTFinanceNavigator">
+                    </div>
+                    <div class="tres"><h4 style="color: #cf0b0b; text-align: center;" >Distribuidor <br> ( +100 Suscripciones al mes)</h4>
+                        <br>
+                    <ul>
+                            <li>Accede a descuentos comerciales escalables, equivalentes a comisiones según volumen mensual de ventas (Suscripciones).</li>
+                            <li>El esquema de comisión es: <br>
+                               <ul>
+                                <li>Por 100 suscripciones mensuales = 30% de Comisión</li>
+                                <li>Por 150 suscripciones mensuales: 37% de Comisión</li>
+                                <li>200 o más suscripciones mensuales: 40% de Comisión</li>
+                               </ul>
+                            <li>Puede coordinar su propia red de comisionistas.</li>
+                            <li>Comisión "Vitalicia": Cuando un "Usuario" adquiere su Suscripción mensual, cada renovación (Cada mes cobrado) genera el % de Comisión para el Distribuidor que realizó la venta.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Registro -->
+        <section class="page-section" id="market1">
+            <div class="container">
+                <div class="text-center mb-5 " >
+                    <h2 class="section-heading" > Realiza tu Solicitud de Acceso al Programa de <br>Comisionistas y Distribuidores <span style="color: #cf0b0b;">BST</span><span style="color: #004aad;" >FN</span> </h2>
+                    
+                    <p style="font-size: 1.1rem;" ><b><span style="color: #cf0b0b;">BST</span><span style="color: #004aad;" >FN</span></b> ofrece una oportunidad única para profesionales que deseen convertirse en promotores activos de una solución financiera innovadora.
+                    Distribuir nuestra <b style="color: #004aad;" >Plataforma de Análisis Financiero</b> no requiere manetner un inventario, compras mínimas ni estructuras de venta tradicionales.
+                    Nuestro modelo comercial opera 100% en línea, permitiendo que cada <b>Aliado Comercial</b> crezca a su ritmo, sin riesgo, pero con un marco claro de beneficios escalables.</p>
+                    <h2 style="color: #004aad;" >Genera Ingresos Inmediatamente, <br> <span style="font-size: 1.5rem;" >aún sin experiencia contable o financiera.</span></h2>
+                </div>
+
+                <div class="row mb-5 ">
+                    <div class="col-md-6">
+                         <video
+                        style="border-radius: 10px;"
+                        controls
+                        autoplay
+                        loop
+                        muted
+                        src="/assets/videos/BSTFinanceNavigator -Nivel-Basico.mp4"
+                        width="100%">
+                        </video>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="border rounded p-3 bg-dark text-light" >
+                            <form id="distribuidorForm" >
+                                <h4 class="text-light" >Registro al Programa de Distribudiores</h4>
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Email" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" required >
+                                    <div id="emailHelp" class="form-text">No enviaremos SPAM</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Phone" class="form-label">Teléfono o WhatsApp</label>
+                                    <input type="tel" class="form-control" id="Phone" placeholder="+52 5555..." required >
+                                </div>
+                                <div class="mb-3">
+                                    <label for="City" class="form-label">Ciudad</label>
+                                    <input type="text" class="form-control" id="City" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Modalidad" class="form-label">Modalidad de participación:</label>
+                                    <br>
+                                    <select name="modalidad" id="Modalidad" required>
+                                        <option value="select"></option>
+                                        <option value="comisionista">Comisionista</option>
+                                        <option value="distribuidor">Distribuidor</option>
+                                        <option value="fundador">Fundador Comercial</option>
+                                    </select>
+                                    <br>
+                                </div>
+                                <input type="checkbox" name="acepta_politicas" required> Acepto la Política Comercial BSTFN y el uso de mis datos para fines operativos.
+                                <br><br>
+                                <button type="submit" class="btn btn-danger"><B>ENVIAR SOLICITUD</B></button>
+                            </form>
+                        </div>
+                    </div>   
+                </div>
+                
+            </div>
+        </section>
+        <!-- Fundadores Comerciales-->
+        <section class="page-section" id="market2">
+            <div class="container" style="padding-top: 5%;" >
+                <div class="text-center mb-5 " >
+                    <h2>Acceso Por tiempo limitado a <span style="color: #cf0b0b;" >FUNDADORES COMERCIALES</span> </h2>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <img width="80%" src="/assets//img/FinanceWoman.png" alt="Completa el Formulario con tus Datos">
+                        <br>
+                        <br>
+                        <h4>Explora nuestras herramientas</h4>
+                    </div>
+                    <div class="col-md-6">
+                         <video
+                        style="border-radius: 10px;"
+                        controls
+                        autoplay
+                        loop
+                        muted
+                        src="/assets/videos/BSTFinanceNavigator-Nivel-Intermedio.mp4"
+                        width="100%">
+                        </video>
+                        <div>
+                        <ul style="text-align: left; padding-top: 2%;" >
+                            <li><b>Genera análisis e interpretación de estados financieros con inteligencia estratégica en menos de 5 segundos.</b></li>
+                            <li>Agiliza la toma de decisiones críticas.</li>
+                            <li>Detecta tendencias, desequilibrios y patrones de comportamiento financiero.</li>
+                            <li>Obtén reportes basados en análisis financieros estratégicos.</li>
+                            <li>Accede a herramientas de planeación estratégica, simuladores, evaluación de proyectos e indicadores de estructura de capital.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="upload_btns" >
+                        <br>
+                        <a class="btn btn-success btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"><i style="font-size: 26px;" class="fa-brands fa-whatsapp"></i> Quiero Ser Fundador Comercial</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row p-4 " >
+                    <div class="col-md-12 text-center" >
+                        <h3> ¿Cuánto Puedo Ganar según mi audiencia?</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contacto</h2>
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Se requiere un nombre.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Se requiere un correo.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido, favor de revisar.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Teléfono" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Se requiere un número telefónico.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Mensaje" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Se requiere un mensaje.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Su Mensaje se envió con éxito, a la brevedad recibirá un contacto de nuestro equipo.</div>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Ocurrió un error al enviar su mensaje</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar Mensaje</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
