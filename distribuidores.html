@@ -30,10 +30,47 @@
                 flex-direction: column;
              }
            }
+           .calculator {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 650px;
+      width: 100%;
+    }
+    input[type=range] {
+      width: 100%;
+
+    }
+    input[type=range]:hover {
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #004aad;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+     label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+
         </style>
         
     </head>
-    <body id="page-top">
+    <body id="page-top" >
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
@@ -45,13 +82,27 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html">Inicio</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#pricing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html#princing">Precios</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./distribuidores.html">Distribuidores</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="#portfolio">Demo</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./Panel/demo.html">Demo</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./about.html">Acerca</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./blog.html">Blog</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./faq.html">Preguntas Frecuentes</a></li>
-                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html#contact">Iniciar Sesión <span class="fa fa-sign-in"></span> </a> </li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./Articles/Modelo-BST-de-Gestion-por-Utilidad-Prioritaria.html">Noticias</a></li>
+                        <li class="nav-item">
+                            <!-- SECCIÓN MÁS -->
+                                <div class="btn-group">
+                                <button  style="font-weight: bold;" type="button" class="nav-link btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MÁS...
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank" href="./assets/img/ebook/Garantia-de-Satisfaccion-Total-BSTFN.pdf">Garantía de Satisfacción</a></li>
+                                    <li><a class="dropdown-item" href="./faq.html">Preguntas Frecuentes</a></li>
+                                    <li><a class="dropdown-item" href="./index.html#contact">Contacto</a></li>
+                                    <li><a class="dropdown-item" href="./legal.html">Legal</a></li>
+                                </ul>
+                                </div>
+                        </li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">Ingresar <span class="fa fa-sign-in"></span> </a> </li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +124,7 @@
                         <br>
                         
                         <div>
-                            <video style="border-radius: 15px;" controls controlsList="nodownload" autoplay muted width="90%" src="/assets/videos/BSTFinanceNavigator - Avanzados.mp4"></video>
+                            <video style="border-radius: 15px;" controls controlsList="nodownload" autoplay muted width="90%" src="/assets/videos/BSTFinanceNavigator-Distribuidores.mp4"></video>
                         </div>
                         <div class="text-center" style="display: flex; flex-direction: column; padding: 2% 10%; " >
                             <p class="poppins-semibold" style="color: var(--bs-FN1); font-size: 16px;">Distribuir <span style="color: #cf0b0b; font-weight: bold;">BST</span><span style="color: #004aad; font-weight: bold;">FN</span> <span style="color: #004aad;" >( Plataforma de Análisis Financiero) </span> no requiere inventario, compras mínimas ni estructuras de venta tradicionales. El modelo opera 100% en línea o de manera presencial, permitiendo que cada aliado comercial crezca a su ritmo, sin riesgo, pero con un marco claro de beneficios escalables. </p>
@@ -81,7 +132,7 @@
                             
                         </div>
                         <div class="upload_btns" >
-                            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1">Quiero Ser Distribudior</a>
+                            <a class="btn btn-primary btn-xl text-uppercase"  href="./distribuidores.html#distribuidorForm">Quiero Ser Distribudior</a>
                             
                             <!--<a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal7">Completa el formulario</a>
                             <div class="inline-text" style="width: 50%;" >
@@ -95,7 +146,7 @@
         </header>
         
         <!-- Grid de Niveles-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light">
             <div class="container">
                 <div class="text-center ">
                     <h3>En <span style="color: #cf0b0b;">BST</span> Finance Navigator <span style="font-weight: 400;" >contamos con 3 figuras de participación comercial, cada una brinda beneficios exclusivos y diferentes niveles de ganancias por comisionamiento.</span></h3>
@@ -104,7 +155,7 @@
                 </div>
 
                 <div class="containerlevel">
-                    <div class="ALL"><h4 style="color: #000000; text-align: center;">Fundadores Comerciales <i>- por Tiempo Limitado -</i> <br> (100 Suscripciones al mes)  </h4>
+                    <div class="ALL"><h4 style="color: #000000; text-align: center;">Fundadores Comerciales <i>- por Tiempo Limitado -</i> <br> (100 Suscripciones en menos de un mes)  </h4>
                         
                         <ul>
                             <li>No se requiere inversión. Solo visión, acción y compromiso.</li>
@@ -146,7 +197,7 @@
             </div>
         </section>
         <!-- Registro -->
-        <section class="page-section" id="market1">
+        <section class="page-section" id="distribudior">
             <div class="container">
                 <div class="text-center mb-5 " >
                     <h2 class="section-heading" > Realiza tu Solicitud de Acceso al Programa de <br>Comisionistas y Distribuidores <span style="color: #cf0b0b;">BST</span><span style="color: #004aad;" >FN</span> </h2>
@@ -165,7 +216,7 @@
                         autoplay
                         loop
                         muted
-                        src="/assets/videos/BSTFinanceNavigator -Nivel-Basico.mp4"
+                        src="/assets/videos/BSTFinanceNavigator-Distribuidores-Ganancias.mp4"
                         width="100%">
                         </video>
                         <br>
@@ -222,10 +273,7 @@
 
                 <div class="row text-center">
                     <div class="col-md-6">
-                        <img width="80%" src="/assets//img/FinanceWoman.png" alt="Completa el Formulario con tus Datos">
-                        <br>
-                        <br>
-                        <h4>Explora nuestras herramientas</h4>
+                        <img width="95%" src="/assets//img/Tabla-Comparativa-Comision.png" alt="Completa el Formulario con tus Datos">
                     </div>
                     <div class="col-md-6">
                          <video
@@ -234,16 +282,15 @@
                         autoplay
                         loop
                         muted
-                        src="/assets/videos/BSTFinanceNavigator-Nivel-Intermedio.mp4"
+                        src="/assets/videos/BSTFinanceNavigatorFundadoresComerciales.mp4"
                         width="100%">
                         </video>
                         <div>
                         <ul style="text-align: left; padding-top: 2%;" >
-                            <li><b>Genera análisis e interpretación de estados financieros con inteligencia estratégica en menos de 5 segundos.</b></li>
-                            <li>Agiliza la toma de decisiones críticas.</li>
-                            <li>Detecta tendencias, desequilibrios y patrones de comportamiento financiero.</li>
-                            <li>Obtén reportes basados en análisis financieros estratégicos.</li>
-                            <li>Accede a herramientas de planeación estratégica, simuladores, evaluación de proyectos e indicadores de estructura de capital.</li>
+                            <li><b>Estatus único y limitado:</b> Esta modalidad solo se puede obtener durante nuestro lanzamiento. No se replicará después.</li>
+                            <li><b>Beneficio vitalicio garantizado:</b> Si se cumple el reto (100 ventas en menos de de 30 días), el Distribuidor asegura el 40% de comisión de por vida, sin estar sujeto a evaluaciones mensuales.</li>
+                            <li><b>Reconocimiento oficial y posicionamiento:</b>Visibilidad como <b>Embajador Fundador</b> en documentos, campañas, sesiones privadas y estrategia institucional.</li>
+                            <li><b>Contrato y validación personalizada: </b> Firma de un <b>Acuerdo oficial con <span style="color: #cf0b0b;" >BST</span> Global Trade Corporation.</b></li>
                         </ul>
                     </div>
                     </div>
@@ -252,13 +299,38 @@
                 <div>
                     <div class="upload_btns" >
                         <br>
-                        <a class="btn btn-success btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal1"><i style="font-size: 26px;" class="fa-brands fa-whatsapp"></i> Quiero Ser Fundador Comercial</a>
+                        <a class="btn btn-success btn-xl text-uppercase" target="_blank" href="https://api.whatsapp.com/send?phone=+5215610509207&text=Quiero%20ser%20Fundador%20Comercial"><i style="font-size: 26px;" class="fa-brands fa-whatsapp"></i> Quiero Ser Fundador Comercial</a>
                     </div>
                 </div>
                 <br>
                 <div class="row p-4 " >
-                    <div class="col-md-12 text-center" >
-                        <h3> ¿Cuánto Puedo Ganar según mi audiencia?</h3>
+                    <div class="col-12 text-center" >
+                        <h3 style="color: #004aad;" > ¿Cuánto Puedo Ganar según mi audiencia?</h3>
+                        <br>
+            <!-- Income Rank-->
+                        <div class="row" style="justify-content: center;" >
+                          <div class="calculator">
+                                <h3>Calcula tus Ganancias con <span style="color: red;" >BST</span><span style="color: #0077ff;" >FN</span></h3>
+
+                                <!-- Nivel de Audiencia -->
+                                <label for="audiencia"><h5>Nivel de Audiencia</h5></label>
+                                <input type="range" id="audiencia" min="0" max="5" step="1" value="0">
+                                <div class="output" id="audienciaOutput">1,000</div>
+
+                                <!-- Conversión -->
+                                <label for="conversion"><h5>Conversión a Suscripciones</h5></label>
+                                <input type="range" id="conversion" min="0" max="4" step="1" value="0">
+                                <div class="output" id="conversionOutput">0.3%</div>
+
+                                <!-- Membresía -->
+                                <label for="membresia"><h5>Nivel de Membresía / Comisión del 40%</h5></label>
+                                <input type="range" id="membresia" min="0" max="2" step="1" value="0">
+                                <div class="output" id="membresiaOutput">Básica - $20 USD</div>
+
+                                <!-- Resultado -->
+                                <div class="result" id="resultado">Mis Ganancias: $0 USD</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -270,58 +342,38 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contacto</h2>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Se requiere un nombre.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Se requiere un correo.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido, favor de revisar.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Teléfono" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Se requiere un número telefónico.</div>
-                            </div>
+                <div  style="display: flex; justify-content: center;" >
+                        <div style="color: white;" >
+                            <ul style="list-style: none; font-size: 16px;" >
+                            <li><span style="color: #cf0b0b;" >BST</span> GLOBAL TRADE CORPORATION</li>
+                            <li>1910 THOMES AVE</li>
+                            <li>CHEYENNE WY 82001</li>
+                            <li><i class="fa-brands fa-whatsapp"> </i>  MX / +52 56 1050 9207</li>
+                            <li>Correos: <a style="color: white;"  href="mailto:info@bstfinancenavigatormexico.com">info@bstfinancenavigatormexico.com</a> / <br> <a  style="color: white;" href="mailto:contacto@bstfinancenavigatormexico.com">contacto@bstfinancenavigatormexico.com</a> </li>
+                            </ul>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Mensaje" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Se requiere un mensaje.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Su Mensaje se envió con éxito, a la brevedad recibirá un contacto de nuestro equipo.</div>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Ocurrió un error al enviar su mensaje</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar Mensaje</button></div>
-                </form>
+                </div>
+                <div class="row" style="justify-content: center;"  >
+                    <form class="col-lg-6" style="display: flex; flex-direction: column; justify-content: space-evenly; gap: 0.5rem; "
+                    action="https://formspree.io/f/mzzeopeg"
+                    method="POST"
+                    >
+                    <label for="name" style="color: white; font-size: 16px;" >Nombre</label>
+                    <input style="padding: 5px;" id="name" type="text" name="name" required >
+                    
+                    <label for="email" style="color: white; font-size: 16px;" >Correo Electónico</label>
+                    <input style="padding: 5px;" id="email" type="email" name="email" required >
+                    
+                    <label for="phone" style="color: white; font-size: 16px;" >Teléfono</label>
+                    <input style="padding: 5px;" id="phone" type="tel" name="phone" required >
+
+                    <label for="message" style="color: white; font-size: 16px;">Escriba su Mensaje</label>
+                    <textarea style="padding: 5px;" rows="5" id="message" name="message"></textarea>
+                    <br>
+                    <button class="btn btn-primary" type="submit"> ENVIAR </button>
+                    </form> 
+                </div>
+                
             </div>
         </section>
         <!-- Footer-->
@@ -330,12 +382,11 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none me-3" target="_blank" href="./assets/img/ebook/Garantia-de-Satisfaccion-Total-BSTFN.pdf">Garantía de Satisfacción</a>
+                        <a class="link-dark text-decoration-none me-3" href="/legal.html">Privacy Policy</a>
                         <a class="link-dark text-decoration-none" href="/legal.html">Terms of Use</a>
                     </div>
                 </div>
@@ -350,10 +401,52 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- JS Calculator-->
+        <script>
+    // Valores posibles
+    const audiencias = [1000, 5000, 10000, 50000, 100000, 1000000];
+    const conversiones = [0.03, 0.05, 0.10, 0.15, 0.20]; // en decimales
+    const membresias = [
+      {nombre: "Básica", precio: 8},
+      {nombre: "Intermedia", precio: 16},
+      {nombre: "Avanzada", precio: 40}
+    ];
+
+    // Inputs
+    const audienciaInput = document.getElementById("audiencia");
+    const conversionInput = document.getElementById("conversion");
+    const membresiaInput = document.getElementById("membresia");
+
+    // Outputs
+    const audienciaOutput = document.getElementById("audienciaOutput");
+    const conversionOutput = document.getElementById("conversionOutput");
+    const membresiaOutput = document.getElementById("membresiaOutput");
+    const resultado = document.getElementById("resultado");
+
+    function calcular() {
+      const audiencia = audiencias[audienciaInput.value];
+      const conversion = conversiones[conversionInput.value];
+      const membresia = membresias[membresiaInput.value];
+
+      // Mostrar valores elegidos
+      audienciaOutput.textContent = audiencia.toLocaleString("en-US");
+      conversionOutput.textContent = (conversion * 100) + "%";
+      membresiaOutput.textContent = `${membresia.nombre} - $${membresia.precio} USD`;
+
+      // Cálculo: (audiencia * conversion * membresía)
+      const ganancias = audiencia * conversion * membresia.precio;
+
+      resultado.textContent = "Ganancias Mensuales: $" + ganancias.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " USD";
+    }
+
+    // Eventos
+    audienciaInput.addEventListener("input", calcular);
+    conversionInput.addEventListener("input", calcular);
+    membresiaInput.addEventListener("input", calcular);
+
+    // Calcular al cargar
+    calcular();
+        </script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

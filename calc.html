@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora BSTFN</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .calculator {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input[type=range] {
+      width: 100%;
+    }
+
+    .output {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #0077ff;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Calculadora de Ganancias <span style="color: red;" >BST</span><span style="color: #0077ff;" >FN</span></h2>
+
+    <!-- Nivel de Audiencia -->
+    <label for="audiencia">Nivel de Audiencia</label>
+    <input type="range" id="audiencia" min="0" max="5" step="1" value="0">
+    <div class="output" id="audienciaOutput">1,000</div>
+
+    <!-- Conversión -->
+    <label for="conversion">Conversión a Suscripciones</label>
+    <input type="range" id="conversion" min="0" max="4" step="1" value="0">
+    <div class="output" id="conversionOutput">0.3%</div>
+
+    <!-- Membresía -->
+    <label for="membresia">Nivel de Membresía</label>
+    <input type="range" id="membresia" min="0" max="2" step="1" value="0">
+    <div class="output" id="membresiaOutput">Básica - $20 USD</div>
+
+    <!-- Resultado -->
+    <div class="result" id="resultado">Mis Ganancias: $0 USD</div>
+  </div>
+
+  <script>
+    // Valores posibles
+    const audiencias = [1000, 5000, 10000, 50000, 100000, 1000000];
+    const conversiones = [0.003, 0.005, 0.10, 0.15, 0.20]; // en decimales
+    const membresias = [
+      {nombre: "Básica", precio: 20},
+      {nombre: "Intermedia", precio: 40},
+      {nombre: "Avanzada", precio: 100}
+    ];
+
+    // Inputs
+    const audienciaInput = document.getElementById("audiencia");
+    const conversionInput = document.getElementById("conversion");
+    const membresiaInput = document.getElementById("membresia");
+
+    // Outputs
+    const audienciaOutput = document.getElementById("audienciaOutput");
+    const conversionOutput = document.getElementById("conversionOutput");
+    const membresiaOutput = document.getElementById("membresiaOutput");
+    const resultado = document.getElementById("resultado");
+
+    function calcular() {
+      const audiencia = audiencias[audienciaInput.value];
+      const conversion = conversiones[conversionInput.value];
+      const membresia = membresias[membresiaInput.value];
+
+      // Mostrar valores elegidos
+      audienciaOutput.textContent = audiencia.toLocaleString("en-US");
+      conversionOutput.textContent = (conversion * 100) + "%";
+      membresiaOutput.textContent = `${membresia.nombre} - $${membresia.precio} USD`;
+
+      // Cálculo: (audiencia * conversion * membresía)
+      const ganancias = audiencia * conversion * membresia.precio;
+
+      resultado.textContent = "Mis Ganancias: $" + ganancias.toFixed(2) + " USD";
+    }
+
+    // Eventos
+    audienciaInput.addEventListener("input", calcular);
+    conversionInput.addEventListener("input", calcular);
+    membresiaInput.addEventListener("input", calcular);
+
+    // Calcular al cargar
+    calcular();
+  </script>
+</body>
+</html>
