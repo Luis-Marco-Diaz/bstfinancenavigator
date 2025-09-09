@@ -83,6 +83,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html">Inicio</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./index.html#princing">Precios</a></li>
+                        <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="index.html/#pricing">Suscripciones</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./distribuidores.html">Distribuidores</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./Panel/demo.html">Demo</a></li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" href="./about.html">Acerca</a></li>
@@ -125,10 +126,10 @@
                         
                         <div>
                             <video style="border-radius: 15px;" controls controlsList="nodownload" autoplay muted width="90%" src="/assets/videos/BSTFinanceNavigator-Distribuidores.mp4"></video>
+                            <figcaption class="video-header" ><i><b>Activar Audio para Escuchar  </b></i></figcaption>
                         </div>
                         <div class="text-center" style="display: flex; flex-direction: column; padding: 2% 10%; " >
                             <p class="poppins-semibold" style="color: var(--bs-FN1); font-size: 16px;">Distribuir <span style="color: #cf0b0b; font-weight: bold;">BST</span><span style="color: #004aad; font-weight: bold;">FN</span> <span style="color: #004aad;" >( Plataforma de Análisis Financiero) </span> no requiere inventario, compras mínimas ni estructuras de venta tradicionales. El modelo opera 100% en línea o de manera presencial, permitiendo que cada aliado comercial crezca a su ritmo, sin riesgo, pero con un marco claro de beneficios escalables. </p>
-                            <a href="">Ver Política Comercial</a>
                             
                         </div>
                         <div class="upload_btns" >
@@ -168,7 +169,7 @@
                     <div class="uno  "><h4 style="color: #0349ac; text-align: center;" >Comisionistas <br> ( Desde 1 Suscripción al mes)</h4>
                         <br>
                         <ul>
-                            <li>Puede ser cualquier persona que desee promover <strong>BSTFN</strong> de forma flexible, sin compromiso de ventas.</li>
+                            <li>Puede ser cualquier persona que desee promover <strong style="color: red;" >BST</strong><strong style="color: #0077ff;" >FN</strong> de forma flexible, sin compromiso de ventas.</li>
                             <li>Obtiene una comisión del 5% al 10% por cada suscripción directa realizada.</li>
                             <li>Su estatus se mantiene activo mientras registre nusvas suscripciones cada 90 días.</li>
                             <li>Puede solicitar evolución a Distribuidor si supera las 100 suscripciones activas en un mes calendario.</li>
@@ -197,7 +198,7 @@
             </div>
         </section>
         <!-- Registro -->
-        <section class="page-section" id="distribudior">
+        <section class="page-section" id="market1">
             <div class="container">
                 <div class="text-center mb-5 " >
                     <h2 class="section-heading" > Realiza tu Solicitud de Acceso al Programa de <br>Comisionistas y Distribuidores <span style="color: #cf0b0b;">BST</span><span style="color: #004aad;" >FN</span> </h2>
@@ -219,8 +220,36 @@
                         src="/assets/videos/BSTFinanceNavigator-Distribuidores-Ganancias.mp4"
                         width="100%">
                         </video>
+                        <figcaption class="text-center" ><i>Activar Audio para Escuchar</i></figcaption>
                         <br>
-                        <br>
+                         <!-- Income Rank-->
+                        <div class="row" style="justify-content: center;" >
+                          <div class="calculator">
+                                <h3>Calcula tus Ganancias con <span style="color: red;" >BST</span><span style="color: #0077ff;" >FN</span></h3>
+
+                                <!-- Nivel de Audiencia -->
+                                <label for="audiencia"><h5>¿Cual es tu Nivel de Audiencia?</h5></label>
+                                <input type="range" id="audiencia" min="0" max="5" step="1" value="0">
+                                <div class="output" id="audienciaOutput">1,000</div>
+
+                                <!-- Conversión -->
+                                <label for="conversion"><h5>% de tu Audiencia que se podría Suscribir a <span style="color: red;" >BST</span><span style="color: #0077ff;" >FN</span></h5></label>
+                                <input type="range" id="conversion" min="0" max="4" step="1" value="0">
+                                <div class="output" id="conversionOutput">0.3%</div>
+
+                               <!-- Membresía -->
+                            <label for="membresia"><h5>Nivel de Suscripción / Comisón del 40%</h5></label>
+                            <select style="width: 70%;" id="membresia">
+                            <option value="0">Básica - $8 USD</option>
+                            <option value="1">Intermedia - $16 USD</option>
+                            <option value="2">Avanzada - $40 USD</option>
+                            </select>
+                            <div style="display: none;" class="output" id="membresiaOutput">Básica - $20 USD</div>
+
+                                <!-- Resultado -->
+                                <div class="result" id="resultado">Mis Ganancias: $0 USD</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="border rounded p-3 bg-dark text-light" >
@@ -270,7 +299,6 @@
                 <div class="text-center mb-5 " >
                     <h2>Acceso Por tiempo limitado a <span style="color: #cf0b0b;" >FUNDADORES COMERCIALES</span> </h2>
                 </div>
-
                 <div class="row text-center">
                     <div class="col-md-6">
                         <img width="95%" src="/assets//img/Tabla-Comparativa-Comision.png" alt="Completa el Formulario con tus Datos">
@@ -285,6 +313,7 @@
                         src="/assets/videos/BSTFinanceNavigatorFundadoresComerciales.mp4"
                         width="100%">
                         </video>
+                        <figcaption class="video-header" ><i><b>Activar Audio para Escuchar  </b></i></figcaption>
                         <div>
                         <ul style="text-align: left; padding-top: 2%;" >
                             <li><b>Estatus único y limitado:</b> Esta modalidad solo se puede obtener durante nuestro lanzamiento. No se replicará después.</li>
@@ -303,36 +332,6 @@
                     </div>
                 </div>
                 <br>
-                <div class="row p-4 " >
-                    <div class="col-12 text-center" >
-                        <h3 style="color: #004aad;" > ¿Cuánto Puedo Ganar según mi audiencia?</h3>
-                        <br>
-            <!-- Income Rank-->
-                        <div class="row" style="justify-content: center;" >
-                          <div class="calculator">
-                                <h3>Calcula tus Ganancias con <span style="color: red;" >BST</span><span style="color: #0077ff;" >FN</span></h3>
-
-                                <!-- Nivel de Audiencia -->
-                                <label for="audiencia"><h5>Nivel de Audiencia</h5></label>
-                                <input type="range" id="audiencia" min="0" max="5" step="1" value="0">
-                                <div class="output" id="audienciaOutput">1,000</div>
-
-                                <!-- Conversión -->
-                                <label for="conversion"><h5>Conversión a Suscripciones</h5></label>
-                                <input type="range" id="conversion" min="0" max="4" step="1" value="0">
-                                <div class="output" id="conversionOutput">0.3%</div>
-
-                                <!-- Membresía -->
-                                <label for="membresia"><h5>Nivel de Suscripción / Comisión del 40%</h5></label>
-                                <input type="range" id="membresia" min="0" max="2" step="1" value="0">
-                                <div class="output" id="membresiaOutput">Básica - $20 USD</div>
-
-                                <!-- Resultado -->
-                                <div class="result" id="resultado">Mis Ganancias: $0 USD</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         
@@ -348,7 +347,7 @@
                             <li><span style="color: #cf0b0b;" >BST</span> GLOBAL TRADE CORPORATION</li>
                             <li>1910 THOMES AVE</li>
                             <li>CHEYENNE WY 82001</li>
-                            <li><i class="fa-brands fa-whatsapp"> </i>  MX / +52 56 1050 9207</li>
+                            <li> <img width="10%" src="./assets/img/Wa.png" alt="">  MX / +52 56 1050 9207</li>
                             <li>Correos: <a style="color: white;"  href="mailto:info@bstfinancenavigatormexico.com">info@bstfinancenavigatormexico.com</a> / <br> <a  style="color: white;" href="mailto:contacto@bstfinancenavigatormexico.com">contacto@bstfinancenavigatormexico.com</a> </li>
                             </ul>
                         </div>
@@ -382,7 +381,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; BST Finance Navigator 2025</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.linkedin.com/company/bst-finance-navigator" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" target="_blank" href="./assets/img/ebook/Garantia-de-Satisfaccion-Total-BSTFN.pdf">Garantía de Satisfacción</a>
@@ -392,9 +391,6 @@
                 </div>
             </div>
         </footer>
-
-
-
 
         
         <!-- Bootstrap core JS-->
@@ -429,7 +425,7 @@
       const membresia = membresias[membresiaInput.value];
 
       // Mostrar valores elegidos
-      audienciaOutput.textContent = audiencia.toLocaleString("en-US");
+      audienciaOutput.textContent = audiencia.toLocaleString("en-US") + " Personas";
       conversionOutput.textContent = (conversion * 100) + "%";
       membresiaOutput.textContent = `${membresia.nombre} - $${membresia.precio} USD`;
 
