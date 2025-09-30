@@ -163,6 +163,7 @@
             <tr>
               <th>Número de Suscripciones</th>
               <th>Nivel Suscripción</th>
+              <th>Precio de Lista por Suscripción USD</th>
               <th>Comisión USD</th>
               <th>%</th>
               <th>Estado de Pago</th>
@@ -397,9 +398,9 @@
         <script>
   // Datos ajustados para un total de $2,540 USD
   const comisionesDirectas = [
-    { suscripciones: 50, nivel: "Básica", comision: 300, porcentaje: "30%", estado: "Pendiente" },
-    { suscripciones: 37, nivel: "Intermedia", comision: 450, porcentaje: "30%", estado: "Pendiente" },
-    { suscripciones: 15, nivel: "Avanzada", comision: 600, porcentaje: "30%", estado: "Pendiente" },
+    { suscripciones: 50, lista:20, nivel: "Básica", comision: 300, porcentaje: "30%", estado: "Pendiente" },
+    { suscripciones: 37, lista:40, nivel: "Intermedia", comision: 450, porcentaje: "30%", estado: "Pendiente" },
+    { suscripciones: 15, lista:100, nivel: "Avanzada", comision: 600, porcentaje: "30%", estado: "Pendiente" },
   ];
   
   const comisionesIntermediacion = [
@@ -420,6 +421,7 @@
         <tr>
           <td>${item.suscripciones}</td>
           <td>${item.nivel}</td>
+          <td>$${item.lista}</td>
           <td>$${item.comision.toFixed(2)}</td>
           <td>${item.porcentaje}</td>
           <td>${item.estado}</td>
