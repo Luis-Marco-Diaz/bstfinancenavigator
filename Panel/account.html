@@ -81,7 +81,9 @@
                               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dataModal">
                                 Agregar Datos
                               </button>
-
+                              <br>
+                              <br>
+                              <a target="_blank" href="https://www.paypal.com/mx/webapps/mpp/account-selection">¿Cómo crear una cuenta en PayPal?</a>
                             </div>
                           </div>
                         </div>
@@ -118,6 +120,7 @@
       </div>
     </div>
   </div>
+
                         <div class="col-sm-5 col-md-6 col-lg-8 p-2" >
                              <!-- Tabla de datos de Pago -->
                                 <h5>Cuentas de Pago</h5>
@@ -155,25 +158,27 @@
                               <hr>
                               <form id="dataForm">
                                 <div class="mb-3">
-                                  <label for="name" class="form-label">Nombre o Empresa</label>
-                                  <input type="text" class="form-control" id="name" required>
+                                  <label for="name1" class="form-label">Nombre o Empresa</label>
+                                  <input type="text" class="form-control" id="name1" >
                                 </div>
                                 <div class="mb-3">
-                                  <label for="email" class="form-label">Correo Electrónico</label>
-                                  <input type="email" class="form-control" id="email" required>
+                                  <label for="email1" class="form-label">Correo Electrónico</label>
+                                  <input type="email" class="form-control" id="email1" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Cargar</button>
                               </form>
+                              
                             </div>
                           </div>
                         </div>
                         <div class=" col-sm-5 col-md-6 col-lg-8 p-2">
                            <h5>Lista de Referidos</h5>
-                              <table class="table table-bordered" id="dataTable">
+                              <table class="table table-bordered" id="dataTable1">
                                 <thead class="table-dark">
                                   <tr>
                                     <th>Nombre o Empresa</th>
                                     <th>Correo Electrónico</th>
+                                    <th>Acciones</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -191,49 +196,78 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script>
-    const form = document.getElementById("dataForm");
-    const tableBody = document.querySelector("#dataTable tbody");
+   <script>
+  // --------- Referidos ---------
+  const refForm = document.getElementById("dataForm");
+  const refTable = document.getElementById("dataTable1");
+  const refTbody = refTable.querySelector("tbody");
 
-    // Cargar datos desde localStorage al inicio
-    let dataList = JSON.parse(localStorage.getItem("formData")) || [];
-    renderTable();
+  let refData = JSON.parse(localStorage.getItem("refData")) || [];
+  let editIndex = null; // null = agregar, número = editar
 
-    // Evento submit del formulario
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+  renderRefTable();
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
+  // Evento submit
+  refForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name1").value.trim();
+    const email = document.getElementById("email1").value.trim();
 
-      if (name && email) {
-        const newData = { name, email };
-        dataList.push(newData);
+    if (!name || !email) return;
 
-        // Guardar en localStorage
-        localStorage.setItem("formData", JSON.stringify(dataList));
-
-        // Mostrar en tabla
-        renderTable();
-
-        // Resetear formulario
-        form.reset();
-      }
-    });
-
-    // Función para renderizar tabla
-    function renderTable() {
-      tableBody.innerHTML = "";
-      dataList.forEach((item, index) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${item.name}</td>
-          <td>${item.email}</td>
-        `;
-        tableBody.appendChild(row);
-      });
+    if (editIndex === null) {
+      // Nuevo registro
+      refData.push({ name, email });
+    } else {
+      // Editar registro existente
+      refData[editIndex] = { name, email };
+      editIndex = null;
     }
-  </script>
+
+    localStorage.setItem("refData", JSON.stringify(refData));
+    renderRefTable();
+    refForm.reset();
+  });
+
+  // Render tabla de referidos
+  function renderRefTable() {
+    refTbody.innerHTML = "";
+    if (refData.length === 0) {
+      refTbody.innerHTML = `<tr><td colspan="3" class="text-muted">No hay registros</td></tr>`;
+      return;
+    }
+    refData.forEach((item, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.email}</td>
+        <td>
+          
+          <button class="btn btn-sm btn-danger" onclick="deleteRef(${index})">Eliminar</button>
+        </td>
+      `;
+      refTbody.appendChild(row);
+    });
+  }
+
+  // Editar un registro
+  window.editRef = function(index) {
+    const item = refData[index];
+    document.getElementById("name1").value = item.name;
+    document.getElementById("email1").value = item.email;
+    editIndex = index;
+  };
+
+  // Eliminar un registro
+  window.deleteRef = function(index) {
+    if (confirm("¿Seguro que quieres eliminar este referido?")) {
+      refData.splice(index, 1);
+      localStorage.setItem("refData", JSON.stringify(refData));
+      renderRefTable();
+    }
+  };
+</script>
+
     <script>
     const formPay = document.getElementById("modalForm");
     const table = document.getElementById("dataTablePay");

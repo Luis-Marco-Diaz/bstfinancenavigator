@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -116,17 +116,92 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active"><h5>Tablero de Control - Distribuidor</h5></li>
                         </ol>
+                        <div class="row justify-content-evenly ">
+                          <div class="card col-11 px-3 py-2 mb-4 shadow-sm" >
+                            <b class="text-danger">Política de Distribución resumida</b>
+                            <ul>
+                              <li>Nuestra política tiene <strong>vigencia mensual</strong>, es decir que cada mes el porcentaje de comisión se calculará conforme a las nuevas suscripciones promovidas.</li>
+                              <li>Los resultados <strong>no son acumulables</strong> de un mes a otro.</li>
+                              <li>El <strong>pago de comisiones</strong> se liquidará al cierre del mes correspondiente, con depósito realizado en un plazo máximo de <strong>10 días naturales</strong> del mes siguiente.</li>
+                              <li>El cálculo para cada nuevo mes aplicará únicamente sobre <strong>renovaciones activas o nuevas suscripciones</strong>.</li>
+                              <li><a href="documentation.html">Ver Política Comercial</a></li>
+                            </ul>
+                          </div>
+                        </div>
                         <div class="row justify-content-evenly " >
                             <div class="col-sm-6 col-md-5 col-lg-6 text-center mb-3 rounded " >
                                 <div class="px-2" >
-                                  <h5 > <i class="fas fa-user-circle"></i> Suscripciones Acreditadas en el Mes: <b class="text-primary" >135 Suscripciones</b></h5>
+                                  <h5 > <i class="fas fa-user-circle"></i> Suscripciones Acreditadas en el Mes: <b class="text-primary" >102 Suscripciones</b></h5>
                                 </div>
                             </div>
                             <div class=" col-sm-6 col-md-5 col-lg-6 text-center rounded ">
                               <div class="px-2" >
-                                <b class=" fs-5 rounded py-1 px-2 text-light bg-primary">Balance: $2,540 USD</b> <a class=" link-dark link-offset-2 link-underline-opacity-25 " href="">Reporte Histórico</a>
+                             <button class=" btn text-light shadow-sm fs-5 rounded py-1 px-2 bg-primary text-decoration-none "  data-bs-toggle="modal" data-bs-target="#comisionesModal"><b>Ver Comisiones por pagar : $2,540 USD</b></button>
+<!-- Modal -->
+<div class="modal fade" id="comisionesModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Estado de Cuenta - Comisiones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Encabezado empresa -->
+        <div class="mb-3 row ">
+          <h4 style="text-align: left;" ><strong>Empresa SA de CV</strong> <span class="fs-6" >- Rango Promedio:</span> <span class=" text-primary fs-6">Distribuidor Básico (30%)</span></h4>
+        </div>
+        <div class="row" >
+          <div class=" p-4" >
+            <h5>Periodo: <span>Del 1/09/2025 al 1/10/2025</span> </h5>
+          </div>
+        </div>
+        <!-- Tabla 1: Promoción directa -->
+        <h5 style="text-align: left;" >Comisiones por promoción directa al Usuario Final</h5>
+        <table class="table" style="text-align: left;">
+          <thead class="table-primary">
+            <tr>
+              <th>Número de Suscripciones</th>
+              <th>Nivel Suscripción</th>
+              <th>Comisión USD</th>
+              <th>%</th>
+              <th>Estado de Pago</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDirecta"> 
+            <!-- Se llenará por JS -->
+          </tbody>
+        </table>
+        <hr>
+        <!-- Tabla 2: Intermediación -->
+        <h5 style="text-align: left;"  >Comisiones por intermediación comercial (Otros Distribuidores)</h5>
+        <table class="table" style="text-align: left;">
+          <thead class="table-warning">
+            <tr>
+              <th>Volumen del Distribuidor</th>
+              <th>Comisión USD</th>
+              <th>%</th>
+              <th>Estado de Pago</th>
+            </tr>
+          </thead>
+          <tbody id="tablaIntermediacion">
+            <!-- Se llenará por JS -->
+          </tbody>
+        </table>
+
+        <!-- Total -->
+        <div class="alert alert-secondary text-end">
+          <h5>Total a Pagar: <span id="totalGeneral" class="text-primary">$0.00 USD</span></h5>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-between ">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Ver Mes Anterior</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                               </div>
-                                
                             </div>
                         </div>
                         <hr>
@@ -319,6 +394,73 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
-        
+        <script>
+  // Datos ajustados para un total de $2,540 USD
+  const comisionesDirectas = [
+    { suscripciones: 50, nivel: "Básica", comision: 300, porcentaje: "30%", estado: "Pendiente" },
+    { suscripciones: 37, nivel: "Intermedia", comision: 450, porcentaje: "30%", estado: "Pendiente" },
+    { suscripciones: 15, nivel: "Avanzada", comision: 600, porcentaje: "30%", estado: "Pendiente" },
+  ];
+  
+  const comisionesIntermediacion = [
+    { monto: 8000, comision: 800, porcentaje: "10%", estado: "Pendiente" },
+    { monto: 3900, comision: 390, porcentaje: "10%", estado: "Pendiente" }
+  ];
+
+  // Renderizar tablas
+  function renderComisiones() {
+    let total = 0;
+
+    // Promoción directa
+    const tbodyDirecta = document.getElementById("tablaDirecta");
+    tbodyDirecta.innerHTML = "";
+    comisionesDirectas.forEach(item => {
+      total += item.comision;
+      tbodyDirecta.innerHTML += `
+        <tr>
+          <td>${item.suscripciones}</td>
+          <td>${item.nivel}</td>
+          <td>$${item.comision.toFixed(2)}</td>
+          <td>${item.porcentaje}</td>
+          <td>${item.estado}</td>
+        </tr>
+      `;
+    });
+
+    // Intermediación
+    const tbodyInter = document.getElementById("tablaIntermediacion");
+    tbodyInter.innerHTML = "";
+    comisionesIntermediacion.forEach(item => {
+      total += item.comision;
+      tbodyInter.innerHTML += `
+        <tr>
+          <td>$${item.monto.toFixed(2)}</td>
+          <td>$${item.comision.toFixed(2)}</td>
+          <td>${item.porcentaje}</td>
+          <td>${item.estado}</td>
+        </tr>
+      `;
+    });
+
+    // Total
+    document.getElementById("totalGeneral").textContent = `$${total.toFixed(2)} USD`;
+  }
+
+  // Render al abrir el modal
+  document.getElementById("comisionesModal").addEventListener("shown.bs.modal", renderComisiones);
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona todos los elementos con data-bs-toggle="tooltip"
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    
+    // Inicializa cada tooltip con triggers múltiples (hover + focus + click)
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl, {
+        trigger: 'hover focus click' // Funciona en desktop (hover) y móvil (tap/click)
+      })
+    })
+  });
+</script>
     </body>
 </html>
