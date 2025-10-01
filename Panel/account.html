@@ -159,11 +159,17 @@
                               <form id="dataForm">
                                 <div class="mb-3">
                                   <label for="name1" class="form-label">Nombre o Empresa</label>
-                                  <input type="text" class="form-control" id="name1" >
+                                  <input type="text" class="form-control" id="name1" required>
                                 </div>
                                 <div class="mb-3">
                                   <label for="email1" class="form-label">Correo Electrónico</label>
                                   <input type="email" class="form-control" id="email1" required>
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-label">Tipo de Alta</label>
+                                  <br>
+                                  <input value="Usuario Final" name="tipo" type="radio" id="Us">Usuario Final
+                                  <input value="Distribuidor" name="tipo" type="radio" id="Dis" required >Distribuidor
                                 </div>
                                 <button type="submit" class="btn btn-primary">Cargar</button>
                               </form>
@@ -178,6 +184,7 @@
                                   <tr>
                                     <th>Nombre o Empresa</th>
                                     <th>Correo Electrónico</th>
+                                    <th>Tipo de Alta</th>
                                     <th>Acciones</th>
                                   </tr>
                                 </thead>
@@ -212,15 +219,17 @@
     e.preventDefault();
     const name = document.getElementById("name1").value.trim();
     const email = document.getElementById("email1").value.trim();
+    const type = document.querySelector('input[name="tipo"]:checked')?.value || "";
+    console.log(type)
 
     if (!name || !email) return;
 
     if (editIndex === null) {
       // Nuevo registro
-      refData.push({ name, email });
+      refData.push({ name, email, type });
     } else {
       // Editar registro existente
-      refData[editIndex] = { name, email };
+      refData[editIndex] = { name, email, type };
       editIndex = null;
     }
 
@@ -233,7 +242,7 @@
   function renderRefTable() {
     refTbody.innerHTML = "";
     if (refData.length === 0) {
-      refTbody.innerHTML = `<tr><td colspan="3" class="text-muted">No hay registros</td></tr>`;
+      refTbody.innerHTML = `<tr><td colspan="4" class="text-muted">No hay registros</td></tr>`;
       return;
     }
     refData.forEach((item, index) => {
@@ -241,8 +250,8 @@
       row.innerHTML = `
         <td>${item.name}</td>
         <td>${item.email}</td>
+         <td>${item.type}</td>
         <td>
-          
           <button class="btn btn-sm btn-danger" onclick="deleteRef(${index})">Eliminar</button>
         </td>
       `;
@@ -255,6 +264,9 @@
     const item = refData[index];
     document.getElementById("name1").value = item.name;
     document.getElementById("email1").value = item.email;
+    document.querySelectorAll('input[name="tipo"]').forEach(radio => {
+      radio.checked = (radio.value === item.type);
+    });
     editIndex = index;
   };
 
