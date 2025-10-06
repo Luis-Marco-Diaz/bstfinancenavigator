@@ -22,8 +22,6 @@
         const vigencias = ["Mensual", "Semestral", "Anual"];
         const estatus = [
           '<span class="badge bg-success">Activo</span>',
-          '<span class="badge bg-warning text-dark">Inactivo</span>',
-          '<span class="badge bg-danger">Cancelado</span>'
         ];
         const comisiones = [ "$6 USD", "12 USD", "30 USD"]
 
@@ -54,8 +52,8 @@
         }
       }
 
-      // Cargar por defecto 50
-      cargarDatos(50);
+      // Cargar por defecto 5
+      cargarDatos(5);
        </script>
        
     </head>
@@ -90,7 +88,13 @@
                                 <div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-tachometer-alt"></i></div>
                                 Tablero de Control
                             </a>
-                            <a class="nav-link" href="account.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-file"> </i> </div>
+                            <a class="nav-link" href="finaluser.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-user-plus"></i> </i> </div>
+                                Registrar prospectos
+                            </a>
+                            <a class="nav-link" href="invite.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-people-line"></i> </i> </div>
+                                Invitar Distribuidores
+                            </a>
+                            <a class="nav-link" href="account.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-brands fa-paypal"></i> </div>
                                 Gestión de Cuenta
                             </a>
                             <a class="nav-link" href="documentation.html"> <div class="sb-nav-link-icon"> <i style="color: white;" class="fas fa-book-open"></i></div> Banco de Recursos
@@ -171,7 +175,15 @@
           </thead>
           <tbody id="tablaDirecta"> 
             <!-- Se llenará por JS -->
+            
           </tbody>
+            <tfoot>
+              <tr>
+                <th >Subtotal</th>
+                <th>102 Suscripciones</th>
+                <th colspan="4" style="text-align: right;" >$1,350.00 USD</th>
+              </tr>
+          </tfoot>
         </table>
         <hr>
         <!-- Tabla 2: Intermediación -->
@@ -187,7 +199,15 @@
           </thead>
           <tbody id="tablaIntermediacion">
             <!-- Se llenará por JS -->
+             
           </tbody>
+           <tfoot>
+              <tr>
+                <th colspan="2">Subtotal</th>
+                
+                <th colspan="2" style="text-align: right;" >$1,190.00 USD</th>
+              </tr>
+          </tfoot>
         </table>
 
         <!-- Total -->
@@ -208,7 +228,7 @@
                         <hr>
                          <div class="container py-2">
       <!-- Encabezado -->
-      <h2 class="mb-4">Clientes asignados (147)</h2>
+      <h4 class="mb-4">Clientes Activos (Usuario Final)</h4>
        <!-- Tabla -->
       <div class="table-responsive">
         <table id="clientesTable" class="table table-bordered table-striped table-hover align-middle">
@@ -269,105 +289,7 @@
               <td>$6 USD</td>
               <td>12/04/2024</td>
             </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
-            <tr>
-              <td>empresa1@empresa.com</td>
-              <td>12/03/2024</td>
-              <td>Básico</td>
-              <td>Mensual</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>$6 USD</td>
-              <td>12/04/2024</td>
-            </tr>
+            
 
             <!-- Filas generadas por JS -->
           </tbody>
@@ -377,13 +299,112 @@
       <!-- Paginación -->
       <nav>
         <ul class="pagination justify-content-center">
-            <li class="page-item"><a class=" btn btn-outline-dark" href="" >1 - 20</a></li>
-          <li class="page-item"><button class=" btn btn-outline-dark " onclick="cargarDatos(50)">21 - 100</button></li>
-          <li class="page-item"><button class="btn btn-outline-dark" onclick="cargarDatos(75)">+ 100 </button></li>
+            <li class="page-item"><a class=" btn btn-outline-dark" href="" >1</a></li>
+          <li class="page-item"><button class=" btn btn-outline-dark " onclick="cargarDatos(5)">2</button></li>
+          <li class="page-item"><button class="btn btn-outline-dark" onclick="cargarDatos(5)">3.. </button></li>
         </ul>
       </nav>
                         </div>
-                       
+                        <hr>
+                         <div class="container py-2">
+                          <!-- Encabezado -->
+                          <h4 class="mb-4">Clientes Inactivos</h4>
+                          <!-- Tabla -->
+                          <div class="table-responsive">
+                            <table id="clientesTable" class="table table-bordered table-striped table-hover align-middle">
+                              <thead class="table-dark">
+                                <tr>
+                                  <th scope="col">Correo</th>
+                                  <th scope="col">Fecha de compra</th>
+                                  <th scope="col">Tipo de plan adquirido</th>
+                                  <th scope="col">Vigencia del plan</th>
+                                  <th scope="col">Estatus</th>
+                                  <th scope="col">Comisión</th>
+                                  <th scope="col">Vencimiento de suscripción</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>empresa1@empresa.com</td>
+                                  <td>12/03/2024</td>
+                                  <td>Básico</td>
+                                  <td>Mensual</td>
+                                  <td><span class="badge bg-danger">Inactivo</span></td>
+                                  <td>$6 USD</td>
+                                  <td>12/04/2024</td>
+                                </tr>
+                                <tr>
+                                  <td>empresa1@empresa.com</td>
+                                  <td>12/03/2024</td>
+                                  <td>Básico</td>
+                                  <td>Mensual</td>
+                                  <td><span class="badge bg-danger">Inactivo</span></td>
+                                  <td>$6 USD</td>
+                                  <td>12/04/2024</td>
+                                </tr>
+                                <tr>
+                                  <td>empresa1@empresa.com</td>
+                                  <td>12/03/2024</td>
+                                  <td>Básico</td>
+                                  <td>Mensual</td>
+                                  <td><span class="badge bg-danger">Inactivo</span></td>
+                                  <td>$6 USD</td>
+                                  <td>12/04/2024</td>
+                                </tr>
+                                <tr>
+                                  <td>empresa1@empresa.com</td>
+                                  <td>12/03/2024</td>
+                                  <td>Básico</td>
+                                  <td>Mensual</td>
+                                  <td><span class="badge bg-danger">Inactivo</span></td>
+                                  <td>$6 USD</td>
+                                  <td>12/04/2024</td>
+                                </tr>
+                                <tr>
+                                  <td>empresa1@empresa.com</td>
+                                  <td>12/03/2024</td>
+                                  <td>Básico</td>
+                                  <td>Mensual</td>
+                                  <td><span class="badge bg-danger">Inactivo</span></td>
+                                  <td>$6 USD</td>
+                                  <td>12/04/2024</td>
+                                </tr>
+                                
+
+                                <!-- Filas generadas por JS -->
+                              </tbody>
+                            </table>
+                          </div>
+                          <br>
+                        </div>
+                        <hr>
+                        <div class="container py-2" >
+                          <!-- Tabla 3: Intermediación -->
+                          <h4 style="text-align: left;"  >Intermediación comercial (Otros Distribuidores)</h4>
+                          <table class="table" style="text-align: left;">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>Correo</th>
+                                <th>Volumen Generado (USD) </th>
+                                <th>Comisión</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tablaIntermediacion">
+                              <tr>
+                                <td>distribuidor1@dist.com</td>
+                                <td>$8,000.00</td>
+                                <td>10%</td>
+                              </tr>
+                            <tr>
+                                <td>distribuidor2@dist.com</td>
+                                <td>$3,900.00</td>
+                                <td>10%</td>
+                              </tr>
+                            </tbody>
+                            
+                          </table>
+                          <br>
+                        </div>
                 </div>
             </main>
           </div>
@@ -445,7 +466,7 @@
     });
 
     // Total
-    document.getElementById("totalGeneral").textContent = `$${total.toFixed(2)} USD`;
+    document.getElementById("totalGeneral").textContent = `$ ${total.toFixed(2)} USD`;
   }
 
   // Render al abrir el modal

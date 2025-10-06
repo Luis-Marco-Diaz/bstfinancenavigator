@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Distribuidor - BST Finance Navigator</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        
+
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/index.html"><i class="fa-regular fa-square-caret-left"></i> Cerrar Sesión</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            
+            <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                
+            </div>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    <div id="layoutSidenav">
+             <!-- Navbar lateral-->
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">MENU</div>
+                            <a class="nav-link" href="panel.html">
+                                <div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-tachometer-alt"></i></div>
+                                Tablero de Control
+                            </a>
+                            <a class="nav-link active" href="finaluser.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-user-plus"></i> </i> </div>
+                                Registrar prospectos
+                            </a>
+                            <a class="nav-link" href="invite.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-people-line"></i> </i> </div>
+                                Invitar Distribuidores
+                            </a>
+                            <a class="nav-link" href="account.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-brands fa-paypal"></i> </div>
+                                Gestión de Cuenta
+                            </a>
+                            <a class="nav-link" href="documentation.html"> <div class="sb-nav-link-icon"> <i style="color: white;" class="fas fa-book-open"></i></div> Banco de Recursos
+                            </a>
+                            <a class="nav-link" href="#" >
+                                <div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-headset"> </i> </div>
+                                Soporte
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Distribuidor
+                    </div>
+                </nav>
+            </div>
+  
+ <!-- PANEL CONTENT -->
+          <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                        <h1 class="mt-4">Empresa SA de CV</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"><h5>Registrar Prospectos</h5></li>
+                        </ol>
+                      <hr>
+                      <div class="container py-2">
+                        <!-- Encabezado -->
+                        <div class="row justify-content-evenly" >
+                          <div class="row justify-content-evenly ">
+                          <div class=" card col-11 p-2 mb-3 shadow-sm " >
+                            <p><i class="fa-solid fa-circle-info"></i> <strong>Para acreditar correctamente las suscripciones generadas a través de su recomendación, es necesario que registre:</strong></p>
+                            <ol>
+                              <li>Nombre completo de la persona o empresa referida.</li>
+                              <li>Correo electrónico de contacto.</li>
+                            </ol>
+                            <p>De esta manera podremos identificar su intervención y asignarle los beneficios correspondientes de manera transparente y oportuna.</p>
+                          </div>
+                        </div>
+                          <div class=" col-sm-5 col-md-4 col-lg-4 " >
+                          <div class="card shadow-sm">
+                            <div class="card-body">
+                              <h5 class="card-title">Alta de Referidos</h5>
+                              <hr>
+                              <form id="dataForm">
+                                <div class="mb-3">
+                                  <label for="name1" class="form-label">Nombre o Empresa</label>
+                                  <input type="text" class="form-control" id="name1" required>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="email1" class="form-label">Correo Electrónico</label>
+                                  <input type="email" class="form-control" id="email1" required>
+                                </div>
+                               
+                                <button type="submit" class="btn btn-primary">Cargar</button>
+                              </form>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" col-sm-5 col-md-6 col-lg-8 p-2">
+                           <h5>Lista de Referidos</h5>
+                              <table class="table table-bordered" id="dataTable1">
+                                <thead class="table-dark">
+                                  <tr>
+                                    <th>Nombre o Empresa</th>
+                                    <th>Correo Electrónico</th>
+                                    <th>Acciones</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- Aquí se llenarán los datos -->
+                                </tbody>
+                              </table>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+            </main>
+          </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+   <script>
+  // --------- Referidos ---------
+  const refForm = document.getElementById("dataForm");
+  const refTable = document.getElementById("dataTable1");
+  const refTbody = refTable.querySelector("tbody");
+
+  let refData = JSON.parse(localStorage.getItem("refData")) || [];
+  let editIndex = null; // null = agregar, número = editar
+
+  renderRefTable();
+
+  // Evento submit
+  refForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name1").value.trim();
+    const email = document.getElementById("email1").value.trim();
+    const type = document.querySelector('input[name="tipo"]:checked')?.value || "";
+    console.log(type)
+
+    if (!name || !email) return;
+
+    if (editIndex === null) {
+      // Nuevo registro
+      refData.push({ name, email, type });
+    } else {
+      // Editar registro existente
+      refData[editIndex] = { name, email, type };
+      editIndex = null;
+    }
+
+    localStorage.setItem("refData", JSON.stringify(refData));
+    renderRefTable();
+    refForm.reset();
+  });
+
+  // Render tabla de referidos
+  function renderRefTable() {
+    refTbody.innerHTML = "";
+    if (refData.length === 0) {
+      refTbody.innerHTML = `<tr><td colspan="4" class="text-muted">No hay registros</td></tr>`;
+      return;
+    }
+    refData.forEach((item, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.email}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" onclick="deleteRef(${index})">Eliminar</button>
+        </td>
+      `;
+      refTbody.appendChild(row);
+    });
+  }
+
+  // Editar un registro
+  window.editRef = function(index) {
+    const item = refData[index];
+    document.getElementById("name1").value = item.name;
+    document.getElementById("email1").value = item.email;
+    document.querySelectorAll('input[name="tipo"]').forEach(radio => {
+      radio.checked = (radio.value === item.type);
+    });
+    editIndex = index;
+  };
+
+  // Eliminar un registro
+  window.deleteRef = function(index) {
+    if (confirm("¿Seguro que quieres eliminar este referido?")) {
+      refData.splice(index, 1);
+      localStorage.setItem("refData", JSON.stringify(refData));
+      renderRefTable();
+    }
+  };
+</script>
+    </body>
+</html>

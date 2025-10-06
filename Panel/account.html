@@ -44,7 +44,13 @@
                                 <div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-tachometer-alt"></i></div>
                                 Tablero de Control
                             </a>
-                            <a class="nav-link active" href="account.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fas fa-file"> </i> </div>
+                            <a class="nav-link" href="finaluser.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-user-plus"></i> </i> </div>
+                                Registrar prospectos
+                            </a>
+                            <a class="nav-link" href="invite.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-solid fa-people-line"></i> </i> </div>
+                                Invitar Distribuidores
+                            </a>
+                            <a class="nav-link active" href="account.html" ><div class="sb-nav-link-icon"><i style="color: white;" class="fa-brands fa-paypal"></i> </div>
                                 Gestión de Cuenta
                             </a>
                             <a class="nav-link" href="documentation.html"> <div class="sb-nav-link-icon"> <i style="color: white;" class="fas fa-book-open"></i></div> Banco de Recursos
@@ -142,70 +148,10 @@
                                       <button class="btn btn-warning mt-2" id="editBtn">Editar Datos</button>
                                     </div>
 
-                         
                         </div>
                         </div>
                       </div>
-                      <hr>
-                      <div class="container py-2">
-                        <!-- Encabezado -->
-                        <div class="row justify-content-evenly" >
-                          <h2 class="text-center px-4 py-1" >Referidos (Usuario Final o Distribuidores)</h2>
-                          <div class="row justify-content-evenly ">
-                          <div class=" card col-11 p-2 mb-3 shadow-sm " >
-                            <p><i class="fa-solid fa-circle-info"></i> <strong>Para acreditar correctamente las suscripciones generadas a través de tu recomendación, es necesario que registres:</strong></p>
-                            <ol>
-                              <li>Nombre completo de la persona o empresa referida.</li>
-                              <li>Correo electrónico de contacto.</li>
-                              <li><strong>Tipo de registro:</strong> selecciona si corresponde a un Usuario final o a un candidato a Distribuidor.</li>
-                            </ol>
-                            <p>De esta manera podremos identificar tu intervención y asignarte los beneficios correspondientes de manera transparente y oportuna.</p>
-                          </div>
-                        </div>
-                          <div class=" col-sm-5 col-md-4 col-lg-4 " >
-                          <div class="card shadow-sm">
-                            <div class="card-body">
-                              <h5 class="card-title">Alta de Referidos</h5>
-                              <hr>
-                              <form id="dataForm">
-                                <div class="mb-3">
-                                  <label for="name1" class="form-label">Nombre o Empresa</label>
-                                  <input type="text" class="form-control" id="name1" required>
-                                </div>
-                                <div class="mb-3">
-                                  <label for="email1" class="form-label">Correo Electrónico</label>
-                                  <input type="email" class="form-control" id="email1" required>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label">Tipo de Alta</label>
-                                  <br>
-                                  <input value="Usuario Final" name="tipo" type="radio" id="Us">Usuario Final
-                                  <input value="Distribuidor" name="tipo" type="radio" id="Dis" required >Distribuidor
-                                </div>
-                                <button type="submit" class="btn btn-primary">Cargar</button>
-                              </form>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class=" col-sm-5 col-md-6 col-lg-8 p-2">
-                           <h5>Lista de Referidos</h5>
-                              <table class="table table-bordered" id="dataTable1">
-                                <thead class="table-dark">
-                                  <tr>
-                                    <th>Nombre o Empresa</th>
-                                    <th>Correo Electrónico</th>
-                                    <th>Tipo de Alta</th>
-                                    <th>Acciones</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <!-- Aquí se llenarán los datos -->
-                                </tbody>
-                              </table>
-                        </div>
-                        </div>
-                      </div>
+                      
                 </div>
             </main>
           </div>
@@ -214,82 +160,6 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-   <script>
-  // --------- Referidos ---------
-  const refForm = document.getElementById("dataForm");
-  const refTable = document.getElementById("dataTable1");
-  const refTbody = refTable.querySelector("tbody");
-
-  let refData = JSON.parse(localStorage.getItem("refData")) || [];
-  let editIndex = null; // null = agregar, número = editar
-
-  renderRefTable();
-
-  // Evento submit
-  refForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name1").value.trim();
-    const email = document.getElementById("email1").value.trim();
-    const type = document.querySelector('input[name="tipo"]:checked')?.value || "";
-    console.log(type)
-
-    if (!name || !email) return;
-
-    if (editIndex === null) {
-      // Nuevo registro
-      refData.push({ name, email, type });
-    } else {
-      // Editar registro existente
-      refData[editIndex] = { name, email, type };
-      editIndex = null;
-    }
-
-    localStorage.setItem("refData", JSON.stringify(refData));
-    renderRefTable();
-    refForm.reset();
-  });
-
-  // Render tabla de referidos
-  function renderRefTable() {
-    refTbody.innerHTML = "";
-    if (refData.length === 0) {
-      refTbody.innerHTML = `<tr><td colspan="4" class="text-muted">No hay registros</td></tr>`;
-      return;
-    }
-    refData.forEach((item, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${item.name}</td>
-        <td>${item.email}</td>
-         <td>${item.type}</td>
-        <td>
-          <button class="btn btn-sm btn-danger" onclick="deleteRef(${index})">Eliminar</button>
-        </td>
-      `;
-      refTbody.appendChild(row);
-    });
-  }
-
-  // Editar un registro
-  window.editRef = function(index) {
-    const item = refData[index];
-    document.getElementById("name1").value = item.name;
-    document.getElementById("email1").value = item.email;
-    document.querySelectorAll('input[name="tipo"]').forEach(radio => {
-      radio.checked = (radio.value === item.type);
-    });
-    editIndex = index;
-  };
-
-  // Eliminar un registro
-  window.deleteRef = function(index) {
-    if (confirm("¿Seguro que quieres eliminar este referido?")) {
-      refData.splice(index, 1);
-      localStorage.setItem("refData", JSON.stringify(refData));
-      renderRefTable();
-    }
-  };
-</script>
 
     <script>
     const formPay = document.getElementById("modalForm");
