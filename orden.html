@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Orden de Suscripción - BSTFN</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body { padding: 20px; background-color: #f4f7f6; }
+        .panel-heading { background-color: #012661 !important; color: white !important; }
+        .btn-primary.styleazul { background-color: #012661; border-color: #001a41; }
+        .plan-buttons { margin-top: 10px; margin-bottom: 40px; }
+        .price-table-container { margin-top: 20px; }
+        .table-title { text-align: center; margin-bottom: 15px; font-size: 18px; color: #333; }
+        .table thead th { background-color: #f2f2f2; }
+        .table .info-header { background-color: #d9edf7; font-weight: bold; }
+        .table .discount-row > td:not(:first-child) { font-weight: bold; color: #d9534f; }
+        .legend-text { text-align: center; font-size: 16px; font-weight: bold; margin-top: 30px; }
+    .style1 {color: #FF0000}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <strong class="panel-title">Suscripción al Plan Intermedio</strong>
+                </div>
+                <div class="panel-body">
+					<strong>Ingrese los siguientes datos:</strong>
+                    <br>
+                    <br>
+                    <form name="form1" method="get" action="orden1.php">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td style="width: 20%;"><strong>Nombre* / Razón Social</strong></td>
+                                    <td><input type="text" name="nombre" class="form-control" required></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Empresa</strong></td>
+                                    <td><input type="text" name="empresa" class="form-control" ></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>E-mail*</strong></td>
+                                    <td><input type="email" name="email" class="form-control" required></td>
+                                </tr>
+                            </table>
+                            <div style="margin-bottom: 2%;">
+                                <label>¿Requiere Factura? </label> &nbsp;
+                                <input type="radio" name="factura" required >Si
+                                <input type="radio" name="factura" >No &nbsp;
+                                <label>RFC</label>
+                                <input type="text" name="rfc" >
+                                <br>
+                                <br>
+                                <label for="">Dirección Fiscal</label> <br>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <input type="hidden" name="plan" value="2">
+                        <input type="submit" class="btn btn-primary styleazul btn-lg" value="Continuar">
+                    </form>
+                </div>
+            </div>
+
+            <p class="legend-text">&nbsp;</p>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
