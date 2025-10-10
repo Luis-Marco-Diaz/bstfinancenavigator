@@ -92,9 +92,9 @@
                               <a target="_blank" href="https://www.paypal.com/mx/webapps/mpp/account-selection">¿Cómo crear una cuenta en PayPal?</a>
                             </div>
                           </div>
-                        </div>
+                          </div>
 
- <!-- Modal -->
+ <!-- Modal-1 -->
   <div class="modal fade" id="dataModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -130,7 +130,7 @@
                         <div class="col-sm-5 col-md-6 col-lg-8 p-2" >
                              <!-- Tabla de datos de Pago -->
                                 <h5>Cuentas de Pago</h5>
-                                  <table class="table table-bordered" id="dataTablePay" style="display:none;">
+                                  <table class="table table-bordered" id="dataTablePay" >
                                     <thead class="table-dark">
                                       <tr>
                                         <th>Nombre</th>
@@ -146,12 +146,110 @@
                                     <!-- Botón editar -->
                                     <div id="editSection" style="display:none;">
                                       <button class="btn btn-warning mt-2" id="editBtn">Editar Datos</button>
+                                      <button id="clearPayBtn" class="btn btn-outline-danger mt-2">
+  <i class="fa-solid fa-trash"></i> Borrar datos de PayPal
+</button>
+
                                     </div>
 
                         </div>
                         </div>
                       </div>
                       
+                </div>
+                
+                <div class="container-fluid px-4">
+                  <hr>
+                  <h5>Pago de Comisiones por Transferencia Bancaria Internacional </h5>
+                  <p>Para realizar pagos internacionales a terceros en México por medio de la banca internacional a través del banco de <strong>BST Global Trade Corporation  en los E.E. U.U</strong>., es necesario proporcionar los siguientes datos los cuales se obtienen directamente del banco en donde tienen su cuenta bancaria: Banco en México, Nombre del Beneficiario, No. de Cuenta, Clabe Interbancaria, Swift.</p>
+  <!-- Modal-2 -->
+  <div class="modal fade" id="Modal2" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="FormModal2">
+          <div class="modal-header">
+            <h5 class="modal-title">Datos de Pago Bancarios</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="bank" class="form-label">Banco en México</label>
+              <input type="text" class="form-control" id="bank" required>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre del Beneficiario</label>
+              <input type="text" class="form-control" id="name2" required>
+              
+            </div>
+            <div class="mb-3">
+              <label for="account" class="form-label">No. de Cuenta</label>
+              <input type="text" class="form-control" id="account" >
+            </div>
+            <div class="mb-3">
+              <label for="clabe" class="form-label">Clabe Interbancaria</label>
+              <input type="text" class="form-control" id="clabe" >
+            </div>
+            <div class="mb-3">
+              <label for="swift" class="form-label">Swift</label>
+              <input type="text" class="form-control" id="swift" >
+              <div id="emailHelp" class="form-text">El Código SWIFT (o BIC), un identificador único para las instituciones financieras utilizado en las transferencias internacionales de dinero.</div>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+                  <div class="container py-2">
+                    <div class="row justify-content-evenly " >
+                    <div class="col-sm-5 col-md-4 col-lg-4 ">
+                        <div class="card shadow-sm">
+                            <div class="card-body" >
+                              <h5 class="card-title">Datos de Pago Bancarios</h5>
+                              <!-- Botón para abrir modal -->
+                              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal2">
+                                Agregar Datos
+                              </button>
+                              <br>
+                              <br>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-5 col-md-4 col-lg-8 p-2 ">
+                        <!-- Tabla de datos de Pago -->
+                                <h5>Cuenta de Pago para Transferencia Internacional</h5>
+                                  <table class="table table-bordered" id="dataModal2">
+                                    <thead class="table-dark">
+                                      <tr>
+                                        <th>Banco en México</th>
+                                        <th>Nombre del Beneficiario </th>
+                                        <th>No. de Cuenta</th>
+                                        <th>Clabe Interbancaria</th>
+                                        <th>Swift</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="tbodyPay2" >
+                                      
+                                    </tbody>
+                                  </table>
+
+                                    <!-- Botón editar -->
+                                    <div id="editSection2" >
+                                      <button class="btn btn-warning mt-2" id="editBtn2">Editar Datos</button>
+                                      <button id="clearBankBtn" class="btn btn-outline-danger mt-2">
+  <i class="fa-solid fa-trash"></i> Borrar datos bancarios
+</button>
+                                    </div>
+                                    
+
+                    </div>
+                    </div>
+                  </div>
+
                 </div>
             </main>
           </div>
@@ -161,7 +259,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 
-    <script>
+  <script>
     const formPay = document.getElementById("modalForm");
     const table = document.getElementById("dataTablePay");
     const tableBodyPay = document.getElementById("tbodyPay");
@@ -213,5 +311,80 @@
       `;
     }
   </script>
+ <script>
+  // === FORMULARIO 2: Transferencia Bancaria ===
+  const formPay2 = document.getElementById("FormModal2");
+  const table2 = document.getElementById("dataModal2");
+  const tableBodyPay2 = document.getElementById("tbodyPay2");
+  const editSection2 = document.getElementById("editSection2");
+  const editBtn2 = document.getElementById("editBtn2");
+  const modal2 = new bootstrap.Modal(document.getElementById("Modal2"));
+
+  let formData2 = JSON.parse(localStorage.getItem("userData2")) || null;
+
+  if (formData2) {
+    renderTablePay2();
+  }
+
+  formPay2.addEventListener("submit", function(e) {
+    e.preventDefault();
+    formData2 = {
+      bank: document.getElementById("bank").value.trim(),
+      name: document.getElementById("name2").value.trim(),
+      account: document.getElementById("account").value.trim(),
+      clabe: document.getElementById("clabe").value.trim(),
+      swift: document.getElementById("swift").value.trim(),
+    };
+
+    localStorage.setItem("userData2", JSON.stringify(formData2));
+    renderTablePay2();
+    modal2.hide();
+  });
+
+  editBtn2.addEventListener("click", () => {
+    if (formData2) {
+      document.getElementById("bank").value = formData2.bank;
+      document.getElementById("name2").value = formData2.name;
+      document.getElementById("account").value = formData2.account;
+      document.getElementById("clabe").value = formData2.clabe;
+      document.getElementById("swift").value = formData2.swift;
+      modal2.show();
+    }
+  });
+
+  function renderTablePay2() {
+    table2.style.display = "table";
+    editSection2.style.display = "block";
+    tableBodyPay2.innerHTML = `
+      <tr>
+        <td>${formData2.bank}</td>
+        <td>${formData2.name}</td>
+        <td>${formData2.account}</td>
+        <td>${formData2.clabe}</td>
+        <td>${formData2.swift}</td>
+      </tr>
+    `;
+  }
+</script>
+<script>
+  document.getElementById("clearPayBtn").addEventListener("click", () => {
+    if (confirm("¿Borrar datos de PayPal?")) {
+      localStorage.removeItem("userData");
+      document.getElementById("tbodyPay").innerHTML = "";
+      document.getElementById("editSection").style.display = "none";
+      alert("Datos de PayPal eliminados.");
+    }
+  });
+
+  document.getElementById("clearBankBtn").addEventListener("click", () => {
+    if (confirm("¿Borrar datos bancarios?")) {
+      localStorage.removeItem("userData2");
+      document.getElementById("tbodyPay2").innerHTML = "";
+      document.getElementById("editSection2").style.display = "none";
+      alert("Datos bancarios eliminados.");
+    }
+  });
+</script>
+
     </body>
 </html>
