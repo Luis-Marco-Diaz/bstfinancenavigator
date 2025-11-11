@@ -1,0 +1,56 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <title>BSTFN</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .panel-heading { background-color: #012661 !important; color: white !important; }
+        .btn-primary.styleazul { background-color: #012661; border-color: #001a41; }
+        body { padding: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <strong>Servicio Premium </strong>
+                </div>
+                <div class="panel-body">
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody><tr>
+                                <td><strong>Nivel de Servicio</strong></td>
+                                <td>
+									<form name="form1" method="get" action="" required="">
+										<select name="plazo" onchange="document.form1.submit()" class="form-control">
+											<option value="">--Seleccione Nivel--</option>
+											<option value="1">Básico</option>
+											<option value="2">Intermedio</option>
+											<option value="3">Avanzado</option>
+										</select>
+										<input type="hidden">
+										<input type="hidden">
+									</form>
+								</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Monto a pagar</strong></td>
+                                <td>$0.00 USD</td>
+                            </tr>
+                        </tbody></table>
+                        <input type="submit" class="btn btn-primary styleazul btn-lg" value="Proceder con el pago con PayPal">
+
+					                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
