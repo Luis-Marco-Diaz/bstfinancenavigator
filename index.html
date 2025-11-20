@@ -50,7 +50,7 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html"><img style="height: 4vh; background-color: #ffff; border-radius: 50%; " src="assets/img/logos/BST-imago.png" alt="BST Global Trade Corporation" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -81,7 +81,12 @@
                                 </div>
                         </li>
                         <li class="nav-item"><a style="font-weight: bold;" class="nav-link" target="_blank" href="login.html">Ingresar<span class="fa fa-sign-in"></span> </a> </li>
-                        
+                        <!-- 🔵 BOTÓN DE IDIOMA -->
+                        <li class="nav-item">
+                            <a id="translateBtn" class="nav-link" style="cursor:pointer; font-weight:bold;">
+                               <i class="fa-solid fa-language"></i> EN / ES
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -976,5 +981,39 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- Google Translate -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+    // Función para activar/desactivar traducción
+    document.getElementById("translateBtn").addEventListener("click", function() {
+        const frame = document.querySelector(".goog-te-banner-frame");
+        const body = document.querySelector("body");
+
+        if (!frame) {
+            // Activar traducción
+            const select = document.querySelector(".goog-te-combo");
+            if (select) select.value = "en";
+            select.dispatchEvent(new Event("change"));
+        } else {
+            // Restaurar español
+            const select = document.querySelector(".goog-te-combo");
+            if (select) select.value = "";
+            select.dispatchEvent(new Event("change"));
+        }
+    });
+</script>
     </body>
 </html>
