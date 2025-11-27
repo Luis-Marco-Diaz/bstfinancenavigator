@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> T21 Financial Expert System Framework (FESF)</title>
+    <meta name="description" content="Carga tus datos financieros y en segundos obtienes recomendaciones inteligentes y reportes descargables. Sin conocimientos contables." />
+    <meta name="keywords" content="software financiero, análisis financiero, inteligencia financiera, simulador financiero, estados financieros" />
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1RHVJJ060"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-W1RHVJJ060');
+            </script>
+        <!-- Smartlook -->
+        <script type='text/javascript'>
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'c0fe69ce74405ba430e992a4e16da4c4a069f2ce', { region: 'eu' });
+        </script>
+    <style>
+        :root {
+            --t21-black: #000000;
+            --t21-blue: #003366;
+            --t21-yellow: #f4e107;
+            --t21-orange: #f89728;
+            --t21-gray: #f2f2f2;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .navbar {
+            background-color: var(--t21-black);
+        }
+        .btn-one {
+            background-color: var(--t21-yellow);
+            border-color: var(--t21-yellow);
+            color: #000000;
+        }
+        .btn-one:hover{
+            background-color: var(--t21-black);
+            color: white;
+        }
+        .hero {
+            background: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+        }
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            padding: 60px;
+        }
+        .section-title {
+            color: var(--t21-black);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/img/t21logoblanco.png" alt="T21" height="40" /><p class="badge" >Powered by BSTFN</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-expand-lg ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#suscripciones">Suscripciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="overlay text-center text-white">
+            <h1 class="display-4 fw-bold">T21 Finanzas al Alcance de Todos</h1>
+            <h4 class="fw-bold">Financial Expert System Framework (FESF)</h4>
+            <p class="lead mt-3">La plataforma integral diseñada para impulsar el análisis financiero, la toma de decisiones estratégicas y la productividad empresarial. Ahora disponible para la audiencia profesional de T21.</p>
+            <a class="btn btn-one btn-lg mt-3" href="#precios">Conocer más</a>
+        </div>
+    </section>
+
+    <!-- MENSAJE SECTOR T21 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-3">Bienvenidos lectores y profesionales del sector logístico</h2>
+            <p class="mb-3"><strong>T21</strong> llega como una solución tecnológica para ofrecer claridad financiera, proyección, control y alto rendimiento a empresas que requieren exactitud en sus procesos operativos y estratégicos. Su aplicación es ideal para organizaciones que buscan fortalecer su competitividad mediante información confiable y herramientas de análisis finanicero automatizado.</p>
+            <p class="mb-3">La alianza de <strong>T21 con BSTFN</strong> permite acercar esta plataforma a ejecutivos, gerentes y especialistas del transporte, logística, comercio exterior y cadenas de suministro, facilitando la adopción de un sistema robusto, moderno y escalable.</p>
+            <a href="#suscripciones" class="btn btn-one">Explorar opciones</a>
+        </div>
+    </section>
+     <!-- Dueños de Negocios -->
+        <section>
+            <div class="container">
+                <div class="text-center p-4" >
+                    <h2 class="section-title mb-3"> Análisis Financiero Profesional Sin Complicaciones</h2>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-6">
+                         <video
+                        style="border-radius: 10px;"
+                        preload="none"
+                        controls
+                        autoplay
+                        loop
+                        muted
+                        src="/assets/videos/BSTFinanceNavigator -Nivel-Basico.mp4"
+                        width="100%">
+                        </video>
+                        <div>
+                        <ul style="text-align: left; padding-top: 2%;" >
+                            <li><b > Nuestra Plataforma de Análisis Financiero</b> proporciona conocimiento, control y velocidad en el análisis financiero empresarial.</li>
+                            <li>Equiparable a una consultoría financiera profesional, a una fracción del costo tradicional.</li>
+                            <li>Ahorra tiempo y dinero en la toma de decisiones estratégicas financieras para tu negocio.</li>
+                            <li>Diagnóstico centrado en indicadores básicos de liquidez, endeudamiento y rentabilidad.</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img width="80%" src="./assets/img/FinanceMan.png" alt="">
+                        <br>
+                        <br>
+                        <h4>"Transforma tus finanzas en segundos"</h4>
+                    </div>
+                    
+                </div>
+                <br>
+                <div>
+                    <div class="text-center py-4">
+                        <br>
+                        <a class="btn btn-secondary btn-xl shadow" target="_blank" href="https://calendly.com/bstglobaltrade/cita">Agenda una Demo Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- PRECIOS -->
+    <section id="precios" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4 text-center">Precios</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" class="card-img-top" alt="Plan básico" />
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Plan Básico</strong></h5>
+                            <p class="card-text">Ideal para profesionales y pequeñas empresas que requieren análisis financiero esencial.</p>
+                            <h4 class="fw-bold">USD $20/mes</h4>
+                            <a class="btn btn-one mt-2" target="_blank" href="https://bstfinancenavigator-mexico.com/orden.php?plan=1">Seleccionar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184468/pexels-photo-3184468.jpeg" class="card-img-top" alt="Plan profesional" />
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Plan Profesional</strong></h5>
+                            <p class="card-text">Para empresas con enfoque estratégico que requieren automatización y reportes avanzados.</p>
+                            <h4 class="fw-bold">USD $40/mes</h4>
+                            <a class="btn btn-one mt-2" target="_blank" href="https://bstfinancenavigator-mexico.com/orden.php?plan=2">Seleccionar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg" class="card-img-top" alt="Plan empresarial" />
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Plan Empresarial</strong></h5>
+                            <p class="card-text">Solución completa para corporativos que buscan control total y múltiples usuarios.</p>
+                            <h4 class="fw-bold">USD $100/mes</h4>
+                            <a class="btn btn-one mt-2" target="_blank" href="https://bstfinancenavigator-mexico.com/orden.php?plan=3">Seleccionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- Grid de Funciones del SAAS-->
+        <section class="page-section py-4 bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title mb-4">¿Qué herramienta financiera necesitas?</h2>
+                    <h5 style="color: #000000;" >Realiza un Análisis automático y obtén claridad financiera.</h5>
+                    <br>
+                </div>
+                <div class="row text-center ">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Valida tu Salud Financiera</div>
+                                <div class="text-muted">Análisis de tu Estado de Resultados y Balance General</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">¿Qué debes siempre conocer de tus finanzas?</div>
+                                <div class="text-muted">liquidez, solvencia, rentabilidad y el uso eficiente de los recursos de tu empresa</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading"> Toma decisiones estratégicas basadas en un análisis financiero claro</div>
+                                <div class="text-muted">Interpretación de Razones de Solvencia</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Recuperación Financiera</div>
+                                <div class="text-muted">Identifica el problema y aplica soluciones objetivas basadas en tus datos contables.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Estado Financiero de Resultados</div>
+                                <div class="text-muted">Conoce lo que está funcionando y lo que necesita corregirse en tu empresa.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="card shadow-sm p-3">
+                            <a class="portfolio-link" href="https://bstfinancenavigator-mexico.com/Panel/login.html">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Oportunidades en Análisis Financieros</div>
+                                <div class="text-muted">Descubre oportunidades y evita sorpresas en segundos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    <!-- SUSCRIPCIONES -->
+    <section id="suscripciones" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-4 text-center">Suscripciones</h2>
+            <p class="text-center mb-5">Accede a herramientas avanzadas de análisis, proyección y automatización financiera para elevar el desempeño de tu organización.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 border rounded bg-white shadow-sm h-100">
+                        <h5>Incluye:</h5>
+                        <ul>
+                            <li>Panel de análisis financiero automatizado</li>
+                            <li>Reportes ejecutivos</li>
+                            <li>Indicadores clave por industria</li>
+                            <li>Modelos predictivos y simulaciones</li>
+                            <li>Acceso a versiones futuras</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border rounded bg-white shadow-sm h-100">
+                        <h5>Beneficios principales:</h5>
+                        <ul>
+                            <li>Optimización del tiempo de análisis</li>
+                            <li>Decisiones estratégicas basadas en datos</li>
+                            <li>Mejor control financiero</li>
+                            <li>Interfaces diseñadas para ejecutivos</li>
+                            <li>Soporte profesional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4 text-center">Acceso</h2>
+            <p class="text-center mb-4">El uso de la plataforma está administrado directamente por el equipo de <strong>T21 y BSTFN</strong>.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Iniciar sesión</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" />
+                                </div>
+                                <button type="submit" class="btn btn-one w-100">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
